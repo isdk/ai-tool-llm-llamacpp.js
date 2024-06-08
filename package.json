@@ -2,10 +2,10 @@
   "name": "@isdk/ai-tool-llm-llamacpp",
   "version": "0.0.1",
   "author": "Riceball LEE <snowyu.lee@gmail.com>",
-  "homepage": "https://github.com/isdk/ai-tool.js",
+  "homepage": "https://github.com/isdk/ai-tool-llm-llamacpp.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/isdk/ai-tool.js.git"
+    "url": "git://github.com/isdk/ai-tool-llm-llamacpp.js.git"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
