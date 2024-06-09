@@ -365,7 +365,7 @@ LLMProvider.rule
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8ad3aed2562165f4fe13169c552b1b3d76889041/src/llamacpp.ts#L26)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d3b305c35cb3c708a6eebf74554559e930a3ef35/src/llamacpp.ts#L26)
 
 ___
 
@@ -808,6 +808,7 @@ ___
 | `options.add_generation_prompt?` | `boolean` |
 | `options.chatTemplate?` | `AIPromptResult` |
 | `options.defaultTemplate?` | `boolean` |
+| `options.prompt?` | `any` |
 | `options.type?` | `AIPromptType` |
 
 #### Returns
@@ -847,7 +848,7 @@ LLMProvider.func
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8ad3aed2562165f4fe13169c552b1b3d76889041/src/llamacpp.ts#L28)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d3b305c35cb3c708a6eebf74554559e930a3ef35/src/llamacpp.ts#L28)
 
 ___
 
@@ -917,7 +918,7 @@ LLMProvider.getDefaultParameters
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:379
+packages/ai-tool-llm/dist/index.d.ts:380
 
 ___
 
@@ -983,7 +984,7 @@ LLMProvider.getModelInfo
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:156](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8ad3aed2562165f4fe13169c552b1b3d76889041/src/llamacpp.ts#L156)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:168](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d3b305c35cb3c708a6eebf74554559e930a3ef35/src/llamacpp.ts#L168)
 
 ___
 
