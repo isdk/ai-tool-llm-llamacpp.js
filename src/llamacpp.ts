@@ -56,20 +56,19 @@ export class LlamaCppProvider extends LLMProvider {
     }
 
     let chatTemplate: any
-    // eot_token: end of turn token
-    let eot_token
+    let endOfTokens: undefined|string[]
     if (!vIsString) {
       const prompt = await this.formatPrompt(value, modelInfo, options)
       if (!prompt) {throw new NotFoundError('ChatTemplate:'+ modelInfo.name, this.name)}
       value = prompt
       if (options.chatTemplate) {
-        eot_token = getEndOfTurnTokenFromPromptTemplate(options.chatTemplate)
+        endOfTokens = getEndOfTokensFromPromptTemplate(options.chatTemplate)
         chatTemplate = options.chatTemplate.prompt
       }
     } else {
       chatTemplate = await this.getChatTemplate(modelInfo, options)
       if (chatTemplate) {
-        eot_token = getEndOfTurnTokenFromPromptTemplate(chatTemplate)
+        endOfTokens = getEndOfTokensFromPromptTemplate(chatTemplate)
         chatTemplate = chatTemplate.prompt
       }
     }
@@ -77,8 +76,10 @@ export class LlamaCppProvider extends LLMProvider {
     if (chatTemplate?.parameters) {
       const defaultParams = this.getDefaultParameters(chatTemplate, modelInfo.name!)
       if (defaultParams) {
-        if (!eot_token) {
-          eot_token = defaultParams.eot_token || defaultParams.eos_token
+        if (defaultParams.eot_token || defaultParams.eos_token) {
+          if (!endOfTokens) endOfTokens = []
+          if (defaultParams.eot_token && !endOfTokens.includes(defaultParams.eot_token)) {endOfTokens.push(defaultParams.eot_token)}
+          if (defaultParams.eos_token && !endOfTokens.includes(defaultParams.eos_token)) {endOfTokens.push(defaultParams.eos_token)}
         }
         const defaultParamsOptions = toLlamaCppOptions(defaultParams)
         if (Array.isArray(defaultParamsOptions.stop) && Array.isArray(options.stop)) {
@@ -97,20 +98,30 @@ export class LlamaCppProvider extends LLMProvider {
       headers.Accept = 'text/event-stream'
     }
 
-    // eot_token: end of turn token
-    if (!eot_token) {eot_token = modelInfo.eot_token || modelInfo.eos_token}
-    if (eot_token) {
+    if (modelInfo.eot_token || modelInfo.eos_token) {
+      if (!endOfTokens) endOfTokens = []
+      if (modelInfo.eot_token && !endOfTokens.includes(modelInfo.eot_token)) {endOfTokens.push(modelInfo.eot_token)}
+      if (modelInfo.eos_token && !endOfTokens.includes(modelInfo.eos_token)) {endOfTokens.push(modelInfo.eos_token)}
+    }
+    if (endOfTokens && endOfTokens.length) {
       if (Array.isArray(options.stop)) {
-        if (options.stop.indexOf(eot_token) === -1) {options.stop.push(eot_token)}
+        options.stop = Array.from(new Set([...endOfTokens, ...options.stop]))
       } else {
-        options.stop = [eot_token]
+        options.stop = endOfTokens
       }
     }
     if (options.grammar_id && options.json_schema) {
       delete options.grammar_id
     }
 
+    let chatTemplateId: any
     if (options.chatTemplate) {
+      if (options.chatTemplate.prompt?._id) {
+        chatTemplateId = {id: options.chatTemplate.prompt._id}
+        if (options.chatTemplate.version) {
+          chatTemplateId.version = options.chatTemplate.version
+        }
+      }
       delete options.chatTemplate
     }
 
@@ -146,9 +157,10 @@ export class LlamaCppProvider extends LLMProvider {
       if (obj.generation_settings) {
         obj.generation_settings = toApiOptions(obj.generation_settings)
       }
+      obj.chatTemplateId = chatTemplateId
       result = llamaCppToAIResult(obj)
     } else {
-      result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream())
+      result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId}))
     }
     return result
   }
@@ -175,23 +187,24 @@ export class LlamaCppProvider extends LLMProvider {
 
 export const llamaCpp = new LlamaCppProvider(LlamaCppProviderName)
 
-function getEndOfTurnTokenFromPromptTemplate(chatTemplate: {prompt: any, version?: string|string[]}) {
-  let result: any
+function getEndOfTokensFromPromptTemplate(chatTemplate: {prompt: any, version?: string|string[]}) {
+  let result: any[] = []
   let ver = chatTemplate.version
   if (Array.isArray(ver)) {
-    if (ver.includes('@')) {
-      ver = undefined
-    } else {
-      ver = ver[0]
-    }
+    ver = ver[0]
   }
   const promptInfo = chatTemplate.prompt
   const vers = promptInfo.version
-  if (ver && ver !== '@' && vers?.[ver]?.prompt) {
-    const p = vers[ver].prompt
-    result = p.eot_token || p.eos_token
+  let p = vers?.[ver!]?.prompt
+  if (ver && ver !== '@' && p) {
+    // eot_token: end of turn token
+    if (p.eot_token) {result.push(p.eot_token)}
+    if (p.eos_token) {result.push(p.eos_token)}
   } else if (promptInfo.prompt) {
-    result = promptInfo.prompt.eot_token || promptInfo.prompt.eos_token
+    p = promptInfo.prompt
+    if (p.eot_token) {result.push(p.eot_token)}
+    if (p.eos_token) {result.push(p.eos_token)}
   }
-  return result
+
+  return result.length ? result : undefined
 }

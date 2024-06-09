@@ -364,6 +364,7 @@ export interface LLamaCppResult {
   tokens_evaluated: number
   tokens_predicted: number
   truncated: boolean
+  chatTemplateId?: {id: string, version?: string}
 }
 
 export type LlamaCppAIStreamParser<T = LLamaCppResult> = AIStreamParser<string, T>
