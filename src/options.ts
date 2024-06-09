@@ -384,10 +384,10 @@ export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
   return result
 }
 
-export function parseLlamaCppStream(): LlamaCppAIStreamParser {
+export function parseLlamaCppStream(opt?: any): LlamaCppAIStreamParser {
   return data => {
     const result = JSON.parse(data)
-    return llamaCppToAIResult(result)
+    return llamaCppToAIResult({...opt, ...result})
   }
 }
 
