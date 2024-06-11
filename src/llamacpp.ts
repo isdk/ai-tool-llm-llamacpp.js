@@ -37,6 +37,9 @@ export class LlamaCppProvider extends LLMProvider {
     }
 
     options = toLlamaCppOptions(options) as AIOptions
+    if (options.stop && typeof options.stop === 'string') {
+      options.stop = [options.stop]
+    }
 
     let modelInfo: AIModelParams
     if (model) {
