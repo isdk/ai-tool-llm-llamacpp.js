@@ -175,7 +175,7 @@ LLMProvider.apiKey
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:183
+packages/ai-tool-llm/dist/index.d.ts:192
 
 ___
 
@@ -189,7 +189,7 @@ LLMProvider.apiUrl
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:184
+packages/ai-tool-llm/dist/index.d.ts:193
 
 ___
 
@@ -248,7 +248,7 @@ LLMProvider.depends
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:352
+packages/ai-tool-llm/dist/index.d.ts:361
 
 ___
 
@@ -262,7 +262,7 @@ LLMProvider.description
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:333
+packages/ai-tool-llm/dist/index.d.ts:342
 
 ___
 
@@ -323,7 +323,7 @@ LLMProvider.params
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:334
+packages/ai-tool-llm/dist/index.d.ts:343
 
 ___
 
@@ -337,7 +337,7 @@ LLMProvider.prior
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:181
+packages/ai-tool-llm/dist/index.d.ts:190
 
 ___
 
@@ -351,7 +351,7 @@ LLMProvider.result
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:351
+packages/ai-tool-llm/dist/index.d.ts:360
 
 ___
 
@@ -365,7 +365,7 @@ LLMProvider.rule
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/llamacpp.ts#L26)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/llamacpp.ts#L26)
 
 ___
 
@@ -422,7 +422,7 @@ LLMProvider.supports
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:182
+packages/ai-tool-llm/dist/index.d.ts:191
 
 ___
 
@@ -450,7 +450,7 @@ LLMProvider.current
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:329
+packages/ai-tool-llm/dist/index.d.ts:338
 
 ___
 
@@ -482,7 +482,7 @@ LLMProvider.items
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:330
+packages/ai-tool-llm/dist/index.d.ts:339
 
 ## Methods
 
@@ -507,7 +507,7 @@ LLMProvider.addModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:325
+packages/ai-tool-llm/dist/index.d.ts:334
 
 ___
 
@@ -761,7 +761,7 @@ LLMProvider.deleteModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:326
+packages/ai-tool-llm/dist/index.d.ts:335
 
 ___
 
@@ -821,7 +821,7 @@ LLMProvider.formatPrompt
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:373
+packages/ai-tool-llm/dist/index.d.ts:382
 
 ___
 
@@ -848,7 +848,7 @@ LLMProvider.func
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/llamacpp.ts#L28)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/llamacpp.ts#L28)
 
 ___
 
@@ -875,7 +875,7 @@ LLMProvider.getChatTemplate
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:369
+packages/ai-tool-llm/dist/index.d.ts:378
 
 ___
 
@@ -893,7 +893,7 @@ LLMProvider.getCurrentProvider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:366
+packages/ai-tool-llm/dist/index.d.ts:375
 
 ___
 
@@ -918,7 +918,7 @@ LLMProvider.getDefaultParameters
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:380
+packages/ai-tool-llm/dist/index.d.ts:389
 
 ___
 
@@ -984,7 +984,7 @@ LLMProvider.getModelInfo
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:168](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/llamacpp.ts#L168)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:171](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/llamacpp.ts#L171)
 
 ___
 
@@ -1087,7 +1087,7 @@ LLMProvider.isModelNameMatched
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:357
+packages/ai-tool-llm/dist/index.d.ts:366
 
 ___
 
@@ -1164,7 +1164,7 @@ LLMProvider.isStream
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:358
+packages/ai-tool-llm/dist/index.d.ts:367
 
 ___
 
@@ -1182,7 +1182,7 @@ LLMProvider.listModels
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:323
+packages/ai-tool-llm/dist/index.d.ts:332
 
 ___
 
@@ -1208,7 +1208,7 @@ LLMProvider.listProviders
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:360
+packages/ai-tool-llm/dist/index.d.ts:369
 
 ___
 
@@ -1525,7 +1525,7 @@ LLMProvider.setCurrentProvider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:367
+packages/ai-tool-llm/dist/index.d.ts:376
 
 ___
 
@@ -1654,7 +1654,7 @@ LLMProvider.updateModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:324
+packages/ai-tool-llm/dist/index.d.ts:333
 
 ___
 
@@ -2179,7 +2179,7 @@ LLMProvider.getByModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:355
+packages/ai-tool-llm/dist/index.d.ts:364
 
 ___
 
@@ -2221,7 +2221,7 @@ LLMProvider.getCurrentProvider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:356
+packages/ai-tool-llm/dist/index.d.ts:365
 
 ___
 

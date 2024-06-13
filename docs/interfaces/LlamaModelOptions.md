@@ -57,7 +57,7 @@ Save the prompt and generation for avoid reprocess entire prompt if a part of th
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:127](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L127)
+[packages/ai-tool-llm-llamacpp/src/options.ts:127](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L127)
 
 ___
 
@@ -83,9 +83,13 @@ ___
 
 Repeat alpha frequency penalty (default: 0.0, 0.0 = disabled).
 
+#### Overrides
+
+AITextGenerationOptions.frequency\_penalty
+
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:66](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L66)
+[packages/ai-tool-llm-llamacpp/src/options.ts:66](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L66)
 
 ___
 
@@ -110,7 +114,7 @@ AITextGenerationOptions.gen\_count
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:98
+packages/ai-tool-llm/dist/index.d.ts:102
 
 ___
 
@@ -126,7 +130,7 @@ https://github.com/ggerganov/llama.cpp/blob/master/grammars/README.md
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:96](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L96)
+[packages/ai-tool-llm-llamacpp/src/options.ts:96](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L96)
 
 ___
 
@@ -138,7 +142,7 @@ Ignore end of stream token and continue generating (default: false).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:107](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L107)
+[packages/ai-tool-llm-llamacpp/src/options.ts:107](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L107)
 
 ___
 
@@ -154,7 +158,7 @@ never produced (default: []).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:116](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L116)
+[packages/ai-tool-llm-llamacpp/src/options.ts:116](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L116)
 
 ___
 
@@ -187,7 +191,7 @@ The minimum probability for a token to be considered, relative to the probabilit
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:24](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L24)
+[packages/ai-tool-llm-llamacpp/src/options.ts:24](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L24)
 
 ___
 
@@ -200,7 +204,7 @@ Enable Mirostat sampling, controlling perplexity during text generation
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:79](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L79)
+[packages/ai-tool-llm-llamacpp/src/options.ts:79](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L79)
 
 ___
 
@@ -212,7 +216,7 @@ Set the Mirostat learning rate, parameter eta (default: 0.1).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:89](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L89)
+[packages/ai-tool-llm-llamacpp/src/options.ts:89](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L89)
 
 ___
 
@@ -224,7 +228,7 @@ Set the Mirostat target entropy, parameter tau (default: 5.0).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:84](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L84)
+[packages/ai-tool-llm-llamacpp/src/options.ts:84](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L84)
 
 ___
 
@@ -238,7 +242,7 @@ are kept). Use -1 to retain all tokens from the prompt.
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:31](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L31)
+[packages/ai-tool-llm-llamacpp/src/options.ts:31](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L31)
 
 ___
 
@@ -251,7 +255,7 @@ It could not exceed the server's n_predict.
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:139](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L139)
+[packages/ai-tool-llm-llamacpp/src/options.ts:139](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L139)
 
 ___
 
@@ -264,7 +268,7 @@ for each generated token (default: 0)
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:122](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L122)
+[packages/ai-tool-llm-llamacpp/src/options.ts:122](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L122)
 
 ___
 
@@ -276,7 +280,7 @@ Penalize newline tokens when applying the repeat penalty (default: true).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:56](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L56)
+[packages/ai-tool-llm-llamacpp/src/options.ts:56](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L56)
 
 ___
 
@@ -290,7 +294,7 @@ Can be either null, a string or an array of numbers representing tokens
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:73](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L73)
+[packages/ai-tool-llm-llamacpp/src/options.ts:73](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L73)
 
 ___
 
@@ -300,9 +304,13 @@ ___
 
 Repeat alpha presence penalty (default: 0.0, 0.0 = disabled).
 
+#### Overrides
+
+AITextGenerationOptions.presence\_penalty
+
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:61](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L61)
+[packages/ai-tool-llm-llamacpp/src/options.ts:61](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L61)
 
 ___
 
@@ -314,7 +322,7 @@ Last n tokens to consider for penalizing repetition (default: 64, 0 = disabled, 
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:51](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L51)
+[packages/ai-tool-llm-llamacpp/src/options.ts:51](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L51)
 
 ___
 
@@ -326,7 +334,7 @@ Control the repetition of token sequences in the generated text (default: 1.1).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:46](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L46)
+[packages/ai-tool-llm-llamacpp/src/options.ts:46](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L46)
 
 ___
 
@@ -340,7 +348,7 @@ AITextGenerationOptions.response\_format
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:107
+packages/ai-tool-llm/dist/index.d.ts:111
 
 ___
 
@@ -351,9 +359,13 @@ ___
 Set the random number generator (RNG) seed
 (default: -1, -1 = random seed).
 
+#### Overrides
+
+AITextGenerationOptions.seed
+
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:102](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L102)
+[packages/ai-tool-llm-llamacpp/src/options.ts:102](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L102)
 
 ___
 
@@ -366,7 +378,7 @@ If is -1 the task will be assigned to a Idle slot (default: -1)
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:133](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L133)
+[packages/ai-tool-llm-llamacpp/src/options.ts:133](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L133)
 
 ___
 
@@ -377,15 +389,19 @@ ___
 Stop generation when any of these tokens are generated in llama.cpp.
 same as stop_words in ai-tool-llm
 
+#### Overrides
+
+AITextGenerationOptions.stop
+
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:9](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L9)
+[packages/ai-tool-llm-llamacpp/src/options.ts:9](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L9)
 
 ___
 
 ### stop\_words
 
-• `Optional` **stop\_words**: `string`[]
+• `Optional` **stop\_words**: `string` \| `string`[]
 
 Stop sequences to use.
 Stop sequences are an array of strings or a single string that the model will recognize as end-of-text indicators.
@@ -417,7 +433,7 @@ AITextGenerationOptions.stream
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:106
+packages/ai-tool-llm/dist/index.d.ts:110
 
 ___
 
@@ -445,7 +461,7 @@ Enable tail free sampling with parameter z (default: 1.0, 1.0 = disabled).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:36](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L36)
+[packages/ai-tool-llm-llamacpp/src/options.ts:36](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L36)
 
 ___
 
@@ -455,9 +471,13 @@ ___
 
 Limit the next token selection to the K most probable tokens (default: 40).
 
+#### Overrides
+
+AITextGenerationOptions.top\_k
+
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:14](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L14)
+[packages/ai-tool-llm-llamacpp/src/options.ts:14](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L14)
 
 ___
 
@@ -467,9 +487,13 @@ ___
 
 Limit the next token selection to a subset of tokens with a cumulative probability above a threshold P (default: 0.95).
 
+#### Overrides
+
+AITextGenerationOptions.top\_p
+
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:19](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L19)
+[packages/ai-tool-llm-llamacpp/src/options.ts:19](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L19)
 
 ___
 
@@ -488,7 +512,7 @@ AITextGenerationOptions.trim
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:105
+packages/ai-tool-llm/dist/index.d.ts:109
 
 ___
 
@@ -500,4 +524,4 @@ Enable locally typical sampling with parameter p (default: 1.0, 1.0 = disabled).
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/39fb9a2e42cb5d4213da4cf1b0f37a655ee50283/src/options.ts#L41)
+[packages/ai-tool-llm-llamacpp/src/options.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/options.ts#L41)
