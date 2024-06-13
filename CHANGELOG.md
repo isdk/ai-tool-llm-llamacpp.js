@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.8](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.7...v0.0.8) (2024-06-13)
+
+
+### Bug Fixes
+
+* should allow stop_words to be a string ([d5d88f7](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/d5d88f724f83e505c778b2363cb62eeee3c2ceef))
+
 ## [0.0.7](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.6...v0.0.7) (2024-06-11)
 
 ## [0.0.6](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.5...v0.0.6) (2024-06-10)
