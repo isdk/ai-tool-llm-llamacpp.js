@@ -365,7 +365,7 @@ LLMProvider.rule
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/llamacpp.ts#L26)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/92a347cd5a5e7f74790a85a758870bb2cf59aad1/src/llamacpp.ts#L26)
 
 ___
 
@@ -848,7 +848,7 @@ LLMProvider.func
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/llamacpp.ts#L28)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/92a347cd5a5e7f74790a85a758870bb2cf59aad1/src/llamacpp.ts#L28)
 
 ___
 
@@ -984,7 +984,7 @@ LLMProvider.getModelInfo
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:171](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/d5d88f724f83e505c778b2363cb62eeee3c2ceef/src/llamacpp.ts#L171)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:171](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/92a347cd5a5e7f74790a85a758870bb2cf59aad1/src/llamacpp.ts#L171)
 
 ___
 
