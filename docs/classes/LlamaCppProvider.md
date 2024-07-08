@@ -147,7 +147,7 @@ LLMProvider.constructor
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:58
+packages/ai-tool/dist/index-japi6bEq.d.ts:58
 
 ## Properties
 
@@ -276,7 +276,7 @@ LLMProvider.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:22
+packages/ai-tool/dist/index-japi6bEq.d.ts:22
 
 ___
 
@@ -365,7 +365,7 @@ LLMProvider.rule
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/92a347cd5a5e7f74790a85a758870bb2cf59aad1/src/llamacpp.ts#L26)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db80c661dd7093828e823cbf9f58e7d76ff863e6/src/llamacpp.ts#L26)
 
 ___
 
@@ -379,7 +379,7 @@ LLMProvider.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:25
+packages/ai-tool/dist/index-japi6bEq.d.ts:25
 
 ___
 
@@ -408,7 +408,7 @@ LLMProvider.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:27
+packages/ai-tool/dist/index-japi6bEq.d.ts:27
 
 ___
 
@@ -436,7 +436,7 @@ LLMProvider.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:26
+packages/ai-tool/dist/index-japi6bEq.d.ts:26
 
 ___
 
@@ -464,7 +464,7 @@ LLMProvider.dataPath
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:43
+packages/ai-tool/dist/index-japi6bEq.d.ts:43
 
 ___
 
@@ -531,7 +531,7 @@ LLMProvider.arr2ObjParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:61
+packages/ai-tool/dist/index-japi6bEq.d.ts:61
 
 ___
 
@@ -848,7 +848,7 @@ LLMProvider.func
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/92a347cd5a5e7f74790a85a758870bb2cf59aad1/src/llamacpp.ts#L28)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db80c661dd7093828e823cbf9f58e7d76ff863e6/src/llamacpp.ts#L28)
 
 ___
 
@@ -942,7 +942,7 @@ LLMProvider.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:67
+packages/ai-tool/dist/index-japi6bEq.d.ts:67
 
 ___
 
@@ -966,7 +966,7 @@ LLMProvider.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:72
+packages/ai-tool/dist/index-japi6bEq.d.ts:72
 
 ___
 
@@ -984,7 +984,7 @@ LLMProvider.getModelInfo
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:171](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/92a347cd5a5e7f74790a85a758870bb2cf59aad1/src/llamacpp.ts#L171)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:171](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db80c661dd7093828e823cbf9f58e7d76ff863e6/src/llamacpp.ts#L171)
 
 ___
 
@@ -1261,7 +1261,7 @@ LLMProvider.obj2ArrParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:62
+packages/ai-tool/dist/index-japi6bEq.d.ts:62
 
 ___
 
@@ -1305,7 +1305,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:59
+packages/ai-tool/dist/index-japi6bEq.d.ts:59
 
 ___
 
@@ -1329,7 +1329,7 @@ LLMProvider.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:64
+packages/ai-tool/dist/index-japi6bEq.d.ts:64
 
 ___
 
@@ -1354,7 +1354,7 @@ LLMProvider.runAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:65
+packages/ai-tool/dist/index-japi6bEq.d.ts:65
 
 ___
 
@@ -1379,7 +1379,7 @@ LLMProvider.runAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:66
+packages/ai-tool/dist/index-japi6bEq.d.ts:66
 
 ___
 
@@ -1403,7 +1403,7 @@ LLMProvider.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:63
+packages/ai-tool/dist/index-japi6bEq.d.ts:63
 
 ___
 
@@ -1427,7 +1427,7 @@ LLMProvider.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:70
+packages/ai-tool/dist/index-japi6bEq.d.ts:70
 
 ___
 
@@ -1452,7 +1452,7 @@ LLMProvider.runWithPosAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:71
+packages/ai-tool/dist/index-japi6bEq.d.ts:71
 
 ___
 
@@ -1477,7 +1477,7 @@ LLMProvider.runWithPosAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:69
+packages/ai-tool/dist/index-japi6bEq.d.ts:69
 
 ___
 
@@ -1501,7 +1501,7 @@ LLMProvider.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:68
+packages/ai-tool/dist/index-japi6bEq.d.ts:68
 
 ___
 
@@ -1629,7 +1629,7 @@ LLMProvider.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:60
+packages/ai-tool/dist/index-japi6bEq.d.ts:60
 
 ___
 
@@ -2131,7 +2131,7 @@ LLMProvider.get
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:44
+packages/ai-tool/dist/index-japi6bEq.d.ts:44
 
 ___
 
@@ -2155,7 +2155,7 @@ LLMProvider.getAllByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:47
+packages/ai-tool/dist/index-japi6bEq.d.ts:47
 
 ___
 
@@ -2203,7 +2203,7 @@ LLMProvider.getByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:46
+packages/ai-tool/dist/index-japi6bEq.d.ts:46
 
 ___
 
@@ -2245,7 +2245,7 @@ LLMProvider.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:50
+packages/ai-tool/dist/index-japi6bEq.d.ts:50
 
 ___
 
@@ -2269,7 +2269,7 @@ LLMProvider.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:53
+packages/ai-tool/dist/index-japi6bEq.d.ts:53
 
 ___
 
@@ -2599,7 +2599,7 @@ LLMProvider.list
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:45
+packages/ai-tool/dist/index-japi6bEq.d.ts:45
 
 ___
 
@@ -2656,7 +2656,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:54
+packages/ai-tool/dist/index-japi6bEq.d.ts:54
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2677,7 +2677,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:55
+packages/ai-tool/dist/index-japi6bEq.d.ts:55
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2698,7 +2698,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:56
+packages/ai-tool/dist/index-japi6bEq.d.ts:56
 
 ___
 
@@ -2723,7 +2723,7 @@ LLMProvider.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:48
+packages/ai-tool/dist/index-japi6bEq.d.ts:48
 
 ___
 
@@ -2748,7 +2748,7 @@ LLMProvider.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:49
+packages/ai-tool/dist/index-japi6bEq.d.ts:49
 
 ___
 
@@ -2773,7 +2773,7 @@ LLMProvider.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:51
+packages/ai-tool/dist/index-japi6bEq.d.ts:51
 
 ___
 
@@ -2798,7 +2798,7 @@ LLMProvider.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:52
+packages/ai-tool/dist/index-japi6bEq.d.ts:52
 
 ___
 
@@ -2881,7 +2881,7 @@ LLMProvider.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-D4KjfAKl.d.ts:57
+packages/ai-tool/dist/index-japi6bEq.d.ts:57
 
 ___
 
