@@ -1,5 +1,5 @@
 import path from 'path'
-import { AIStream, CommonError, ErrorCode, NotFoundError, getResponseErrorReadableStream, throwError } from "@isdk/ai-tool";
+import { AIStream, CommonError, ErrorCode, NotFoundError, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
 import { AIModelParams, LLMProvider, joinUrl, mapApiOptions, AIOptions } from "@isdk/ai-tool-llm";
 import {
   LLamaCppResult,
@@ -187,6 +187,7 @@ export class LlamaCppProvider extends LLMProvider {
     return result as AIModelParams
   }
 }
+makeToolFuncCancelable(LlamaCppProvider)
 
 export const llamaCpp = new LlamaCppProvider(LlamaCppProviderName)
 
