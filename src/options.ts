@@ -186,31 +186,37 @@ export enum LlmArch {
   Llama,
   Falcon,
   Baichuan,
+  Grok,
   Gpt2,
-  GptJ,
-  GptNeoX,
+  Gptj,
+  Gptneox,
   Mpt,
-  StarCoder,
-  Persimmon,
+  Starcoder,
   Refact,
   Bert,
-  NomicBert,
+  Nomic_bert,
+  Jina_bert_v2,
   Bloom,
-  StableLm,
+  Stablelm,
   Qwen,
   Qwen2,
+  Qwen2moe,
   Phi2,
+  Phi3,
   Plamo,
-  CodeShell,
+  Codeshell,
   Orion,
-  InternLm2,
-  MiniCpm,
+  Internlm2,
+  Minicpm,
   Gemma,
-  StarCoder2,
+  Starcoder2,
   Mamba,
-  CommandR,
-  DBRX,
-  OLMO,
+  Xverse,
+  Command_r,
+  Dbrx,
+  Olmo,
+  Arctic,
+  Deepseek2,
   Unknown,
 }
 
@@ -365,6 +371,7 @@ export interface LLamaCppResult {
   tokens_predicted: number
   truncated: boolean
   chatTemplateId?: {id: string, version?: string}
+  aborter?: AbortController
 }
 
 export type LlamaCppAIStreamParser<T = LLamaCppResult> = AIStreamParser<string, T>
@@ -380,6 +387,8 @@ export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
     } else {
       result.finishReason = null
     }
+  } else {
+    if (data.aborter) {result.aborter = data.aborter}
   }
   if (data.stop !== undefined) {result.stop = data.stop}
   return result

@@ -1,5 +1,5 @@
 import path from 'path'
-import { AIStream, CommonError, ErrorCode, NotFoundError, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
+import { AIStream, AsyncFeatures, CommonError, ErrorCode, NotFoundError, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
 import { AIModelParams, LLMProvider, joinUrl, mapApiOptions, AIOptions } from "@isdk/ai-tool-llm";
 import {
   LLamaCppResult,
@@ -25,6 +25,8 @@ function toApiOptions(opts: LlamaModelOptions) {
 export class LlamaCppProvider extends LLMProvider {
   rule = /.gguf$/
 
+  asyncFeatures = AsyncFeatures.MultiTask
+
   async func({model, value, options}: {model: string, value: any, options: AIOptions}): Promise<any> {
     const vIsString = typeof value === 'string'
     if (!value || (!vIsString && !Array.isArray(value))) {
@@ -40,6 +42,10 @@ export class LlamaCppProvider extends LLMProvider {
     if (options.stop && typeof options.stop === 'string') {
       options.stop = [options.stop]
     }
+
+    const aborter = this.createAborter(options)
+    const signal = aborter.signal
+    if (options.aborter) {delete options.aborter}
 
     let modelInfo: AIModelParams
     if (model) {
@@ -91,9 +97,6 @@ export class LlamaCppProvider extends LLMProvider {
         options = {...defaultParamsOptions, ...options}
       }
     }
-
-    const signal = options!.signal
-    delete options!.signal
 
     const isStream = options!.stream
     if (isStream) {
@@ -162,8 +165,9 @@ export class LlamaCppProvider extends LLMProvider {
       }
       obj.chatTemplateId = chatTemplateId
       result = llamaCppToAIResult(obj)
+      result.aborter = aborter
     } else {
-      result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId}))
+      result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId, aborter}))
     }
     return result
   }

@@ -3,7 +3,7 @@ import { AIPromptsFunc, AIPromptsName } from '@isdk/ai-tool-prompt'
 
 import { LlamaCppProviderName, llamaCpp } from '../src'
 import { LlmArch } from '../src/options';
-import { AIChatMessageParam, ToolFunc } from '@isdk/ai-tool';
+import { AbortError, AIChatMessageParam, ToolAsyncCancelableBit, ToolFunc } from '@isdk/ai-tool';
 
 const testLLMProvider = new LLMProvider('LLMTest', {
   rule: /.test$/
@@ -39,6 +39,85 @@ calculate the expression<|im_end|>
 const chatMLStop = '<|im_end|>'
 
 async function testGeneration(provider: LLMProvider = llamaCpp) {
+  const hasCancelableFeature = provider.hasAsyncFeature(ToolAsyncCancelableBit)
+  it('should abort generate text with stream', async () => {
+    const stream = await provider.run({
+      model: 'llamacpp://.',
+      value: [
+        {role: 'user', content: '1+2='},
+        {role: 'assistant', content: 'One plus two, the result is three.'},
+        {role: 'user', content: '2+3='},
+      ],
+      options: {stop_words: ['User:', 'Assistant:'], stream: true}
+    }) as ReadableStream
+    expect(stream).toBeInstanceOf(ReadableStream)
+    const reader = stream.getReader()
+    let err: any
+    const chunks: any[] = []
+    try {
+      while (true) {
+        const chunk = await reader.read(); // read data in chunks
+        if (chunk.done) break; // exit loop when done reading the stream
+        const aborter = chunk.value.aborter;
+        // console.log('Chunk received:', chunk.value); // process or handle each chunk as needed
+        chunks.push(chunk.value)
+        if (hasCancelableFeature) {provider.abort('test', {taskId: aborter.taskId})}
+      }
+
+    } catch (error) {
+      console.error('An error occurred while consuming data from ReadableStream:', error);
+      err = error
+    } finally {
+      reader.releaseLock()
+    }
+
+    if (hasCancelableFeature) {
+      expect(err).toHaveProperty('name', 'AbortError')
+      expect(err).toHaveProperty('data')
+      expect(err.data).toHaveProperty('what', 'test')
+    } else {
+      expect(err).toBeUndefined()
+    }
+  });
+
+  it('should abort generate text from outside', async () => {
+    const aborter = new AbortController()
+    const stream = await provider.run({
+      model: 'llamacpp://.',
+      value: [
+        {role: 'user', content: '1+2='},
+        {role: 'assistant', content: 'One plus two, the result is three.'},
+        {role: 'user', content: '2+3='},
+      ],
+      options: {stop_words: ['User:', 'Assistant:'], stream: true, aborter}
+    }) as ReadableStream
+    expect(stream).toBeInstanceOf(ReadableStream)
+    const reader = stream.getReader()
+    let err: any
+    const chunks: any[] = []
+    try {
+      while (true) {
+        const chunk = await reader.read(); // read data in chunks
+        if (chunk.done) break; // exit loop when done reading the stream
+        // console.log('Chunk received:', chunk.value); // process or handle each chunk as needed
+        chunks.push(chunk.value)
+        if (hasCancelableFeature) {aborter.abort()}
+      }
+
+    } catch (error) {
+      console.error('An error occurred while consuming data from ReadableStream:', error);
+      err = error
+    } finally {
+      reader.releaseLock()
+    }
+
+    if (hasCancelableFeature) {
+      expect(err).toHaveProperty('name', 'AbortError')
+    } else {
+      expect(err).toBeUndefined()
+    }
+  });
+
   it('should generate text with messages format', async () => {
     const result = await provider.run({
       model: 'llamacpp://.',
@@ -108,6 +187,7 @@ describe('LlamaCpp Provider', async () => {
     ToolFunc.register(promptsFunc)
     testLLMProvider.register()
     llamaCpp.register()
+    /*
     fetchMock.mockIf(/^https?:\/\/localhost.*$/, (req) => {
       if (req.url.endsWith('/completion')) {
         return {
@@ -125,6 +205,7 @@ describe('LlamaCpp Provider', async () => {
     });
     // fetchMock.doMock();
     fetchMock.dontMock();
+    */
   })
 
   afterAll(()=>{
@@ -158,7 +239,7 @@ describe('LlamaCpp Provider', async () => {
 
 
   it('should get current model info', async ()=>{
-    const result = await llamaCpp.getModelInfo('')
+    const result = await llamaCpp.getModelInfo()
     expect(result).toHaveProperty('name')
   })
 

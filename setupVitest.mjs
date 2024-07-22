@@ -1,3 +1,4 @@
+/*
 import createFetchMock from 'vitest-fetch-mock';
 import { vi } from 'vitest';
 // import './fetch-polyfill.mjs';
@@ -9,3 +10,4 @@ fetchMocker.enableMocks();
 
 // changes default behavior of fetchMock to use the real 'fetch' implementation and not mock responses
 fetchMocker.dontMock();
+*/
