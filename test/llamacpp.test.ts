@@ -3,7 +3,7 @@ import { AIPromptsFunc, AIPromptsName } from '@isdk/ai-tool-prompt'
 
 import { LlamaCppProviderName, llamaCpp } from '../src'
 import { LlmArch } from '../src/options';
-import { AbortError, AIChatMessageParam, ToolAsyncCancelableBit, ToolFunc } from '@isdk/ai-tool';
+import { AbortError, AIChatMessageParam, TaskAbortController, TaskPromise, ToolAsyncCancelableBit, ToolFunc } from '@isdk/ai-tool';
 
 const testLLMProvider = new LLMProvider('LLMTest', {
   rule: /.test$/
@@ -40,45 +40,51 @@ const chatMLStop = '<|im_end|>'
 
 async function testGeneration(provider: LLMProvider = llamaCpp) {
   const hasCancelableFeature = provider.hasAsyncFeature(ToolAsyncCancelableBit)
-  it('should abort generate text with stream', async () => {
-    const stream = await provider.run({
-      model: 'llamacpp://.',
-      value: [
-        {role: 'user', content: '1+2='},
-        {role: 'assistant', content: 'One plus two, the result is three.'},
-        {role: 'user', content: '2+3='},
-      ],
-      options: {stop_words: ['User:', 'Assistant:'], stream: true}
-    }) as ReadableStream
-    expect(stream).toBeInstanceOf(ReadableStream)
-    const reader = stream.getReader()
-    let err: any
-    const chunks: any[] = []
-    try {
-      while (true) {
-        const chunk = await reader.read(); // read data in chunks
-        if (chunk.done) break; // exit loop when done reading the stream
-        const aborter = chunk.value.aborter;
-        // console.log('Chunk received:', chunk.value); // process or handle each chunk as needed
-        chunks.push(chunk.value)
-        if (hasCancelableFeature) {provider.abort('test', {taskId: aborter.taskId})}
+
+  if (hasCancelableFeature) {
+    it('should abort generate text with stream by provider', async () => {
+      const options: any = {stop_words: ['User:', 'Assistant:'], stream: true}
+      const taskInfo = provider.run({
+        model: 'llamacpp://.',
+        value: [
+          {role: 'user', content: '1+2='},
+          {role: 'assistant', content: 'One plus two, the result is three.'},
+          {role: 'user', content: '2+3='},
+        ],
+        options,
+      }) as TaskPromise
+      const task = taskInfo.task!
+      expect(task).toBeInstanceOf(TaskAbortController)
+      expect(task).toBe(options.aborter)
+      expect(task).toHaveProperty('id')
+      const stream = await taskInfo as ReadableStream
+      expect(stream).toBeInstanceOf(ReadableStream)
+      const reader = stream.getReader()
+      let err: any
+      const chunks: any[] = []
+      try {
+        for (let chunk = await reader.read(); !chunk.done; chunk = await reader.read()) {
+          if (chunk.done) break; // exit loop when done reading the stream
+          const taskId = chunk.value.taskId;
+          expect(taskId).not.toBeUndefined()
+          // console.log('Chunk received:', chunk.value); // process or handle each chunk as needed
+          chunks.push(chunk.value)
+          // provider.abort('test', {taskId})
+          task.abort('test')
+        }
+
+      } catch (error) {
+        // console.error('An error occurred while consuming data from ReadableStream:', error);
+        err = error
+      } finally {
+        reader.releaseLock()
       }
 
-    } catch (error) {
-      console.error('An error occurred while consuming data from ReadableStream:', error);
-      err = error
-    } finally {
-      reader.releaseLock()
-    }
-
-    if (hasCancelableFeature) {
       expect(err).toHaveProperty('name', 'AbortError')
       expect(err).toHaveProperty('data')
       expect(err.data).toHaveProperty('what', 'test')
-    } else {
-      expect(err).toBeUndefined()
-    }
-  });
+    });
+  }
 
   it('should abort generate text from outside', async () => {
     const aborter = new AbortController()

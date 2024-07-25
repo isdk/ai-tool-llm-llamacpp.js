@@ -1,5 +1,5 @@
 import path from 'path'
-import { AIStream, AsyncFeatures, CommonError, ErrorCode, NotFoundError, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
+import { AIStream, AsyncFeatures, CommonError, ErrorCode, NotFoundError, TaskAbortController, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
 import { AIModelParams, LLMProvider, joinUrl, mapApiOptions, AIOptions } from "@isdk/ai-tool-llm";
 import {
   LLamaCppResult,
@@ -25,27 +25,16 @@ function toApiOptions(opts: LlamaModelOptions) {
 export class LlamaCppProvider extends LLMProvider {
   rule = /.gguf$/
 
-  asyncFeatures = AsyncFeatures.MultiTask
-
-  async func({model, value, options}: {model: string, value: any, options: AIOptions}): Promise<any> {
+  async processModelOptions(model: string, value: any, options: AIOptions) {
     const vIsString = typeof value === 'string'
     if (!value || (!vIsString && !Array.isArray(value))) {
       throwError('missing prompt value', 'LlamaCppProvider')
-    }
-
-    const url = this.apiUrl ?? 'http://localhost:8080'
-    const headers: HeadersInit = {
-      'Content-Type': 'application/json',
     }
 
     options = toLlamaCppOptions(options) as AIOptions
     if (options.stop && typeof options.stop === 'string') {
       options.stop = [options.stop]
     }
-
-    const aborter = this.createAborter(options)
-    const signal = aborter.signal
-    if (options.aborter) {delete options.aborter}
 
     let modelInfo: AIModelParams
     if (model) {
@@ -98,12 +87,6 @@ export class LlamaCppProvider extends LLMProvider {
       }
     }
 
-    const isStream = options!.stream
-    if (isStream) {
-      headers.Connection = 'keep-alive'
-      headers.Accept = 'text/event-stream'
-    }
-
     if (modelInfo.eot_token || modelInfo.eos_token) {
       if (!endOfTokens) endOfTokens = []
       if (modelInfo.eot_token && !endOfTokens.includes(modelInfo.eot_token)) {endOfTokens.push(modelInfo.eot_token)}
@@ -131,45 +114,82 @@ export class LlamaCppProvider extends LLMProvider {
       delete options.chatTemplate
     }
 
-    const body = {
-      ...options,
-      model,
-      prompt: value,
-    }
-    const response = await fetch(joinUrl(url, '/completion'), {
-      method: 'POST',
-      headers,
-      body: JSON.stringify(body),
-      signal,
-    })
+    if (chatTemplateId) {options.chatTemplateId = chatTemplateId}
+    options.value = value
 
-    let result: LlamaCppAIResult | ReadableStream<LlamaCppAIResult>
+    return options
+  }
 
-    if (!response.ok) {
-      const processed = this.emitError ? this.emitError(response, url, body) : undefined
-      if (!processed) {
-        if (isStream) {
-          result = getResponseErrorReadableStream(response.body)
+  func({model, value, options}: {model: string, value: any, options: AIOptions}): Promise<any> {
+    const taskPromise = this.runAsyncCancelableTask(options, async (params: any) => {
+      const aborter = params.aborter as TaskAbortController
+      const signal = aborter.signal
+
+      params= {...params}
+      delete params.aborter
+      params = await this.processModelOptions(model, value, params)
+
+      const url = this.apiUrl ?? 'http://localhost:8080'
+      const headers: HeadersInit = {
+        'Content-Type': 'application/json',
+      }
+      const isStream = options!.stream
+      if (isStream) {
+        headers.Connection = 'keep-alive'
+        headers.Accept = 'text/event-stream'
+      }
+
+
+      const chatTemplateId = params.chatTemplateId
+      if (chatTemplateId) {delete params.chatTemplateId}
+
+      value = params.value
+      delete params.value
+
+      const body = {
+        ...params,
+        model,
+        prompt: value,
+      }
+      // delete body.aborter
+
+      const response = await fetch(joinUrl(url, '/completion'), {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body),
+        signal,
+      })
+
+      let result: LlamaCppAIResult | ReadableStream<LlamaCppAIResult>
+
+      if (!response.ok) {
+        const processed = this.emitError ? this.emitError(response, url, body) : undefined
+        if (!processed) {
+          if (isStream) {
+            result = getResponseErrorReadableStream(response.body)
+          } else {
+            throw new CommonError(await response.text(), 'LlamaCppProvider')
+          }
         } else {
-          throw new CommonError(await response.text(), 'LlamaCppProvider')
+          result = processed
         }
+      } else if (!isStream) {
+        const text = await response.text()
+        // const obj = await response.json() as LLamaCppResult
+        const obj = JSON.parse(text)
+        if (obj.generation_settings) {
+          obj.generation_settings = toApiOptions(obj.generation_settings)
+        }
+        obj.chatTemplateId = chatTemplateId
+        result = llamaCppToAIResult(obj)
       } else {
-        result = processed
+        result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId}))
       }
-    } else if (!isStream) {
-      const text = await response.text()
-      // const obj = await response.json() as LLamaCppResult
-      const obj = JSON.parse(text)
-      if (obj.generation_settings) {
-        obj.generation_settings = toApiOptions(obj.generation_settings)
-      }
-      obj.chatTemplateId = chatTemplateId
-      result = llamaCppToAIResult(obj)
-      result.aborter = aborter
-    } else {
-      result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId, aborter}))
-    }
-    return result
+      return result
+
+    });
+
+    return taskPromise
   }
 
   async getModelInfo() {
@@ -191,7 +211,7 @@ export class LlamaCppProvider extends LLMProvider {
     return result as AIModelParams
   }
 }
-makeToolFuncCancelable(LlamaCppProvider)
+makeToolFuncCancelable(LlamaCppProvider, {asyncFeatures: AsyncFeatures.MultiTask})
 
 export const llamaCpp = new LlamaCppProvider(LlamaCppProviderName)
 

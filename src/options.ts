@@ -1,4 +1,4 @@
-import { AIResult, AIStreamParser } from "@isdk/ai-tool";
+import { AIResult, AIStreamParser, AsyncTaskId } from "@isdk/ai-tool";
 import { AIOptions, AILavaModelSettings, AIModelQuantType, AITextGenerationOptions, flip, } from "@isdk/ai-tool-llm";
 
 export interface LlamaModelOptions extends AITextGenerationOptions {
@@ -371,7 +371,7 @@ export interface LLamaCppResult {
   tokens_predicted: number
   truncated: boolean
   chatTemplateId?: {id: string, version?: string}
-  aborter?: AbortController
+  taskId?: AsyncTaskId
 }
 
 export type LlamaCppAIStreamParser<T = LLamaCppResult> = AIStreamParser<string, T>
@@ -387,8 +387,6 @@ export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
     } else {
       result.finishReason = null
     }
-  } else {
-    if (data.aborter) {result.aborter = data.aborter}
   }
   if (data.stop !== undefined) {result.stop = data.stop}
   return result
