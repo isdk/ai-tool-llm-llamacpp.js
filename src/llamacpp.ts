@@ -116,7 +116,6 @@ export class LlamaCppProvider extends LLMProvider {
 
     if (chatTemplateId) {options.chatTemplateId = chatTemplateId}
     options.value = value
-
     return options
   }
 
@@ -185,8 +184,8 @@ export class LlamaCppProvider extends LLMProvider {
       } else {
         result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId}))
       }
-      return result
 
+      return result
     });
 
     return taskPromise
