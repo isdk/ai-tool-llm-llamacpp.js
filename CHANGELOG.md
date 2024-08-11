@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.11](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.10...v0.0.11) (2024-08-11)
+
+
+### Features
+
+* add makeToolFuncCancelable ability ([0839bda](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/0839bdad8b86cb69bc20c1f6ac8c7c8d05d2f137))
+* add mutiltask aborter supports ([bfe7eb9](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/bfe7eb92364c46c6a1356c53edaa03b3cf504c26))
+
+
+### Refactor
+
+* follow the ai-tool update CancelableAbility ([4375b77](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/4375b779a687ce47cc4114816e30dcf3e9412caa))
+
 ## [0.0.10](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.9...v0.0.10) (2024-07-08)
 
 ## [0.0.9](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.8...v0.0.9) (2024-06-21)
