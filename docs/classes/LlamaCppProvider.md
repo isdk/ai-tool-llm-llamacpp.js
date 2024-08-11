@@ -59,6 +59,7 @@
 - [getFuncWithPos](LlamaCppProvider.md#getfuncwithpos)
 - [getModelInfo](LlamaCppProvider.md#getmodelinfo)
 - [getProperties](LlamaCppProvider.md#getproperties)
+- [hasAsyncFeature](LlamaCppProvider.md#hasasyncfeature)
 - [hasOwnProperty](LlamaCppProvider.md#hasownproperty)
 - [initialize](LlamaCppProvider.md#initialize)
 - [isModelNameMatched](LlamaCppProvider.md#ismodelnamematched)
@@ -69,6 +70,7 @@
 - [listProviders](LlamaCppProvider.md#listproviders)
 - [mergeTo](LlamaCppProvider.md#mergeto)
 - [obj2ArrParams](LlamaCppProvider.md#obj2arrparams)
+- [processModelOptions](LlamaCppProvider.md#processmodeloptions)
 - [propertyIsEnumerable](LlamaCppProvider.md#propertyisenumerable)
 - [register](LlamaCppProvider.md#register)
 - [run](LlamaCppProvider.md#run)
@@ -107,6 +109,7 @@
 - [getOwnPropertySymbols](LlamaCppProvider.md#getownpropertysymbols)
 - [getProperties](LlamaCppProvider.md#getproperties-1)
 - [getPrototypeOf](LlamaCppProvider.md#getprototypeof)
+- [hasAsyncFeature](LlamaCppProvider.md#hasasyncfeature-1)
 - [is](LlamaCppProvider.md#is)
 - [isExtensible](LlamaCppProvider.md#isextensible)
 - [isFrozen](LlamaCppProvider.md#isfrozen)
@@ -147,7 +150,7 @@ LLMProvider.constructor
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:58
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:78
 
 ## Properties
 
@@ -175,7 +178,7 @@ LLMProvider.apiKey
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:192
+packages/ai-tool-llm/dist/index.d.ts:152
 
 ___
 
@@ -189,7 +192,7 @@ LLMProvider.apiUrl
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:193
+packages/ai-tool-llm/dist/index.d.ts:153
 
 ___
 
@@ -248,7 +251,7 @@ LLMProvider.depends
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:361
+packages/ai-tool-llm/dist/index.d.ts:325
 
 ___
 
@@ -262,7 +265,7 @@ LLMProvider.description
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:342
+packages/ai-tool-llm/dist/index.d.ts:306
 
 ___
 
@@ -276,7 +279,7 @@ LLMProvider.name
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:22
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:36
 
 ___
 
@@ -323,7 +326,7 @@ LLMProvider.params
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:343
+packages/ai-tool-llm/dist/index.d.ts:307
 
 ___
 
@@ -337,7 +340,7 @@ LLMProvider.prior
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:190
+packages/ai-tool-llm/dist/index.d.ts:150
 
 ___
 
@@ -351,7 +354,7 @@ LLMProvider.result
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:360
+packages/ai-tool-llm/dist/index.d.ts:324
 
 ___
 
@@ -365,7 +368,7 @@ LLMProvider.rule
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db80c661dd7093828e823cbf9f58e7d76ff863e6/src/llamacpp.ts#L26)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:26](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/96e5e54d979071fb1b53199389afb36b9b11bf69/src/llamacpp.ts#L26)
 
 ___
 
@@ -379,7 +382,7 @@ LLMProvider.scope
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:25
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:39
 
 ___
 
@@ -408,7 +411,7 @@ LLMProvider.setup
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:27
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:41
 
 ___
 
@@ -422,7 +425,7 @@ LLMProvider.supports
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:191
+packages/ai-tool-llm/dist/index.d.ts:151
 
 ___
 
@@ -436,7 +439,7 @@ LLMProvider.tags
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:26
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:40
 
 ___
 
@@ -450,7 +453,7 @@ LLMProvider.current
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:338
+packages/ai-tool-llm/dist/index.d.ts:302
 
 ___
 
@@ -464,7 +467,7 @@ LLMProvider.dataPath
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:43
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:62
 
 ___
 
@@ -482,7 +485,7 @@ LLMProvider.items
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:339
+packages/ai-tool-llm/dist/index.d.ts:303
 
 ## Methods
 
@@ -507,7 +510,7 @@ LLMProvider.addModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:334
+packages/ai-tool-llm/dist/index.d.ts:298
 
 ___
 
@@ -531,7 +534,7 @@ LLMProvider.arr2ObjParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:61
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:81
 
 ___
 
@@ -761,7 +764,7 @@ LLMProvider.deleteModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:335
+packages/ai-tool-llm/dist/index.d.ts:299
 
 ___
 
@@ -821,7 +824,7 @@ LLMProvider.formatPrompt
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:382
+packages/ai-tool-llm/dist/index.d.ts:346
 
 ___
 
@@ -848,7 +851,7 @@ LLMProvider.func
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db80c661dd7093828e823cbf9f58e7d76ff863e6/src/llamacpp.ts#L28)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:122](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/96e5e54d979071fb1b53199389afb36b9b11bf69/src/llamacpp.ts#L122)
 
 ___
 
@@ -875,7 +878,7 @@ LLMProvider.getChatTemplate
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:378
+packages/ai-tool-llm/dist/index.d.ts:342
 
 ___
 
@@ -893,7 +896,7 @@ LLMProvider.getCurrentProvider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:375
+packages/ai-tool-llm/dist/index.d.ts:339
 
 ___
 
@@ -918,7 +921,7 @@ LLMProvider.getDefaultParameters
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:389
+packages/ai-tool-llm/dist/index.d.ts:353
 
 ___
 
@@ -942,7 +945,7 @@ LLMProvider.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:67
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:87
 
 ___
 
@@ -966,7 +969,7 @@ LLMProvider.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:72
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:92
 
 ___
 
@@ -984,7 +987,7 @@ LLMProvider.getModelInfo
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:171](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db80c661dd7093828e823cbf9f58e7d76ff863e6/src/llamacpp.ts#L171)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:194](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/96e5e54d979071fb1b53199389afb36b9b11bf69/src/llamacpp.ts#L194)
 
 ___
 
@@ -1009,6 +1012,30 @@ LLMProvider.getProperties
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+
+___
+
+### hasAsyncFeature
+
+▸ **hasAsyncFeature**(`feature`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feature` | `AsyncFeatureBits` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+LLMProvider.hasAsyncFeature
+
+#### Defined in
+
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:93
 
 ___
 
@@ -1087,7 +1114,7 @@ LLMProvider.isModelNameMatched
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:366
+packages/ai-tool-llm/dist/index.d.ts:330
 
 ___
 
@@ -1164,7 +1191,7 @@ LLMProvider.isStream
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:367
+packages/ai-tool-llm/dist/index.d.ts:331
 
 ___
 
@@ -1182,7 +1209,7 @@ LLMProvider.listModels
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:332
+packages/ai-tool-llm/dist/index.d.ts:296
 
 ___
 
@@ -1208,7 +1235,7 @@ LLMProvider.listProviders
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:369
+packages/ai-tool-llm/dist/index.d.ts:333
 
 ___
 
@@ -1261,7 +1288,29 @@ LLMProvider.obj2ArrParams
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:62
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:82
+
+___
+
+### processModelOptions
+
+▸ **processModelOptions**(`model`, `value`, `options`): `Promise`\<`AIOptions`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `model` | `string` |
+| `value` | `any` |
+| `options` | `AIOptions` |
+
+#### Returns
+
+`Promise`\<`AIOptions`\>
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:28](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/96e5e54d979071fb1b53199389afb36b9b11bf69/src/llamacpp.ts#L28)
 
 ___
 
@@ -1305,7 +1354,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:59
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:79
 
 ___
 
@@ -1329,7 +1378,7 @@ LLMProvider.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:64
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:84
 
 ___
 
@@ -1354,7 +1403,7 @@ LLMProvider.runAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:65
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:85
 
 ___
 
@@ -1379,7 +1428,7 @@ LLMProvider.runAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:66
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:86
 
 ___
 
@@ -1403,7 +1452,7 @@ LLMProvider.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:63
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:83
 
 ___
 
@@ -1427,7 +1476,7 @@ LLMProvider.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:70
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:90
 
 ___
 
@@ -1452,7 +1501,7 @@ LLMProvider.runWithPosAs
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:71
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:91
 
 ___
 
@@ -1477,7 +1526,7 @@ LLMProvider.runWithPosAsSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:69
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:89
 
 ___
 
@@ -1501,7 +1550,7 @@ LLMProvider.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:68
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:88
 
 ___
 
@@ -1525,7 +1574,7 @@ LLMProvider.setCurrentProvider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:376
+packages/ai-tool-llm/dist/index.d.ts:340
 
 ___
 
@@ -1629,7 +1678,7 @@ LLMProvider.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:60
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:80
 
 ___
 
@@ -1654,7 +1703,7 @@ LLMProvider.updateModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:333
+packages/ai-tool-llm/dist/index.d.ts:297
 
 ___
 
@@ -2131,7 +2180,7 @@ LLMProvider.get
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:44
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:63
 
 ___
 
@@ -2155,7 +2204,7 @@ LLMProvider.getAllByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:47
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:66
 
 ___
 
@@ -2179,7 +2228,7 @@ LLMProvider.getByModel
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:364
+packages/ai-tool-llm/dist/index.d.ts:328
 
 ___
 
@@ -2203,7 +2252,7 @@ LLMProvider.getByTag
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:46
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:65
 
 ___
 
@@ -2221,7 +2270,7 @@ LLMProvider.getCurrentProvider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:365
+packages/ai-tool-llm/dist/index.d.ts:329
 
 ___
 
@@ -2245,7 +2294,7 @@ LLMProvider.getFunc
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:50
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:70
 
 ___
 
@@ -2269,7 +2318,7 @@ LLMProvider.getFuncWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:53
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:73
 
 ___
 
@@ -2429,6 +2478,30 @@ LLMProvider.getPrototypeOf
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+
+___
+
+### hasAsyncFeature
+
+▸ **hasAsyncFeature**(`feature`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `feature` | `AsyncFeatureBits` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+LLMProvider.hasAsyncFeature
+
+#### Defined in
+
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:67
 
 ___
 
@@ -2599,7 +2672,7 @@ LLMProvider.list
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:45
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:64
 
 ___
 
@@ -2656,7 +2729,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:54
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:74
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2677,7 +2750,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:55
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:75
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2698,7 +2771,7 @@ LLMProvider.register
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:56
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:76
 
 ___
 
@@ -2723,7 +2796,7 @@ LLMProvider.run
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:48
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:68
 
 ___
 
@@ -2748,7 +2821,7 @@ LLMProvider.runSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:49
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:69
 
 ___
 
@@ -2773,7 +2846,7 @@ LLMProvider.runWithPos
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:51
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:71
 
 ___
 
@@ -2798,7 +2871,7 @@ LLMProvider.runWithPosSync
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:52
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:72
 
 ___
 
@@ -2881,7 +2954,7 @@ LLMProvider.unregister
 
 #### Defined in
 
-packages/ai-tool/dist/index-japi6bEq.d.ts:57
+packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:77
 
 ___
 
