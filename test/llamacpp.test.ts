@@ -262,10 +262,27 @@ describe('LlamaCpp Provider', async () => {
       value: messages,
       options: {max_tokens:1024, temperature: 0, stop_words: ['='], add_generation_prompt: true}
     })
-    expect(result.options.generation_settings.stop_words).toContain('=')
+    const llmSettings = result.options.generation_settings
+    // expect(llmSettings.max_tokens).toBe(1024) // current llama.cpp can not return the user configured max_tokens
+    expect(llmSettings.stop_words).toContain('=')
     expect(result.content.trim()).toMatch(/^5|2\s*[+]\s*3\s*=\s*5$/)
-    expect(result.options.generation_settings.stream).toBeFalsy()
+    expect(llmSettings.stream).toBeFalsy()
     expect(result.finishReason).toStrictEqual('stop')
+    // expect(result.options.stopped_word).toBeTruthy()
+    // expect(result.options.stopping_word).toStrictEqual('User:')
+  });
+
+  it('should generate text with max_tokens option', async () => {
+    const result = await llamaCpp.run({
+      value: messages,
+      options: {max_tokens:1, temperature: 0, stop_words: ['='], add_generation_prompt: true}
+    })
+    const llmSettings = result.options.generation_settings
+    // expect(llmSettings.max_tokens).toBe(1) // current llama.cpp can not return the user configured max_tokens
+    expect(llmSettings.stop_words).toContain('=')
+    expect(result.content.trim().length).toBe(1)
+    expect(llmSettings.stream).toBeFalsy()
+    expect(result.finishReason).toStrictEqual('length')
     // expect(result.options.stopped_word).toBeTruthy()
     // expect(result.options.stopping_word).toStrictEqual('User:')
   });
