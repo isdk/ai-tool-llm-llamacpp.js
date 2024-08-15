@@ -1,5 +1,5 @@
 import { AIResult, AIStreamParser, AsyncTaskId } from "@isdk/ai-tool";
-import { AIOptions, AILavaModelSettings, AIModelQuantType, AITextGenerationOptions, flip, } from "@isdk/ai-tool-llm";
+import { AIOptions, AILavaModelSettings, AIModelQuantType, AITextGenerationOptions, flip, mapApiOptions, } from "@isdk/ai-tool-llm";
 
 export interface LlamaModelOptions extends AITextGenerationOptions {
   /**
@@ -377,6 +377,10 @@ export interface LLamaCppResult {
 export type LlamaCppAIStreamParser<T = LLamaCppResult> = AIStreamParser<string, T>
 export type LlamaCppAIResult = AIResult<string, LLamaCppResult>
 
+function toApiOptions(opts: LlamaModelOptions) {
+  return mapApiOptions<LlamaModelOptions>(opts, ReverseAIOptionsMap)
+}
+
 export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
   const result: LlamaCppAIResult = {content: data.content, options: data}
   if (data.stop) {
@@ -389,6 +393,12 @@ export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
     }
   }
   if (data.stop !== undefined) {result.stop = data.stop}
+  if (data.generation_settings) {
+    const max_tokens = data.generation_settings.max_tokens
+    data.generation_settings = toApiOptions(data.generation_settings) as any
+    if (max_tokens) {data.generation_settings.max_tokens = max_tokens}
+  }
+
   return result
 }
 
@@ -400,7 +410,7 @@ export function parseLlamaCppStream(opt?: any): LlamaCppAIStreamParser {
 }
 
 export const AIOptionsMap = {
-  // max_tokens: 'n_predict',
+  max_tokens: 'n_predict',
   stop_words: 'stop',
   content_size: 'n_ctx',
   'response_format.type': 'grammar_id',

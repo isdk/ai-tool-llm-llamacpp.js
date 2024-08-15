@@ -8,7 +8,6 @@ import {
   llamaCppToAIResult,
   LlamaCppAIResult,
   AIOptionsMap,
-  ReverseAIOptionsMap,
   AIModelSettingsMap,
 } from "./options";
 
@@ -16,10 +15,6 @@ export const LlamaCppProviderName = 'llamacpp'
 
 function toLlamaCppOptions(opts?: LlamaModelOptions) {
   return mapApiOptions<LlamaModelOptions>(opts, AIOptionsMap)
-}
-
-function toApiOptions(opts: LlamaModelOptions) {
-  return mapApiOptions<LlamaModelOptions>(opts, ReverseAIOptionsMap)
 }
 
 export class LlamaCppProvider extends LLMProvider {
@@ -176,9 +171,6 @@ export class LlamaCppProvider extends LLMProvider {
         const text = await response.text()
         // const obj = await response.json() as LLamaCppResult
         const obj = JSON.parse(text)
-        if (obj.generation_settings) {
-          obj.generation_settings = toApiOptions(obj.generation_settings)
-        }
         obj.chatTemplateId = chatTemplateId
         result = llamaCppToAIResult(obj)
       } else {

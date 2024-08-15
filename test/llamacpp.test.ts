@@ -287,6 +287,40 @@ describe('LlamaCpp Provider', async () => {
     // expect(result.options.stopping_word).toStrictEqual('User:')
   });
 
+  it('should generate text stream with max_tokens option', async () => {
+    const stream = await llamaCpp.run({
+      value: messages,
+      options: {stream: true, max_tokens:1, temperature: 0, stop_words: ['='], add_generation_prompt: true}
+    })
+    expect(stream).toBeInstanceOf(ReadableStream)
+    const reader = stream.getReader()
+    let err: any
+    const chunks: any[] = []
+    try {
+      while (true) {
+        const chunk = await reader.read(); // read data in chunks
+        if (chunk.done) break; // exit loop when done reading the stream
+        // console.log('Chunk received:', chunk.value); // process or handle each chunk as needed
+        chunks.push(chunk.value)
+      }
+    } catch (error) {
+      console.error('An error occurred while consuming data from ReadableStream:', error);
+      err = error
+    } finally {
+      reader.releaseLock()
+    }
+    const content = chunks.map(i=>i.content).join('').trim()
+    const lastChunk = chunks.pop()
+    const llmSettings = lastChunk.options.generation_settings
+    expect(llmSettings.max_tokens).toBe(1) // current llama.cpp can not return the user configured max_tokens
+    expect(llmSettings.stop_words).toContain('=')
+    expect(content.trim().length).toBe(1)
+    expect(llmSettings.stream).toBeTruthy()
+    expect(lastChunk.finishReason).toStrictEqual('length')
+    // expect(result.options.stopped_word).toBeTruthy()
+    // expect(result.options.stopping_word).toStrictEqual('User:')
+  });
+
 
   describe('LlmProvider', async ()=>{
     beforeAll(()=>{
