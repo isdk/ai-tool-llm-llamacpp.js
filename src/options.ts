@@ -400,7 +400,7 @@ export function parseLlamaCppStream(opt?: any): LlamaCppAIStreamParser {
 }
 
 export const AIOptionsMap = {
-  max_tokens: 'n_predict',
+  // max_tokens: 'n_predict',
   stop_words: 'stop',
   content_size: 'n_ctx',
   'response_format.type': 'grammar_id',
@@ -418,6 +418,6 @@ export const ReverseAILoadModelOptions = flip(AILoadModelOptionsMap)
 
 export const AIModelSettingsMap = {
   model: 'name',
-  n_predict: 'max_tokens',
+  // n_predict: 'max_tokens',
   n_ctx: 'content_size',
 }

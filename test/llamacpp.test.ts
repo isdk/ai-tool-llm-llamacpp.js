@@ -278,7 +278,7 @@ describe('LlamaCpp Provider', async () => {
       options: {max_tokens:1, temperature: 0, stop_words: ['='], add_generation_prompt: true}
     })
     const llmSettings = result.options.generation_settings
-    // expect(llmSettings.max_tokens).toBe(1) // current llama.cpp can not return the user configured max_tokens
+    expect(llmSettings.max_tokens).toBe(1) // current llama.cpp can not return the user configured max_tokens
     expect(llmSettings.stop_words).toContain('=')
     expect(result.content.trim().length).toBe(1)
     expect(llmSettings.stream).toBeFalsy()
