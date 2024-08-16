@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.12...v0.1.0) (2024-08-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* the max_tokens can work on the new llama.cpp
+
+### Features
+
+* the max_tokens can work on the new llama.cpp ([2759313](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/2759313967904252280491cfb03ef5fb58f19ce1))
+
+
+### Bug Fixes
+
+* should convert the options in the stream ([fc98f39](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/fc98f39e3b115ecb3b202be85a03fb23642cba74))
+
 ## [0.0.12](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.11...v0.0.12) (2024-08-14)
 
 ## [0.0.11](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.10...v0.0.11) (2024-08-11)
