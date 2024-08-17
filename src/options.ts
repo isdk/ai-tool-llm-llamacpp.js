@@ -151,24 +151,46 @@ export interface LoraItemObject {
 export type LoraItem = LoraItemObject | string
 export type LoraItems = LoraItem[]
 
+// e_model
 export enum LlmSizeType {
   Unknown,
+  _14M,
   _17M,
   _22M,
   _33M,
+  _60M,
+  _70M,
+  _80M,
   _109M,
   _137M,
+  _160M,
+  _220M,
+  _250M,
+  _270M,
   _335M,
+  _410M,
+  _450M,
+  _770M,
+  _780M,
   _0_5B,
   _1B,
+  _1_3B,
+  _1_4B,
   _2B,
+  _2_8B,
   _3B,
   _4B,
+  _6B,
+  _6_9B,
   _7B,
   _8B,
+  _9B,
+  _11B,
+  _12B,
   _13B,
   _14B,
   _15B,
+  _16B,
   _20B,
   _30B,
   _34B,
@@ -176,21 +198,31 @@ export enum LlmSizeType {
   _40B,
   _65B,
   _70B,
-  Small,
-  Medium,
-  Large,
-  XL,
+  _236B,
+  _314B,
+  _SMALL,
+  _MEDIUM,
+  _LARGE,
+  _XL,
+  _A2_7B,
+  _8x7B,
+  _8x22B,
+  _16x12B,
+  _10B_128x3_66B,
+  _57B_A14B,
+  _27B,
 }
 
+//src/llama.cpp llm_arch
 export enum LlmArch {
   Llama,
   Falcon,
-  Baichuan,
   Grok,
   Gpt2,
   Gptj,
   Gptneox,
   Mpt,
+  Baichuan,
   Starcoder,
   Refact,
   Bert,
@@ -209,31 +241,54 @@ export enum LlmArch {
   Internlm2,
   Minicpm,
   Gemma,
+  Gemma2,
   Starcoder2,
   Mamba,
   Xverse,
   Command_r,
   Dbrx,
   Olmo,
+  Openelm,
   Arctic,
   Deepseek2,
+  Chatglm,
+  Bitnet,
+  T5,
+  T5encoder,
+  Jais,
+  Nemotron,
+  Exaone,
   Unknown,
 }
 
+// llama_vocab_type
 export enum LlamaVocabType {
-  None, // For models without vocab
-  Spm, // SentencePiece
-  Bpe, // Byte Pair Encoding
-  Wpm, // WordPiece
+  NONE, // For models without vocab
+  SPM, // SentencePiece
+  BPE, // Byte Pair Encoding
+  WPM, // WordPiece
+  UGM, // T5 tokenizer based on Unigram
 }
 
+// llama_split_mode
+export enum LlamaSplitMode {
+  SPLIT_MODE_NONE    = 0, // single GPU
+  SPLIT_MODE_LAYER   = 1, // split layers and KV across GPUs
+  SPLIT_MODE_ROW     = 2, // split rows across GPUs
+}
+
+// common/common.h gpt_params
+// common/common.cpp gpt_params_find_arg
 export interface LlamaLoadModelOptions extends AIOptions {
-  model: string
-  // the projector model name
-  mmproj?: string
-  // the model alias
-  alias?: string
-  gpu_layers?: number
+  threads?: number
+  threads_batch?: number
+  threads_draft?: number
+  threads_batch_draft?: number
+  escape?: boolean
+  path_prompt_cache?: string
+  prompt_cache_all?: boolean  // save user input and generations to prompt cache
+  prompt_cache_ro?: boolean   // open the prompt cache read-only and do not update it
+  n_predict?: number          // limits number of tokens to predict
   /**
    * Specify the context window size of the model that you have loaded in your
    * Llama.cpp server.
@@ -241,56 +296,159 @@ export interface LlamaLoadModelOptions extends AIOptions {
   // The size may differ in other models, for example, baichuan models were build with a context of 4096.
    */
   n_ctx?: number
-  embedding?: boolean
-  batch?: number
-  parallel?: number
-  threads?: number
-  n_threads_batch?: number
   grp_attn_n?: number
   grp_attn_w?: number
-  rope_scaling?: LlamaRopeScalingType
   rope_freq_base?: number
   rope_freq_scale?: number
+  rope_scaling?: LlamaRopeScalingType
+  yarn_orig_ctx?: number
   yarn_ext_factor?: number
   yarn_attn_factor?: number
   yarn_beta_fast?: number
   yarn_beta_slow?: number
-  use_mmap?: boolean
-  use_mlock?: boolean
-  cont_batching?: boolean
-  n_predict?: number
+  pooling?: 'none'|'mean'|'cls'|'last'
+  attention_type?: 'causal'|'non-causal'
+  defrag_thold?: number
+  samplers?: string
+  samplers_sequence?: string
+
+  batch?: number
+  ubatch?: number
+  n_keep?: number
+  n_draft?: number
+  n_chunks?: number
+  parallel?: number
+  n_sequences?: number
+  p_split?: number
+
+  model: string
+  model_draft?: string // draft model for speculative decoding
+  model_alias?: string
+  model_url?: string
+  hf_token?: string
+  hf_repo?: string
+  hf_file?: string
+
+  lora?: LoraItem|LoraItems
+  lora_init_without_apply?: boolean
+  // lora_base?: string
+
+  // the projector model name
+  mmproj?: string
+  image?: string // path to image file
+  special?: boolean // enable special token output
+  embedding?: boolean
+  embd_normalize?: number
+  embd_output_format?: ""|"array"|"json"|"json+" // empty = default, "array" = [[],[]...], "json" = openai style, "json+" = same "json" + cosine similarity matrix
+  embd_sep?: string // separator of embendings, defaults to "\n"
+  conversation?: boolean // conversation mode (does not print special tokens and suffix/prefix)
+  infill?: boolean // enable infilling mode should disable embedding mode
+  dump_kv_cache?: boolean // dump the KV cache contents for debugging purposes
+  no_kv_offload?: boolean // disable KV offloading
   cache_type_k?: LlamaCacheQuantType
   cache_type_v?: LlamaCacheQuantType
-  lora?: LoraItem|LoraItems
-  lora_base?: string
+  multiline_input?: boolean
+  cont_batching?: boolean
+  flash_attn?: boolean
+  use_mlock?: boolean
+  gpu_layers?: number
+  gpu_layers_draft?: number
+  main_gpu?: number
+  split_mode?: LlamaSplitMode
+  tensor_split?: string
+  rpc_servers?: string
+  use_mmap?: boolean
+  numa?: 'distribute'|'isolate'|'numactl'
+  verbosity?: number
+  verbose_prompt?: boolean
+  reverse_prompt?: boolean
+  display_prompt?: boolean
+  logdir?: string
+  lookup_cache_static?: string
+  lookup_cache_dynamic?: string
+  logits_file?: string
+  logits_all?: boolean
+  check_tensors?: boolean
 }
 
 export const LlamaLoadModelOptionsKeys: (keyof LlamaLoadModelOptions)[] = [
-  'mmproj',
-  'alias',
-  'gpu_layers',
-  'n_ctx',
-  'embedding',
-  'batch',
-  'parallel',
   'threads',
-  'n_threads_batch',
+  'threads_batch',
+  'threads_draft',
+  'threads_batch_draft',
+  'escape',
+  'path_prompt_cache',
+  'prompt_cache_all',
+  'prompt_cache_ro',
+  'n_predict',
+  'n_ctx',
   'grp_attn_n',
   'grp_attn_w',
-  'rope_scaling',
   'rope_freq_base',
   'rope_freq_scale',
+  'rope_scaling',
+  'yarn_orig_ctx',
   'yarn_ext_factor',
   'yarn_attn_factor',
   'yarn_beta_fast',
   'yarn_beta_slow',
-  'use_mmap',
-  'use_mlock',
-  'cont_batching',
+  'pooling',
+  'attention_type',
+  'defrag_thold',
+  'samplers',
+  'samplers_sequence',
+  'batch',
+  'ubatch',
+  'n_keep',
+  'n_draft',
+  'n_chunks',
+  'parallel',
+  'n_sequences',
+  'p_split',
+  'model',
+  'model_draft',
+  'model_alias',
+  'model_url',
+  'hf_token',
+  'hf_repo',
+  'hf_file',
+  'lora',
+  'lora_init_without_apply',
+  'mmproj',
+  'image',
+  'special',
+  'embedding',
+  'embd_normalize',
+  'embd_output_format',
+  'embd_sep',
+  'conversation',
+  'infill',
+  'dump_kv_cache',
+  'no_kv_offload',
   'cache_type_k',
   'cache_type_v',
-  'lora',
-  'lora_base',
+  'multiline_input',
+  'cont_batching',
+  'flash_attn',
+  'use_mlock',
+  'gpu_layers',
+  'gpu_layers_draft',
+  'main_gpu',
+  'split_mode',
+  'tensor_split',
+  'rpc_servers',
+  'use_mmap',
+  'numa',
+  'verbosity',
+  'verbose_prompt',
+  'reverse_prompt',
+  'display_prompt',
+  'logdir',
+  'lookup_cache_static',
+  'lookup_cache_dynamic',
+  'logits_file',
+  'logits_all',
+  'check_tensors',
 ];
 
 enum LlamaCppServerState {
