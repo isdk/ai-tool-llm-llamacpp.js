@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:329](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/fc98f39e3b115ecb3b202be85a03fb23642cba74/src/options.ts#L329)
+[packages/ai-tool-llm-llamacpp/src/options.ts:487](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/options.ts#L487)
 
 ___
 

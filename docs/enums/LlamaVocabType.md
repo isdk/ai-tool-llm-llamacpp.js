@@ -6,47 +6,58 @@
 
 ### Enumeration Members
 
-- [Bpe](LlamaVocabType.md#bpe)
-- [None](LlamaVocabType.md#none)
-- [Spm](LlamaVocabType.md#spm)
-- [Wpm](LlamaVocabType.md#wpm)
+- [BPE](LlamaVocabType.md#bpe)
+- [NONE](LlamaVocabType.md#none)
+- [SPM](LlamaVocabType.md#spm)
+- [UGM](LlamaVocabType.md#ugm)
+- [WPM](LlamaVocabType.md#wpm)
 
 ## Enumeration Members
 
-### Bpe
+### BPE
 
-• **Bpe** = ``2``
+• **BPE** = ``2``
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:226](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/fc98f39e3b115ecb3b202be85a03fb23642cba74/src/options.ts#L226)
+[packages/ai-tool-llm-llamacpp/src/options.ts:268](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/options.ts#L268)
 
 ___
 
-### None
+### NONE
 
-• **None** = ``0``
+• **NONE** = ``0``
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:224](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/fc98f39e3b115ecb3b202be85a03fb23642cba74/src/options.ts#L224)
+[packages/ai-tool-llm-llamacpp/src/options.ts:266](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/options.ts#L266)
 
 ___
 
-### Spm
+### SPM
 
-• **Spm** = ``1``
+• **SPM** = ``1``
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:225](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/fc98f39e3b115ecb3b202be85a03fb23642cba74/src/options.ts#L225)
+[packages/ai-tool-llm-llamacpp/src/options.ts:267](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/options.ts#L267)
 
 ___
 
-### Wpm
+### UGM
 
-• **Wpm** = ``3``
+• **UGM** = ``4``
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:227](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/fc98f39e3b115ecb3b202be85a03fb23642cba74/src/options.ts#L227)
+[packages/ai-tool-llm-llamacpp/src/options.ts:270](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/options.ts#L270)
+
+___
+
+### WPM
+
+• **WPM** = ``3``
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:269](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/options.ts#L269)
