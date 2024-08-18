@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.0](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.1.0...v0.2.0) (2024-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* sync to llama.cpp
+
+### Refactor
+
+* sync to llama.cpp ([93d3582](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/93d35820584e194d5f0d1f510bbd9e1fb303d907))
+
 ## [0.1.0](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.0.12...v0.1.0) (2024-08-16)
 
 
