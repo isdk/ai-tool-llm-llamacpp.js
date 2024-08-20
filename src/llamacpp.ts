@@ -1,5 +1,5 @@
 import path from 'path'
-import { AIStream, AsyncFeatures, CommonError, ErrorCode, NotFoundError, TaskAbortController, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
+import { AIStream, AsyncFeatures, type CancelableAbility, CommonError, ErrorCode, NotFoundError, TaskAbortController, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
 import { AIModelParams, LLMProvider, joinUrl, mapApiOptions, AIOptions } from "@isdk/ai-tool-llm";
 import {
   LLamaCppResult,
@@ -9,6 +9,8 @@ import {
   LlamaCppAIResult,
   AIOptionsMap,
   AIModelSettingsMap,
+  LlamaLoadModelOptionsKeys,
+  LlamaLoadModelOptions,
 } from "./options";
 
 export const LlamaCppProviderName = 'llamacpp'
@@ -17,6 +19,24 @@ function toLlamaCppOptions(opts?: LlamaModelOptions) {
   return mapApiOptions<LlamaModelOptions>(opts, AIOptionsMap)
 }
 
+/**
+ * Checks if any element in arr1 exists in arr2
+ * @param {any[]} arr1 - The first array
+ * @param {any[]} arr2 - The second array
+ * @returns {boolean} True if any element in arr1 exists in arr2, false otherwise
+ */
+function existsAny(arr1: any[], arr2: any[]) {
+  let result = false
+  for (const v of arr1) {
+    result = arr2.includes(v)
+    if (result) {
+      break
+    }
+  }
+  return result
+}
+
+export interface LlamaCppProvider extends CancelableAbility {}
 export class LlamaCppProvider extends LLMProvider {
   rule = /.gguf$/
 
@@ -34,11 +54,14 @@ export class LlamaCppProvider extends LLMProvider {
     let modelInfo: AIModelParams
     if (model) {
       if (model.endsWith('.gguf')) {model = model.slice(0, -5)}
-      if (model.startsWith(LlamaCppProviderName + '://')) {model = model.slice(LlamaCppProviderName.length + 3)}
+      if (model.startsWith(this.name + '://')) {model = model.slice(this.name!.length + 3)}
       modelInfo = await this.getModelInfo()
-      const currentModel = modelInfo?.name
-      if (currentModel && currentModel.indexOf(model) < 0) {
-        throw new CommonError(`the model(${model}) is not the current llamaCpp running model(${currentModel})`, this.name, ErrorCode.InvalidArgument)
+      if (model !== '.') {
+        const currentModel = modelInfo?.name
+        if ((currentModel && currentModel.indexOf(model) < 0) || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
+          await this.loadModel({...options, model, currentModel})
+          modelInfo = await this.getModelInfo(model)
+        }
       }
     } else {
       modelInfo = await this.getModelInfo()
@@ -183,7 +206,12 @@ export class LlamaCppProvider extends LLMProvider {
     return taskPromise
   }
 
-  async getModelInfo() {
+  async loadModel(model: LlamaLoadModelOptions): Promise<any> {
+    const currentModel = model.currentModel
+    throw new CommonError(`the model(${model}) is not the current llamaCpp running model(${currentModel})`, this.name, ErrorCode.InvalidArgument)
+  }
+
+  async getModelInfo(modelName?: string) {
     const url = this.apiUrl ?? 'http://localhost:8080'
     const response = await fetch(joinUrl(url, '/props'))
     const obj = await response.json()
