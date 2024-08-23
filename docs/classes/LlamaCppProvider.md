@@ -4,6 +4,8 @@
 
 ## Hierarchy
 
+- `CancelableAbility`
+
 - `LLMProvider`
 
   ↳ **`LlamaCppProvider`**
@@ -17,12 +19,19 @@
 ### Properties
 
 - [$attributes](LlamaCppProvider.md#$attributes)
+- [\_\_task\_aborter](LlamaCppProvider.md#__task_aborter)
+- [\_\_task\_semaphore](LlamaCppProvider.md#__task_semaphore)
+- [\_asyncFeatures](LlamaCppProvider.md#_asyncfeatures)
+- [\_maxTaskConcurrency](LlamaCppProvider.md#_maxtaskconcurrency)
 - [apiKey](LlamaCppProvider.md#apikey)
 - [apiUrl](LlamaCppProvider.md#apiurl)
+- [cleanMultiTaskAborter](LlamaCppProvider.md#cleanmultitaskaborter)
 - [constructor](LlamaCppProvider.md#constructor-1)
 - [defaultOptions](LlamaCppProvider.md#defaultoptions)
 - [depends](LlamaCppProvider.md#depends)
 - [description](LlamaCppProvider.md#description)
+- [generateAsyncTaskId](LlamaCppProvider.md#generateasynctaskid)
+- [isApi](LlamaCppProvider.md#isapi)
 - [name](LlamaCppProvider.md#name)
 - [nonExported1stChar](LlamaCppProvider.md#nonexported1stchar)
 - [params](LlamaCppProvider.md#params)
@@ -31,22 +40,36 @@
 - [rule](LlamaCppProvider.md#rule)
 - [scope](LlamaCppProvider.md#scope)
 - [setup](LlamaCppProvider.md#setup)
+- [stream](LlamaCppProvider.md#stream)
 - [supports](LlamaCppProvider.md#supports)
 - [tags](LlamaCppProvider.md#tags)
 - [current](LlamaCppProvider.md#current)
 - [dataPath](LlamaCppProvider.md#datapath)
 - [items](LlamaCppProvider.md#items)
 
+### Accessors
+
+- [maxTaskConcurrency](LlamaCppProvider.md#maxtaskconcurrency)
+- [semaphore](LlamaCppProvider.md#semaphore)
+
 ### Methods
 
+- [$cleanMultiTaskAborter](LlamaCppProvider.md#$cleanmultitaskaborter)
+- [$generateAsyncTaskId](LlamaCppProvider.md#$generateasynctaskid)
+- [\_cleanMultiTaskAborter](LlamaCppProvider.md#_cleanmultitaskaborter)
+- [\_generateAsyncTaskId](LlamaCppProvider.md#_generateasynctaskid)
+- [abort](LlamaCppProvider.md#abort)
 - [addModel](LlamaCppProvider.md#addmodel)
 - [arr2ObjParams](LlamaCppProvider.md#arr2objparams)
 - [assign](LlamaCppProvider.md#assign)
 - [assignProperty](LlamaCppProvider.md#assignproperty)
 - [assignPropertyTo](LlamaCppProvider.md#assignpropertyto)
 - [assignTo](LlamaCppProvider.md#assignto)
+- [cleanTaskAborter](LlamaCppProvider.md#cleantaskaborter)
 - [clone](LlamaCppProvider.md#clone)
 - [cloneTo](LlamaCppProvider.md#cloneto)
+- [createAborter](LlamaCppProvider.md#createaborter)
+- [createTaskPromise](LlamaCppProvider.md#createtaskpromise)
 - [defineProperties](LlamaCppProvider.md#defineproperties)
 - [deleteModel](LlamaCppProvider.md#deletemodel)
 - [exportTo](LlamaCppProvider.md#exportto)
@@ -59,15 +82,19 @@
 - [getFuncWithPos](LlamaCppProvider.md#getfuncwithpos)
 - [getModelInfo](LlamaCppProvider.md#getmodelinfo)
 - [getProperties](LlamaCppProvider.md#getproperties)
+- [getRunningTask](LlamaCppProvider.md#getrunningtask)
+- [getRunningTaskCount](LlamaCppProvider.md#getrunningtaskcount)
 - [hasAsyncFeature](LlamaCppProvider.md#hasasyncfeature)
 - [hasOwnProperty](LlamaCppProvider.md#hasownproperty)
 - [initialize](LlamaCppProvider.md#initialize)
+- [isAborted](LlamaCppProvider.md#isaborted)
 - [isModelNameMatched](LlamaCppProvider.md#ismodelnamematched)
 - [isPrototypeOf](LlamaCppProvider.md#isprototypeof)
 - [isSame](LlamaCppProvider.md#issame)
 - [isStream](LlamaCppProvider.md#isstream)
 - [listModels](LlamaCppProvider.md#listmodels)
 - [listProviders](LlamaCppProvider.md#listproviders)
+- [loadModel](LlamaCppProvider.md#loadmodel)
 - [mergeTo](LlamaCppProvider.md#mergeto)
 - [obj2ArrParams](LlamaCppProvider.md#obj2arrparams)
 - [processModelOptions](LlamaCppProvider.md#processmodeloptions)
@@ -76,6 +103,7 @@
 - [run](LlamaCppProvider.md#run)
 - [runAs](LlamaCppProvider.md#runas)
 - [runAsSync](LlamaCppProvider.md#runassync)
+- [runAsyncCancelableTask](LlamaCppProvider.md#runasynccancelabletask)
 - [runSync](LlamaCppProvider.md#runsync)
 - [runWithPos](LlamaCppProvider.md#runwithpos)
 - [runWithPosAs](LlamaCppProvider.md#runwithposas)
@@ -146,11 +174,11 @@
 
 #### Inherited from
 
-LLMProvider.constructor
+CancelableAbility.constructor
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:78
+packages/ai-tool/dist/index-DvpywQaE.d.ts:80
 
 ## Properties
 
@@ -158,23 +186,71 @@ packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:78
 
 • **$attributes**: `Properties`
 
-#### Inherited from
-
-LLMProvider.$attributes
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:5
 
 ___
 
-### apiKey
+### \_\_task\_aborter
 
-• `Optional` **apiKey**: `string`
+• **\_\_task\_aborter**: `undefined` \| `TaskAbortController` \| `TaskAbortControllers`
 
 #### Inherited from
 
-LLMProvider.apiKey
+CancelableAbility.\_\_task\_aborter
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:209
+
+___
+
+### \_\_task\_semaphore
+
+• **\_\_task\_semaphore**: `undefined` \| `Semaphore`
+
+#### Inherited from
+
+CancelableAbility.\_\_task\_semaphore
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:210
+
+___
+
+### \_asyncFeatures
+
+• `Optional` **\_asyncFeatures**: `number`
+
+#### Inherited from
+
+CancelableAbility.\_asyncFeatures
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:202
+
+___
+
+### \_maxTaskConcurrency
+
+• **\_maxTaskConcurrency**: `undefined` \| `number`
+
+#### Inherited from
+
+CancelableAbility.\_maxTaskConcurrency
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:203
+
+___
+
+### apiKey
+
+• `Optional` **apiKey**: `string`
 
 #### Defined in
 
@@ -186,13 +262,38 @@ ___
 
 • `Optional` **apiUrl**: `string`
 
-#### Inherited from
-
-LLMProvider.apiUrl
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:154
+
+___
+
+### cleanMultiTaskAborter
+
+• **cleanMultiTaskAborter**: (`id`: `AsyncTaskId`, `aborters`: `TaskAbortControllers`) => `void`
+
+#### Type declaration
+
+▸ (`id`, `aborters`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `AsyncTaskId` |
+| `aborters` | `TaskAbortControllers` |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+CancelableAbility.cleanMultiTaskAborter
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:208
 
 ___
 
@@ -201,10 +302,6 @@ ___
 • **constructor**: `Function`
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
-
-#### Inherited from
-
-LLMProvider.constructor
 
 #### Defined in
 
@@ -225,10 +322,6 @@ The default options for export and assign
 | `assign?` | `IMergeOptions` |
 | `export?` | `IMergeOptions` |
 
-#### Inherited from
-
-LLMProvider.defaultOptions
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:74
@@ -245,10 +338,6 @@ ___
 | :------ | :------ |
 | `event-bus` | `EventToolFunc` |
 
-#### Inherited from
-
-LLMProvider.depends
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:326
@@ -259,13 +348,48 @@ ___
 
 • **description**: `string`
 
-#### Inherited from
-
-LLMProvider.description
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:307
+
+___
+
+### generateAsyncTaskId
+
+• **generateAsyncTaskId**: (`taskId?`: `AsyncTaskId`, `aborters?`: `TaskAbortControllers`) => `AsyncTaskId`
+
+#### Type declaration
+
+▸ (`taskId?`, `aborters?`): `AsyncTaskId`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `taskId?` | `AsyncTaskId` |
+| `aborters?` | `TaskAbortControllers` |
+
+##### Returns
+
+`AsyncTaskId`
+
+#### Inherited from
+
+CancelableAbility.generateAsyncTaskId
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:207
+
+___
+
+### isApi
+
+• `Optional` **isApi**: `boolean`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DvpywQaE.d.ts:42
 
 ___
 
@@ -273,13 +397,9 @@ ___
 
 • `Optional` **name**: `string`
 
-#### Inherited from
-
-LLMProvider.name
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:36
+packages/ai-tool/dist/index-DvpywQaE.d.ts:36
 
 ___
 
@@ -288,10 +408,6 @@ ___
 • **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
-
-#### Inherited from
-
-LLMProvider.nonExported1stChar
 
 #### Defined in
 
@@ -320,10 +436,6 @@ ___
 | `value.name` | `string` |
 | `value.type` | `string` |
 
-#### Inherited from
-
-LLMProvider.params
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:308
@@ -333,10 +445,6 @@ ___
 ### prior
 
 • **prior**: `number`
-
-#### Inherited from
-
-LLMProvider.prior
 
 #### Defined in
 
@@ -348,10 +456,6 @@ ___
 
 • **result**: `string`
 
-#### Inherited from
-
-LLMProvider.result
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:325
@@ -362,13 +466,9 @@ ___
 
 • **rule**: `RegExp`
 
-#### Overrides
-
-LLMProvider.rule
-
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:21](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/llamacpp.ts#L21)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/bddcb350cde2314c95df2454df8e6e5e2a38d96d/src/llamacpp.ts#L41)
 
 ___
 
@@ -376,13 +476,9 @@ ___
 
 • `Optional` **scope**: `any`
 
-#### Inherited from
-
-LLMProvider.scope
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:39
+packages/ai-tool/dist/index-DvpywQaE.d.ts:39
 
 ___
 
@@ -405,23 +501,25 @@ ___
 
 `void`
 
-#### Inherited from
+#### Defined in
 
-LLMProvider.setup
+packages/ai-tool/dist/index-DvpywQaE.d.ts:41
+
+___
+
+### stream
+
+• `Optional` **stream**: `boolean`
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:41
+packages/ai-tool/dist/index-DvpywQaE.d.ts:43
 
 ___
 
 ### supports
 
 • **supports**: `AIModelType` \| `AIModelType`[]
-
-#### Inherited from
-
-LLMProvider.supports
 
 #### Defined in
 
@@ -433,23 +531,15 @@ ___
 
 • `Optional` **tags**: `string` \| `string`[]
 
-#### Inherited from
-
-LLMProvider.tags
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:40
+packages/ai-tool/dist/index-DvpywQaE.d.ts:40
 
 ___
 
 ### current
 
 ▪ `Static` `Optional` **current**: `string`
-
-#### Inherited from
-
-LLMProvider.current
 
 #### Defined in
 
@@ -461,13 +551,9 @@ ___
 
 ▪ `Static` **dataPath**: `string`
 
-#### Inherited from
-
-LLMProvider.dataPath
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:62
+packages/ai-tool/dist/index-DvpywQaE.d.ts:64
 
 ___
 
@@ -479,15 +565,172 @@ ___
 
 ▪ [name: `string`]: `LLMProvider`
 
-#### Inherited from
-
-LLMProvider.items
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:304
 
+## Accessors
+
+### maxTaskConcurrency
+
+• `get` **maxTaskConcurrency**(): `undefined` \| `number`
+
+#### Returns
+
+`undefined` \| `number`
+
+#### Inherited from
+
+CancelableAbility.maxTaskConcurrency
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:211
+
+___
+
+### semaphore
+
+• `get` **semaphore**(): `undefined` \| `Semaphore`
+
+#### Returns
+
+`undefined` \| `Semaphore`
+
+#### Inherited from
+
+CancelableAbility.semaphore
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:212
+
 ## Methods
+
+### $cleanMultiTaskAborter
+
+▸ **$cleanMultiTaskAborter**(`id`, `aborters`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `AsyncTaskId` |
+| `aborters` | `TaskAbortControllers` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+CancelableAbility.$cleanMultiTaskAborter
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:219
+
+___
+
+### $generateAsyncTaskId
+
+▸ **$generateAsyncTaskId**(`taskId?`, `aborters?`): `undefined` \| `AsyncTaskId`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `taskId?` | `AsyncTaskId` |
+| `aborters?` | `TaskAbortControllers` |
+
+#### Returns
+
+`undefined` \| `AsyncTaskId`
+
+#### Inherited from
+
+CancelableAbility.$generateAsyncTaskId
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:217
+
+___
+
+### \_cleanMultiTaskAborter
+
+▸ **_cleanMultiTaskAborter**(`id`, `aborters`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `AsyncTaskId` |
+| `aborters` | `TaskAbortControllers` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+CancelableAbility.\_cleanMultiTaskAborter
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:221
+
+___
+
+### \_generateAsyncTaskId
+
+▸ **_generateAsyncTaskId**(`taskId?`, `aborters?`): `AsyncTaskId`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `taskId?` | `AsyncTaskId` |
+| `aborters?` | `TaskAbortControllers` |
+
+#### Returns
+
+`AsyncTaskId`
+
+#### Inherited from
+
+CancelableAbility.\_generateAsyncTaskId
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:216
+
+___
+
+### abort
+
+▸ **abort**(`reason?`, `data?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `reason?` | `string` |
+| `data?` | `any` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+CancelableAbility.abort
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:230
+
+___
 
 ### addModel
 
@@ -503,10 +746,6 @@ packages/ai-tool-llm/dist/index.d.ts:304
 #### Returns
 
 `Promise`\<`any`\>
-
-#### Inherited from
-
-LLMProvider.addModel
 
 #### Defined in
 
@@ -528,13 +767,9 @@ ___
 
 `any`[]
 
-#### Inherited from
-
-LLMProvider.arr2ObjParams
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:81
+packages/ai-tool/dist/index-DvpywQaE.d.ts:83
 
 ___
 
@@ -556,10 +791,6 @@ Assign the values from the src object.
 `this`
 
 this object
-
-#### Inherited from
-
-LLMProvider.assign
 
 #### Defined in
 
@@ -586,10 +817,6 @@ Assign a property of src to this object.
 #### Returns
 
 `void`
-
-#### Inherited from
-
-LLMProvider.assignProperty
 
 #### Defined in
 
@@ -620,10 +847,6 @@ Assign the property value from the src to destination object.
 
 **`Abstract`**
 
-#### Inherited from
-
-LLMProvider.assignPropertyTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:131
@@ -649,13 +872,33 @@ Assign this attributes to the dest object
 
 the dest object
 
-#### Inherited from
-
-LLMProvider.assignTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:191
+
+___
+
+### cleanTaskAborter
+
+▸ **cleanTaskAborter**(`aborter`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `aborter` | `TaskAbortController` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+CancelableAbility.cleanTaskAborter
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:220
 
 ___
 
@@ -676,10 +919,6 @@ Create a new object with the same values of attributes.
 `any`
 
 the new object
-
-#### Inherited from
-
-LLMProvider.clone
 
 #### Defined in
 
@@ -706,13 +945,69 @@ Create and assign the values to the destination object.
 
 the new dest object
 
-#### Inherited from
-
-LLMProvider.cloneTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:148
+
+___
+
+### createAborter
+
+▸ **createAborter**(`params?`, `taskId?`, `raiseError?`): `TaskAbortController`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params?` | `any` |
+| `taskId?` | `AsyncTaskId` |
+| `raiseError?` | `boolean` |
+
+#### Returns
+
+`TaskAbortController`
+
+#### Inherited from
+
+CancelableAbility.createAborter
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:218
+
+___
+
+### createTaskPromise
+
+▸ **createTaskPromise**\<`Output`\>(`runTask`, `params`, `options?`): `TaskPromise`\<`Output`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Output` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `runTask` | (`params`: `Record`\<`string`, `any`\>, `aborter`: `TaskAbortController`) => `Promise`\<`Output`\> |
+| `params` | `Record`\<`string`, `any`\> |
+| `options?` | `Object` |
+| `options.raiseError?` | `boolean` |
+| `options.taskId?` | `AsyncTaskId` |
+
+#### Returns
+
+`TaskPromise`\<`Output`\>
+
+#### Inherited from
+
+CancelableAbility.createTaskPromise
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:222
 
 ___
 
@@ -734,10 +1029,6 @@ Define the attributes of this object.
 
 **`Abstract`**
 
-#### Inherited from
-
-LLMProvider.defineProperties
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:89
@@ -757,10 +1048,6 @@ ___
 #### Returns
 
 `Promise`\<`any`\>
-
-#### Inherited from
-
-LLMProvider.deleteModel
 
 #### Defined in
 
@@ -786,10 +1073,6 @@ Export attributes to the dest json object.
 `any`
 
 the dest object.
-
-#### Inherited from
-
-LLMProvider.exportTo
 
 #### Defined in
 
@@ -818,10 +1101,6 @@ ___
 
 `Promise`\<`undefined` \| `string`\>
 
-#### Inherited from
-
-LLMProvider.formatPrompt
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:347
@@ -845,13 +1124,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Overrides
-
-LLMProvider.func
-
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:117](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/llamacpp.ts#L117)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/bddcb350cde2314c95df2454df8e6e5e2a38d96d/src/llamacpp.ts#L140)
 
 ___
 
@@ -872,10 +1147,6 @@ ___
 
 `Promise`\<`undefined` \| `AIPromptResult`\>
 
-#### Inherited from
-
-LLMProvider.getChatTemplate
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:343
@@ -889,10 +1160,6 @@ ___
 #### Returns
 
 `undefined` \| `LLMProvider`
-
-#### Inherited from
-
-LLMProvider.getCurrentProvider
 
 #### Defined in
 
@@ -915,10 +1182,6 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.getDefaultParameters
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:354
@@ -939,13 +1202,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.getFunc
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:87
+packages/ai-tool/dist/index-DvpywQaE.d.ts:89
 
 ___
 
@@ -963,31 +1222,29 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.getFuncWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:92
+packages/ai-tool/dist/index-DvpywQaE.d.ts:94
 
 ___
 
 ### getModelInfo
 
-▸ **getModelInfo**(): `Promise`\<`AIModelParams`\>
+▸ **getModelInfo**(`modelName?`): `Promise`\<`AIModelParams`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `modelName?` | `string` |
 
 #### Returns
 
 `Promise`\<`AIModelParams`\>
 
-#### Overrides
-
-LLMProvider.getModelInfo
-
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:186](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/llamacpp.ts#L186)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/bddcb350cde2314c95df2454df8e6e5e2a38d96d/src/llamacpp.ts#L214)
 
 ___
 
@@ -1005,13 +1262,51 @@ the descriptors of properties object
 
 **`Abstract`**
 
-#### Inherited from
-
-LLMProvider.getProperties
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+
+___
+
+### getRunningTask
+
+▸ **getRunningTask**(`taskId?`): `undefined` \| `TaskAbortController`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `taskId?` | `AsyncTaskId` |
+
+#### Returns
+
+`undefined` \| `TaskAbortController`
+
+#### Inherited from
+
+CancelableAbility.getRunningTask
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:214
+
+___
+
+### getRunningTaskCount
+
+▸ **getRunningTaskCount**(): `number`
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+CancelableAbility.getRunningTaskCount
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:215
 
 ___
 
@@ -1029,13 +1324,9 @@ ___
 
 `boolean`
 
-#### Inherited from
-
-LLMProvider.hasAsyncFeature
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:93
+packages/ai-tool/dist/index-DvpywQaE.d.ts:95
 
 ___
 
@@ -1054,10 +1345,6 @@ Determines whether an object has a property with the specified name.
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-LLMProvider.hasOwnProperty
 
 #### Defined in
 
@@ -1083,13 +1370,33 @@ Initialize object and assign attribute values from src if src exists.
 
 this object.
 
-#### Inherited from
-
-LLMProvider.initialize
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:139
+
+___
+
+### isAborted
+
+▸ **isAborted**(`taskId?`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `taskId?` | `AsyncTaskId` |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+CancelableAbility.isAborted
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:213
 
 ___
 
@@ -1107,10 +1414,6 @@ ___
 #### Returns
 
 `undefined` \| `string` \| `RegExpExecArray`
-
-#### Inherited from
-
-LLMProvider.isModelNameMatched
 
 #### Defined in
 
@@ -1133,10 +1436,6 @@ Determines whether an object exists in another object's prototype chain.
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-LLMProvider.isPrototypeOf
 
 #### Defined in
 
@@ -1161,10 +1460,6 @@ Check the src object whether “equals” this object.
 
 `boolean`
 
-#### Inherited from
-
-LLMProvider.isSame
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:200
@@ -1185,10 +1480,6 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.isStream
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:332
@@ -1202,10 +1493,6 @@ ___
 #### Returns
 
 `Promise`\<`undefined` \| `string`[]\>
-
-#### Inherited from
-
-LLMProvider.listModels
 
 #### Defined in
 
@@ -1229,13 +1516,29 @@ ___
 
 `Object`
 
-#### Inherited from
-
-LLMProvider.listProviders
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:334
+
+___
+
+### loadModel
+
+▸ **loadModel**(`model`): `Promise`\<`any`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `model` | [`LlamaLoadModelOptions`](../interfaces/LlamaLoadModelOptions.md) |
+
+#### Returns
+
+`Promise`\<`any`\>
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/bddcb350cde2314c95df2454df8e6e5e2a38d96d/src/llamacpp.ts#L209)
 
 ___
 
@@ -1258,10 +1561,6 @@ Merge this attributes to dest object.
 
 the dest object.
 
-#### Inherited from
-
-LLMProvider.mergeTo
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:164
@@ -1282,13 +1581,9 @@ ___
 
 `any`[]
 
-#### Inherited from
-
-LLMProvider.obj2ArrParams
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:82
+packages/ai-tool/dist/index-DvpywQaE.d.ts:84
 
 ___
 
@@ -1310,7 +1605,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:23](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/93d35820584e194d5f0d1f510bbd9e1fb303d907/src/llamacpp.ts#L23)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/bddcb350cde2314c95df2454df8e6e5e2a38d96d/src/llamacpp.ts#L43)
 
 ___
 
@@ -1330,10 +1625,6 @@ Determines whether a specified property is enumerable.
 
 `boolean`
 
-#### Inherited from
-
-LLMProvider.propertyIsEnumerable
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
@@ -1348,13 +1639,9 @@ ___
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:79
+packages/ai-tool/dist/index-DvpywQaE.d.ts:81
 
 ___
 
@@ -1372,13 +1659,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.run
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:84
+packages/ai-tool/dist/index-DvpywQaE.d.ts:86
 
 ___
 
@@ -1397,13 +1680,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.runAs
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:85
+packages/ai-tool/dist/index-DvpywQaE.d.ts:87
 
 ___
 
@@ -1422,13 +1701,43 @@ ___
 
 `any`
 
+#### Defined in
+
+packages/ai-tool/dist/index-DvpywQaE.d.ts:88
+
+___
+
+### runAsyncCancelableTask
+
+▸ **runAsyncCancelableTask**\<`Output`\>(`params`, `runTask`, `options?`): `TaskPromise`\<`Output`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Output` | `any` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | `undefined` \| `Record`\<`string`, `any`\> |
+| `runTask` | (`params`: `Record`\<`string`, `any`\>, `aborter`: `TaskAbortController`) => `Promise`\<`Output`\> |
+| `options?` | `Object` |
+| `options.raiseError?` | `boolean` |
+| `options.taskId?` | `AsyncTaskId` |
+
+#### Returns
+
+`TaskPromise`\<`Output`\>
+
 #### Inherited from
 
-LLMProvider.runAsSync
+CancelableAbility.runAsyncCancelableTask
 
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:86
+packages/ai-tool/dist/index.d.ts:226
 
 ___
 
@@ -1446,13 +1755,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.runSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:83
+packages/ai-tool/dist/index-DvpywQaE.d.ts:85
 
 ___
 
@@ -1470,13 +1775,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.runWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:90
+packages/ai-tool/dist/index-DvpywQaE.d.ts:92
 
 ___
 
@@ -1495,13 +1796,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.runWithPosAs
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:91
+packages/ai-tool/dist/index-DvpywQaE.d.ts:93
 
 ___
 
@@ -1520,13 +1817,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.runWithPosAsSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:89
+packages/ai-tool/dist/index-DvpywQaE.d.ts:91
 
 ___
 
@@ -1544,13 +1837,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.runWithPosSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:88
+packages/ai-tool/dist/index-DvpywQaE.d.ts:90
 
 ___
 
@@ -1568,10 +1857,6 @@ ___
 
 `void`
 
-#### Inherited from
-
-LLMProvider.setCurrentProvider
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:341
@@ -1585,10 +1870,6 @@ ___
 #### Returns
 
 `any`
-
-#### Inherited from
-
-LLMProvider.toJSON
 
 #### Defined in
 
@@ -1605,10 +1886,6 @@ Returns a date converted to a string using the current locale.
 #### Returns
 
 `string`
-
-#### Inherited from
-
-LLMProvider.toLocaleString
 
 #### Defined in
 
@@ -1634,10 +1911,6 @@ Convert the attributes to the json object
 
 the json object.
 
-#### Inherited from
-
-LLMProvider.toObject
-
 #### Defined in
 
 node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:181
@@ -1654,10 +1927,6 @@ Returns a string representation of an object.
 
 `string`
 
-#### Inherited from
-
-LLMProvider.toString
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
@@ -1672,13 +1941,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.unregister
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:80
+packages/ai-tool/dist/index-DvpywQaE.d.ts:82
 
 ___
 
@@ -1697,10 +1962,6 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.updateModel
-
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:298
@@ -1716,10 +1977,6 @@ Returns the primitive value of the specified object.
 #### Returns
 
 `Object`
-
-#### Inherited from
-
-LLMProvider.valueOf
 
 #### Defined in
 
@@ -1752,10 +2009,6 @@ target object. Returns the target object.
 
 `T` & `U`
 
-#### Inherited from
-
-LLMProvider.assign
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
@@ -1784,10 +2037,6 @@ target object. Returns the target object.
 #### Returns
 
 `T` & `U` & `V`
-
-#### Inherited from
-
-LLMProvider.assign
 
 #### Defined in
 
@@ -1820,10 +2069,6 @@ target object. Returns the target object.
 
 `T` & `U` & `V` & `W`
 
-#### Inherited from
-
-LLMProvider.assign
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
@@ -1843,10 +2088,6 @@ target object. Returns the target object.
 #### Returns
 
 `any`
-
-#### Inherited from
-
-LLMProvider.assign
 
 #### Defined in
 
@@ -1870,10 +2111,6 @@ Creates an object that has the specified prototype or that has null prototype.
 
 `any`
 
-#### Inherited from
-
-LLMProvider.create
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
@@ -1892,10 +2129,6 @@ Creates an object that has the specified prototype, and that optionally contains
 #### Returns
 
 `any`
-
-#### Inherited from
-
-LLMProvider.create
 
 #### Defined in
 
@@ -1918,10 +2151,6 @@ ___
 #### Returns
 
 `any`
-
-#### Inherited from
-
-LLMProvider.defineProperties
 
 #### Defined in
 
@@ -1953,10 +2182,6 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 `T`
 
-#### Inherited from
-
-LLMProvider.defineProperty
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
@@ -1985,10 +2210,6 @@ Returns an array of key/values of the enumerable properties of an object
 
 [`string`, `T`][]
 
-#### Inherited from
-
-LLMProvider.entries
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
@@ -2006,10 +2227,6 @@ Returns an array of key/values of the enumerable properties of an object
 #### Returns
 
 [`string`, `any`][]
-
-#### Inherited from
-
-LLMProvider.entries
 
 #### Defined in
 
@@ -2039,10 +2256,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 `T`
 
-#### Inherited from
-
-LLMProvider.freeze
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
@@ -2068,10 +2281,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 `Readonly`\<`T`\>
 
-#### Inherited from
-
-LLMProvider.freeze
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
@@ -2095,10 +2304,6 @@ Prevents the modification of existing property attributes and values, and preven
 #### Returns
 
 `Readonly`\<`T`\>
-
-#### Inherited from
-
-LLMProvider.freeze
 
 #### Defined in
 
@@ -2128,10 +2333,6 @@ Returns an object created by key-value entries for properties and methods
 
 `Object`
 
-#### Inherited from
-
-LLMProvider.fromEntries
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
@@ -2149,10 +2350,6 @@ Returns an object created by key-value entries for properties and methods
 #### Returns
 
 `any`
-
-#### Inherited from
-
-LLMProvider.fromEntries
 
 #### Defined in
 
@@ -2174,13 +2371,9 @@ ___
 
 `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.get
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:63
+packages/ai-tool/dist/index-DvpywQaE.d.ts:65
 
 ___
 
@@ -2198,13 +2391,9 @@ ___
 
 `ToolFunc`[]
 
-#### Inherited from
-
-LLMProvider.getAllByTag
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:66
+packages/ai-tool/dist/index-DvpywQaE.d.ts:68
 
 ___
 
@@ -2221,10 +2410,6 @@ ___
 #### Returns
 
 `undefined` \| `LLMProvider`
-
-#### Inherited from
-
-LLMProvider.getByModel
 
 #### Defined in
 
@@ -2246,13 +2431,9 @@ ___
 
 `undefined` \| `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.getByTag
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:65
+packages/ai-tool/dist/index-DvpywQaE.d.ts:67
 
 ___
 
@@ -2263,10 +2444,6 @@ ___
 #### Returns
 
 `undefined` \| `LLMProvider`
-
-#### Inherited from
-
-LLMProvider.getCurrentProvider
 
 #### Defined in
 
@@ -2288,13 +2465,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.getFunc
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:70
+packages/ai-tool/dist/index-DvpywQaE.d.ts:72
 
 ___
 
@@ -2312,13 +2485,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.getFuncWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:73
+packages/ai-tool/dist/index-DvpywQaE.d.ts:75
 
 ___
 
@@ -2339,10 +2508,6 @@ An own property descriptor is one that is defined directly on the object and is 
 #### Returns
 
 `undefined` \| `PropertyDescriptor`
-
-#### Inherited from
-
-LLMProvider.getOwnPropertyDescriptor
 
 #### Defined in
 
@@ -2372,10 +2537,6 @@ Returns an object containing all own property descriptors of an object
 
 \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
 
-#### Inherited from
-
-LLMProvider.getOwnPropertyDescriptors
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
@@ -2399,10 +2560,6 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 `string`[]
 
-#### Inherited from
-
-LLMProvider.getOwnPropertyNames
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
@@ -2425,10 +2582,6 @@ Returns an array of all symbol properties found directly on object o.
 
 `symbol`[]
 
-#### Inherited from
-
-LLMProvider.getOwnPropertySymbols
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
@@ -2444,10 +2597,6 @@ get all properties descriptor include inherited.
 #### Returns
 
 `PropDescriptors`
-
-#### Inherited from
-
-LLMProvider.getProperties
 
 #### Defined in
 
@@ -2471,10 +2620,6 @@ Returns the prototype of an object.
 
 `any`
 
-#### Inherited from
-
-LLMProvider.getPrototypeOf
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
@@ -2495,13 +2640,9 @@ ___
 
 `boolean`
 
-#### Inherited from
-
-LLMProvider.hasAsyncFeature
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:67
+packages/ai-tool/dist/index-DvpywQaE.d.ts:69
 
 ___
 
@@ -2521,10 +2662,6 @@ Returns true if the values are the same value, false otherwise.
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-LLMProvider.is
 
 #### Defined in
 
@@ -2548,10 +2685,6 @@ Returns a value that indicates whether new properties can be added to an object.
 
 `boolean`
 
-#### Inherited from
-
-LLMProvider.isExtensible
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
@@ -2573,10 +2706,6 @@ Returns true if existing property attributes and values cannot be modified in an
 #### Returns
 
 `boolean`
-
-#### Inherited from
-
-LLMProvider.isFrozen
 
 #### Defined in
 
@@ -2600,10 +2729,6 @@ Returns true if existing property attributes cannot be modified in an object and
 
 `boolean`
 
-#### Inherited from
-
-LLMProvider.isSealed
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
@@ -2626,10 +2751,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 `string`[]
 
-#### Inherited from
-
-LLMProvider.keys
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
@@ -2648,10 +2769,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 `string`[]
 
-#### Inherited from
-
-LLMProvider.keys
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
@@ -2666,13 +2783,9 @@ ___
 
 `Funcs`
 
-#### Inherited from
-
-LLMProvider.list
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:64
+packages/ai-tool/dist/index-DvpywQaE.d.ts:66
 
 ___
 
@@ -2698,10 +2811,6 @@ Prevents the addition of new properties to an object.
 
 `T`
 
-#### Inherited from
-
-LLMProvider.preventExtensions
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
@@ -2723,13 +2832,9 @@ ___
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:74
+packages/ai-tool/dist/index-DvpywQaE.d.ts:76
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2744,13 +2849,9 @@ packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:74
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:75
+packages/ai-tool/dist/index-DvpywQaE.d.ts:77
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2765,13 +2866,9 @@ packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:75
 
 `boolean` \| `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.register
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:76
+packages/ai-tool/dist/index-DvpywQaE.d.ts:78
 
 ___
 
@@ -2790,13 +2887,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.run
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:68
+packages/ai-tool/dist/index-DvpywQaE.d.ts:70
 
 ___
 
@@ -2815,13 +2908,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.runSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:69
+packages/ai-tool/dist/index-DvpywQaE.d.ts:71
 
 ___
 
@@ -2840,13 +2929,9 @@ ___
 
 `Promise`\<`any`\>
 
-#### Inherited from
-
-LLMProvider.runWithPos
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:71
+packages/ai-tool/dist/index-DvpywQaE.d.ts:73
 
 ___
 
@@ -2865,13 +2950,9 @@ ___
 
 `any`
 
-#### Inherited from
-
-LLMProvider.runWithPosSync
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:72
+packages/ai-tool/dist/index-DvpywQaE.d.ts:74
 
 ___
 
@@ -2897,10 +2978,6 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 `T`
 
-#### Inherited from
-
-LLMProvider.seal
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
@@ -2924,10 +3001,6 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 `any`
 
-#### Inherited from
-
-LLMProvider.setPrototypeOf
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
@@ -2948,13 +3021,9 @@ ___
 
 `undefined` \| `ToolFunc`
 
-#### Inherited from
-
-LLMProvider.unregister
-
 #### Defined in
 
-packages/ai-tool/dist/index-Dgo3ZXPQ.d.ts:77
+packages/ai-tool/dist/index-DvpywQaE.d.ts:79
 
 ___
 
@@ -2980,10 +3049,6 @@ Returns an array of values of the enumerable properties of an object
 
 `T`[]
 
-#### Inherited from
-
-LLMProvider.values
-
 #### Defined in
 
 node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
@@ -3001,10 +3066,6 @@ Returns an array of values of the enumerable properties of an object
 #### Returns
 
 `any`[]
-
-#### Inherited from
-
-LLMProvider.values
 
 #### Defined in
 
