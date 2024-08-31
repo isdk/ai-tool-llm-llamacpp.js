@@ -188,7 +188,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:80
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:5
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
 
 ___
 
@@ -202,7 +202,7 @@ CancelableAbility.\_\_task\_aborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:209
+packages/ai-tool/dist/index.d.ts:210
 
 ___
 
@@ -216,7 +216,7 @@ CancelableAbility.\_\_task\_semaphore
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:210
+packages/ai-tool/dist/index.d.ts:211
 
 ___
 
@@ -230,7 +230,7 @@ CancelableAbility.\_asyncFeatures
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:202
+packages/ai-tool/dist/index.d.ts:203
 
 ___
 
@@ -244,7 +244,7 @@ CancelableAbility.\_maxTaskConcurrency
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:203
+packages/ai-tool/dist/index.d.ts:204
 
 ___
 
@@ -293,7 +293,7 @@ CancelableAbility.cleanMultiTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:208
+packages/ai-tool/dist/index.d.ts:209
 
 ___
 
@@ -324,7 +324,7 @@ The default options for export and assign
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:74
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
 
 ___
 
@@ -379,7 +379,7 @@ CancelableAbility.generateAsyncTaskId
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:207
+packages/ai-tool/dist/index.d.ts:208
 
 ___
 
@@ -411,7 +411,7 @@ the property with the default prefix '$' will not be exported.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:78
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
 
 ___
 
@@ -468,7 +468,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e5fd257b47b158172a9bf9687c59d128aa82dc4a/src/llamacpp.ts#L41)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db257f84cb586462dda4b541aacf37e9583f6807/src/llamacpp.ts#L41)
 
 ___
 
@@ -585,7 +585,7 @@ CancelableAbility.maxTaskConcurrency
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:211
+packages/ai-tool/dist/index.d.ts:212
 
 ___
 
@@ -603,7 +603,7 @@ CancelableAbility.semaphore
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:212
+packages/ai-tool/dist/index.d.ts:213
 
 ## Methods
 
@@ -628,7 +628,7 @@ CancelableAbility.$cleanMultiTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:219
+packages/ai-tool/dist/index.d.ts:220
 
 ___
 
@@ -653,7 +653,7 @@ CancelableAbility.$generateAsyncTaskId
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:217
+packages/ai-tool/dist/index.d.ts:218
 
 ___
 
@@ -678,7 +678,7 @@ CancelableAbility.\_cleanMultiTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:221
+packages/ai-tool/dist/index.d.ts:222
 
 ___
 
@@ -703,7 +703,7 @@ CancelableAbility.\_generateAsyncTaskId
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:216
+packages/ai-tool/dist/index.d.ts:217
 
 ___
 
@@ -728,7 +728,7 @@ CancelableAbility.abort
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:230
+packages/ai-tool/dist/index.d.ts:231
 
 ___
 
@@ -794,7 +794,7 @@ this object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:106
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
 
 ___
 
@@ -820,7 +820,7 @@ Assign a property of src to this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:117
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
 
 ___
 
@@ -849,7 +849,7 @@ Assign the property value from the src to destination object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:131
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
 
 ___
 
@@ -874,7 +874,7 @@ the dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:191
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
 
 ___
 
@@ -898,7 +898,7 @@ CancelableAbility.cleanTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:220
+packages/ai-tool/dist/index.d.ts:221
 
 ___
 
@@ -922,7 +922,7 @@ the new object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:155
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
 
 ___
 
@@ -947,7 +947,7 @@ the new dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:148
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
 
 ___
 
@@ -973,7 +973,7 @@ CancelableAbility.createAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:218
+packages/ai-tool/dist/index.d.ts:219
 
 ___
 
@@ -1007,7 +1007,7 @@ CancelableAbility.createTaskPromise
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:222
+packages/ai-tool/dist/index.d.ts:223
 
 ___
 
@@ -1031,7 +1031,7 @@ Define the attributes of this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:89
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
 
 ___
 
@@ -1076,7 +1076,7 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:173
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
 
 ___
 
@@ -1126,7 +1126,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e5fd257b47b158172a9bf9687c59d128aa82dc4a/src/llamacpp.ts#L140)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db257f84cb586462dda4b541aacf37e9583f6807/src/llamacpp.ts#L140)
 
 ___
 
@@ -1244,7 +1244,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e5fd257b47b158172a9bf9687c59d128aa82dc4a/src/llamacpp.ts#L214)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db257f84cb586462dda4b541aacf37e9583f6807/src/llamacpp.ts#L214)
 
 ___
 
@@ -1264,7 +1264,7 @@ the descriptors of properties object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:98
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
 
 ___
 
@@ -1288,7 +1288,7 @@ CancelableAbility.getRunningTask
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:214
+packages/ai-tool/dist/index.d.ts:215
 
 ___
 
@@ -1306,7 +1306,7 @@ CancelableAbility.getRunningTaskCount
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:215
+packages/ai-tool/dist/index.d.ts:216
 
 ___
 
@@ -1372,7 +1372,7 @@ this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:139
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
 
 ___
 
@@ -1396,7 +1396,7 @@ CancelableAbility.isAborted
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:213
+packages/ai-tool/dist/index.d.ts:214
 
 ___
 
@@ -1462,7 +1462,7 @@ Check the src object whether “equals” this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:200
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
 
 ___
 
@@ -1538,7 +1538,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e5fd257b47b158172a9bf9687c59d128aa82dc4a/src/llamacpp.ts#L209)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db257f84cb586462dda4b541aacf37e9583f6807/src/llamacpp.ts#L209)
 
 ___
 
@@ -1563,7 +1563,7 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:164
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
 
 ___
 
@@ -1605,7 +1605,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e5fd257b47b158172a9bf9687c59d128aa82dc4a/src/llamacpp.ts#L43)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/db257f84cb586462dda4b541aacf37e9583f6807/src/llamacpp.ts#L43)
 
 ___
 
@@ -1737,7 +1737,7 @@ CancelableAbility.runAsyncCancelableTask
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:226
+packages/ai-tool/dist/index.d.ts:227
 
 ___
 
@@ -1873,7 +1873,7 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:182
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
 
 ___
 
@@ -1913,7 +1913,7 @@ the json object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/abstract.d.ts:181
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
 
 ___
 
@@ -2154,7 +2154,7 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:11
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
 
 ___
 
@@ -2600,7 +2600,7 @@ get all properties descriptor include inherited.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0-alpha.5/node_modules/property-manager/lib/advance.d.ts:10
+node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
 
 ___
 
