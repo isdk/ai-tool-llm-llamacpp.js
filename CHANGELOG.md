@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.7](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.6...v0.3.7) (2024-09-01)
+
 ## [0.3.6](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.5...v0.3.6) (2024-08-31)
 
 ## [0.3.5](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.4...v0.3.5) (2024-08-28)
