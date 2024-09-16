@@ -178,7 +178,7 @@ CancelableAbility.constructor
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:80
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:80
 
 ## Properties
 
@@ -202,7 +202,7 @@ CancelableAbility.\_\_task\_aborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:210
+packages/ai-tool/dist/index.d.ts:212
 
 ___
 
@@ -216,7 +216,7 @@ CancelableAbility.\_\_task\_semaphore
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:211
+packages/ai-tool/dist/index.d.ts:213
 
 ___
 
@@ -230,7 +230,7 @@ CancelableAbility.\_asyncFeatures
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:203
+packages/ai-tool/dist/index.d.ts:205
 
 ___
 
@@ -244,7 +244,7 @@ CancelableAbility.\_maxTaskConcurrency
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:204
+packages/ai-tool/dist/index.d.ts:206
 
 ___
 
@@ -254,7 +254,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:153
+packages/ai-tool-llm/dist/index.d.ts:152
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:154
+packages/ai-tool-llm/dist/index.d.ts:153
 
 ___
 
@@ -293,7 +293,7 @@ CancelableAbility.cleanMultiTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:209
+packages/ai-tool/dist/index.d.ts:211
 
 ___
 
@@ -332,15 +332,13 @@ ___
 
 • **depends**: `Object`
 
-#### Type declaration
+#### Index signature
 
-| Name | Type |
-| :------ | :------ |
-| `event-bus` | `EventToolFunc` |
+▪ [name: `string`]: `ToolFunc`
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:326
+packages/ai-tool-llm/dist/index.d.ts:325
 
 ___
 
@@ -350,7 +348,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:307
+packages/ai-tool-llm/dist/index.d.ts:306
 
 ___
 
@@ -379,7 +377,7 @@ CancelableAbility.generateAsyncTaskId
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:208
+packages/ai-tool/dist/index.d.ts:210
 
 ___
 
@@ -389,7 +387,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:42
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
 
 ___
 
@@ -399,7 +397,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:36
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
 
 ___
 
@@ -438,7 +436,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:308
+packages/ai-tool-llm/dist/index.d.ts:307
 
 ___
 
@@ -448,7 +446,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:151
+packages/ai-tool-llm/dist/index.d.ts:150
 
 ___
 
@@ -458,7 +456,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:325
+packages/ai-tool-llm/dist/index.d.ts:324
 
 ___
 
@@ -468,7 +466,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/1faba182a165808fbbc7003c50a815dfe07e42ff/src/llamacpp.ts#L41)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L41)
 
 ___
 
@@ -478,7 +476,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:39
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
 
 ___
 
@@ -503,7 +501,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:41
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
 
 ___
 
@@ -513,7 +511,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:43
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
 
 ___
 
@@ -523,7 +521,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:152
+packages/ai-tool-llm/dist/index.d.ts:151
 
 ___
 
@@ -533,7 +531,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:40
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
 
 ___
 
@@ -543,7 +541,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:303
+packages/ai-tool-llm/dist/index.d.ts:302
 
 ___
 
@@ -553,7 +551,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:64
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:64
 
 ___
 
@@ -567,7 +565,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:304
+packages/ai-tool-llm/dist/index.d.ts:303
 
 ## Accessors
 
@@ -585,7 +583,7 @@ CancelableAbility.maxTaskConcurrency
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:212
+packages/ai-tool/dist/index.d.ts:214
 
 ___
 
@@ -603,7 +601,7 @@ CancelableAbility.semaphore
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:213
+packages/ai-tool/dist/index.d.ts:215
 
 ## Methods
 
@@ -628,7 +626,7 @@ CancelableAbility.$cleanMultiTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:220
+packages/ai-tool/dist/index.d.ts:222
 
 ___
 
@@ -653,7 +651,7 @@ CancelableAbility.$generateAsyncTaskId
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:218
+packages/ai-tool/dist/index.d.ts:220
 
 ___
 
@@ -678,7 +676,7 @@ CancelableAbility.\_cleanMultiTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:222
+packages/ai-tool/dist/index.d.ts:224
 
 ___
 
@@ -703,7 +701,7 @@ CancelableAbility.\_generateAsyncTaskId
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:217
+packages/ai-tool/dist/index.d.ts:219
 
 ___
 
@@ -728,7 +726,7 @@ CancelableAbility.abort
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:231
+packages/ai-tool/dist/index.d.ts:233
 
 ___
 
@@ -749,7 +747,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:299
+packages/ai-tool-llm/dist/index.d.ts:298
 
 ___
 
@@ -769,7 +767,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:83
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:83
 
 ___
 
@@ -898,7 +896,7 @@ CancelableAbility.cleanTaskAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:221
+packages/ai-tool/dist/index.d.ts:223
 
 ___
 
@@ -973,7 +971,7 @@ CancelableAbility.createAborter
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:219
+packages/ai-tool/dist/index.d.ts:221
 
 ___
 
@@ -1007,7 +1005,7 @@ CancelableAbility.createTaskPromise
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:223
+packages/ai-tool/dist/index.d.ts:225
 
 ___
 
@@ -1051,7 +1049,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:300
+packages/ai-tool-llm/dist/index.d.ts:299
 
 ___
 
@@ -1103,7 +1101,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:347
+packages/ai-tool-llm/dist/index.d.ts:346
 
 ___
 
@@ -1126,7 +1124,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/1faba182a165808fbbc7003c50a815dfe07e42ff/src/llamacpp.ts#L140)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L140)
 
 ___
 
@@ -1149,7 +1147,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:343
+packages/ai-tool-llm/dist/index.d.ts:342
 
 ___
 
@@ -1163,7 +1161,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:340
+packages/ai-tool-llm/dist/index.d.ts:339
 
 ___
 
@@ -1184,7 +1182,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:354
+packages/ai-tool-llm/dist/index.d.ts:353
 
 ___
 
@@ -1204,7 +1202,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:89
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:89
 
 ___
 
@@ -1224,7 +1222,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:94
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:94
 
 ___
 
@@ -1244,7 +1242,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/1faba182a165808fbbc7003c50a815dfe07e42ff/src/llamacpp.ts#L214)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L214)
 
 ___
 
@@ -1288,7 +1286,7 @@ CancelableAbility.getRunningTask
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:215
+packages/ai-tool/dist/index.d.ts:217
 
 ___
 
@@ -1306,7 +1304,7 @@ CancelableAbility.getRunningTaskCount
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:216
+packages/ai-tool/dist/index.d.ts:218
 
 ___
 
@@ -1326,7 +1324,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:95
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:95
 
 ___
 
@@ -1396,7 +1394,7 @@ CancelableAbility.isAborted
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:214
+packages/ai-tool/dist/index.d.ts:216
 
 ___
 
@@ -1417,7 +1415,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:331
+packages/ai-tool-llm/dist/index.d.ts:330
 
 ___
 
@@ -1482,7 +1480,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:332
+packages/ai-tool-llm/dist/index.d.ts:331
 
 ___
 
@@ -1496,7 +1494,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:297
+packages/ai-tool-llm/dist/index.d.ts:296
 
 ___
 
@@ -1518,7 +1516,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:334
+packages/ai-tool-llm/dist/index.d.ts:333
 
 ___
 
@@ -1538,7 +1536,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/1faba182a165808fbbc7003c50a815dfe07e42ff/src/llamacpp.ts#L209)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L209)
 
 ___
 
@@ -1583,7 +1581,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:84
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:84
 
 ___
 
@@ -1605,7 +1603,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/1faba182a165808fbbc7003c50a815dfe07e42ff/src/llamacpp.ts#L43)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L43)
 
 ___
 
@@ -1641,7 +1639,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:81
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:81
 
 ___
 
@@ -1661,7 +1659,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:86
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:86
 
 ___
 
@@ -1682,7 +1680,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:87
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:87
 
 ___
 
@@ -1703,7 +1701,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:88
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:88
 
 ___
 
@@ -1737,7 +1735,7 @@ CancelableAbility.runAsyncCancelableTask
 
 #### Defined in
 
-packages/ai-tool/dist/index.d.ts:227
+packages/ai-tool/dist/index.d.ts:229
 
 ___
 
@@ -1757,7 +1755,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:85
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:85
 
 ___
 
@@ -1777,7 +1775,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:92
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:92
 
 ___
 
@@ -1798,7 +1796,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:93
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:93
 
 ___
 
@@ -1819,7 +1817,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:91
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:91
 
 ___
 
@@ -1839,7 +1837,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:90
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:90
 
 ___
 
@@ -1859,7 +1857,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:341
+packages/ai-tool-llm/dist/index.d.ts:340
 
 ___
 
@@ -1943,7 +1941,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:82
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:82
 
 ___
 
@@ -1964,7 +1962,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:298
+packages/ai-tool-llm/dist/index.d.ts:297
 
 ___
 
@@ -2373,7 +2371,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:65
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:65
 
 ___
 
@@ -2393,7 +2391,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:68
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:68
 
 ___
 
@@ -2413,7 +2411,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:329
+packages/ai-tool-llm/dist/index.d.ts:328
 
 ___
 
@@ -2433,7 +2431,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:67
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:67
 
 ___
 
@@ -2447,7 +2445,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:330
+packages/ai-tool-llm/dist/index.d.ts:329
 
 ___
 
@@ -2467,7 +2465,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:72
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:72
 
 ___
 
@@ -2487,7 +2485,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:75
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:75
 
 ___
 
@@ -2642,7 +2640,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:69
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:69
 
 ___
 
@@ -2785,7 +2783,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:66
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:66
 
 ___
 
@@ -2834,7 +2832,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:76
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:76
 
 ▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
@@ -2851,7 +2849,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:76
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:77
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:77
 
 ▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
 
@@ -2868,7 +2866,7 @@ packages/ai-tool/dist/index-DvpywQaE.d.ts:77
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:78
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:78
 
 ___
 
@@ -2889,7 +2887,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:70
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:70
 
 ___
 
@@ -2910,7 +2908,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:71
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:71
 
 ___
 
@@ -2931,7 +2929,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:73
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:73
 
 ___
 
@@ -2952,7 +2950,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:74
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:74
 
 ___
 
@@ -3023,7 +3021,7 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-DvpywQaE.d.ts:79
+packages/ai-tool/dist/index-nP9lSU6E.d.ts:79
 
 ___
 

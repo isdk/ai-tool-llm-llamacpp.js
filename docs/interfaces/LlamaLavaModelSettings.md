@@ -54,7 +54,7 @@ AILavaModelSettings.\_id
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:214
+packages/ai-tool-llm/dist/index.d.ts:213
 
 ___
 
@@ -68,7 +68,7 @@ AILavaModelSettings.author
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:246
+packages/ai-tool-llm/dist/index.d.ts:245
 
 ___
 
@@ -82,7 +82,7 @@ AILavaModelSettings.chat\_template
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:249
+packages/ai-tool-llm/dist/index.d.ts:248
 
 ___
 
@@ -96,7 +96,7 @@ AILavaModelSettings.config
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:250
+packages/ai-tool-llm/dist/index.d.ts:249
 
 ___
 
@@ -112,7 +112,7 @@ AILavaModelSettings.content\_size
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:229
+packages/ai-tool-llm/dist/index.d.ts:228
 
 ___
 
@@ -126,7 +126,7 @@ AILavaModelSettings.createdAt
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:252
+packages/ai-tool-llm/dist/index.d.ts:251
 
 ___
 
@@ -140,7 +140,7 @@ AILavaModelSettings.description
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:245
+packages/ai-tool-llm/dist/index.d.ts:244
 
 ___
 
@@ -154,7 +154,7 @@ AILavaModelSettings.downloaded
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:254
+packages/ai-tool-llm/dist/index.d.ts:253
 
 ___
 
@@ -168,7 +168,7 @@ AILavaModelSettings.downloads
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:243
+packages/ai-tool-llm/dist/index.d.ts:242
 
 ___
 
@@ -182,7 +182,7 @@ AILavaModelSettings.featured
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:241
+packages/ai-tool-llm/dist/index.d.ts:240
 
 ___
 
@@ -196,7 +196,7 @@ AILavaModelSettings.files
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:259
+packages/ai-tool-llm/dist/index.d.ts:258
 
 ___
 
@@ -212,7 +212,7 @@ AILavaModelSettings.hf\_repo
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:238
+packages/ai-tool-llm/dist/index.d.ts:237
 
 ___
 
@@ -226,7 +226,7 @@ AILavaModelSettings.language
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:251
+packages/ai-tool-llm/dist/index.d.ts:250
 
 ___
 
@@ -240,7 +240,7 @@ AILavaModelSettings.license
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:247
+packages/ai-tool-llm/dist/index.d.ts:246
 
 ___
 
@@ -254,7 +254,7 @@ AILavaModelSettings.likes
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:242
+packages/ai-tool-llm/dist/index.d.ts:241
 
 ___
 
@@ -268,7 +268,7 @@ AILavaModelSettings.logo
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:248
+packages/ai-tool-llm/dist/index.d.ts:247
 
 ___
 
@@ -282,7 +282,7 @@ AILavaModelSettings.model
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:262
+packages/ai-tool-llm/dist/index.d.ts:261
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:487](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/1faba182a165808fbbc7003c50a815dfe07e42ff/src/options.ts#L487)
+[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L509)
 
 ___
 
@@ -308,7 +308,7 @@ AILavaModelSettings.name
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:218
+packages/ai-tool-llm/dist/index.d.ts:217
 
 ___
 
@@ -324,7 +324,7 @@ AILavaModelSettings.params\_size
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:225
+packages/ai-tool-llm/dist/index.d.ts:224
 
 ___
 
@@ -338,7 +338,7 @@ AILavaModelSettings.provider
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:240
+packages/ai-tool-llm/dist/index.d.ts:239
 
 ___
 
@@ -352,7 +352,7 @@ AILavaModelSettings.scale
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:230
+packages/ai-tool-llm/dist/index.d.ts:229
 
 ___
 
@@ -366,7 +366,7 @@ AILavaModelSettings.skills
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:239
+packages/ai-tool-llm/dist/index.d.ts:238
 
 ___
 
@@ -380,7 +380,7 @@ AILavaModelSettings.source
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:221
+packages/ai-tool-llm/dist/index.d.ts:220
 
 ___
 
@@ -394,7 +394,7 @@ AILavaModelSettings.supports
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:220
+packages/ai-tool-llm/dist/index.d.ts:219
 
 ___
 
@@ -408,7 +408,7 @@ AILavaModelSettings.title
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:244
+packages/ai-tool-llm/dist/index.d.ts:243
 
 ___
 
@@ -422,7 +422,7 @@ AILavaModelSettings.type
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:219
+packages/ai-tool-llm/dist/index.d.ts:218
 
 ___
 
@@ -436,7 +436,7 @@ AILavaModelSettings.updatedAt
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:253
+packages/ai-tool-llm/dist/index.d.ts:252
 
 ___
 
@@ -452,4 +452,4 @@ AILavaModelSettings.url
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:234
+packages/ai-tool-llm/dist/index.d.ts:233
