@@ -280,46 +280,68 @@ export enum LlamaSplitMode {
 // common/common.h gpt_params
 // common/common.cpp gpt_params_find_arg
 export interface LlamaLoadModelOptions extends AIOptions {
+  host?: string
+  port?: number
+  api_key?: string
+  ssl_key_file?: string
+  ssl_cert_file?: string
+  timeout?: number
+  threads_http?: number
+  version?: boolean
+
+  log_format?: 'json' | 'text'
+  simple_io?: boolean   // use basic IO for better compatibility in subprocesses and limited consoles
+  logdir?: string       // path under which to save YAML logs (no logging if unset)
+  log_disable?: boolean // Disable trace logs
+  log_enable?: boolean  // Enable trace logs
+  log_file?: string     // Specify a log filename (without extension)
+  log_new?: boolean     // Create a separate new log file on start. Each log file will have unique name: "<name>.<ID>.log"
+  log_append?: boolean  // Don't truncate the old log file.
+
+  no_slots?: boolean
+
   threads?: number
   threads_batch?: number
   threads_draft?: number
   threads_batch_draft?: number
   escape?: boolean
+  no_escape?: boolean
   path_prompt_cache?: string
   prompt_cache_all?: boolean  // save user input and generations to prompt cache
   prompt_cache_ro?: boolean   // open the prompt cache read-only and do not update it
-  n_predict?: number          // limits number of tokens to predict
+  predict?: number            // number of tokens to predict (default: -1, -1 = infinity, -2 = until context filled)
   /**
    * Specify the context window size of the model that you have loaded in your
    * Llama.cpp server.
   // Set the size of the prompt context. The default is 512, but LLaMA models were built with a context of 2048, which will provide better results for longer input/inference.
   // The size may differ in other models, for example, baichuan models were build with a context of 4096.
    */
-  n_ctx?: number
+  ctx_size?: number // size of the prompt context (default: 0, 0 = loaded from model)
   grp_attn_n?: number
   grp_attn_w?: number
   rope_freq_base?: number
   rope_freq_scale?: number
   rope_scaling?: LlamaRopeScalingType
+  rope_scale?: number
   yarn_orig_ctx?: number
   yarn_ext_factor?: number
   yarn_attn_factor?: number
   yarn_beta_fast?: number
   yarn_beta_slow?: number
   pooling?: 'none'|'mean'|'cls'|'last'
-  attention_type?: 'causal'|'non-causal'
+  attention?: 'causal'|'non-causal'
   defrag_thold?: number
   samplers?: string
   samplers_sequence?: string
 
-  batch?: number
-  ubatch?: number
-  n_keep?: number
-  n_draft?: number
-  n_chunks?: number
+  batch_size?: number
+  ubatch_size?: number
+  keep?: number     // number of tokens to keep from the initial prompt (default: 0, -1 = all)
+  draft?: number    // number of tokens to draft for speculative decoding (default: 5)
+  chunks?: number   // max number of chunks to process (default: -1, -1 = all)
   parallel?: number
-  n_sequences?: number
-  p_split?: number
+  sequences?: number  // number of sequences to decode (default: 1)
+  p_split?: number    // speculative decoding split probability (default: 0.1)
 
   model: string
   model_draft?: string // draft model for speculative decoding
@@ -349,7 +371,8 @@ export interface LlamaLoadModelOptions extends AIOptions {
   cache_type_v?: LlamaCacheQuantType
   multiline_input?: boolean
   cont_batching?: boolean
-  flash_attn?: boolean
+  no_cont_batching?: boolean
+  flash_attn?: boolean    // enable Flash Attention (default: disabled)
   use_mlock?: boolean
   gpu_layers?: number
   gpu_layers_draft?: number
@@ -363,7 +386,6 @@ export interface LlamaLoadModelOptions extends AIOptions {
   verbose_prompt?: boolean
   reverse_prompt?: boolean
   display_prompt?: boolean
-  logdir?: string
   lookup_cache_static?: string
   lookup_cache_dynamic?: string
   logits_file?: string
@@ -380,8 +402,8 @@ export const LlamaLoadModelOptionsKeys: (keyof LlamaLoadModelOptions)[] = [
   'path_prompt_cache',
   'prompt_cache_all',
   'prompt_cache_ro',
-  'n_predict',
-  'n_ctx',
+  'predict',
+  'ctx_size',
   'grp_attn_n',
   'grp_attn_w',
   'rope_freq_base',
@@ -397,13 +419,13 @@ export const LlamaLoadModelOptionsKeys: (keyof LlamaLoadModelOptions)[] = [
   'defrag_thold',
   'samplers',
   'samplers_sequence',
-  'batch',
-  'ubatch',
-  'n_keep',
-  'n_draft',
-  'n_chunks',
+  'batch_size',
+  'ubatch_size',
+  'keep',
+  'draft',
+  'chunks',
   'parallel',
-  'n_sequences',
+  'sequences',
   'p_split',
   'model',
   'model_draft',

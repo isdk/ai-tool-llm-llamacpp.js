@@ -189,7 +189,8 @@ async function testGeneration(provider: LLMProvider = llamaCpp) {
 }
 
 describe('LlamaCpp Provider', async () => {
-  beforeAll(()=>{
+  beforeAll(async ()=>{
+    await promptsFunc.initData()
     ToolFunc.register(promptsFunc)
     testLLMProvider.register()
     llamaCpp.register()
