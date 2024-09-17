@@ -1,454 +1,422 @@
-[@isdk/ai-tool-llm-llamacpp](../README.md) / [Exports](../modules.md) / LlamaLavaModelSettings
+[**@isdk/ai-tool-llm-llamacpp**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-llm-llamacpp](../globals.md) / LlamaLavaModelSettings
 
 # Interface: LlamaLavaModelSettings
 
-## Hierarchy
+## Extends
 
 - `AILavaModelSettings`
 
-  ↳ **`LlamaLavaModelSettings`**
-
-## Table of contents
-
-### Properties
-
-- [\_id](LlamaLavaModelSettings.md#_id)
-- [author](LlamaLavaModelSettings.md#author)
-- [chat\_template](LlamaLavaModelSettings.md#chat_template)
-- [config](LlamaLavaModelSettings.md#config)
-- [content\_size](LlamaLavaModelSettings.md#content_size)
-- [createdAt](LlamaLavaModelSettings.md#createdat)
-- [description](LlamaLavaModelSettings.md#description)
-- [downloaded](LlamaLavaModelSettings.md#downloaded)
-- [downloads](LlamaLavaModelSettings.md#downloads)
-- [featured](LlamaLavaModelSettings.md#featured)
-- [files](LlamaLavaModelSettings.md#files)
-- [hf\_repo](LlamaLavaModelSettings.md#hf_repo)
-- [language](LlamaLavaModelSettings.md#language)
-- [license](LlamaLavaModelSettings.md#license)
-- [likes](LlamaLavaModelSettings.md#likes)
-- [logo](LlamaLavaModelSettings.md#logo)
-- [model](LlamaLavaModelSettings.md#model)
-- [n\_embd](LlamaLavaModelSettings.md#n_embd)
-- [name](LlamaLavaModelSettings.md#name)
-- [params\_size](LlamaLavaModelSettings.md#params_size)
-- [provider](LlamaLavaModelSettings.md#provider)
-- [scale](LlamaLavaModelSettings.md#scale)
-- [skills](LlamaLavaModelSettings.md#skills)
-- [source](LlamaLavaModelSettings.md#source)
-- [supports](LlamaLavaModelSettings.md#supports)
-- [title](LlamaLavaModelSettings.md#title)
-- [type](LlamaLavaModelSettings.md#type)
-- [updatedAt](LlamaLavaModelSettings.md#updatedat)
-- [url](LlamaLavaModelSettings.md#url)
-
 ## Properties
 
-### \_id
+### \_id?
 
-• `Optional` **\_id**: `string`
+> `optional` **\_id**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.\_id
+`AILavaModelSettings._id`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:213
 
-___
+***
 
-### author
+### author?
 
-• `Optional` **author**: `string`
+> `optional` **author**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.author
+`AILavaModelSettings.author`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:245
 
-___
+***
 
-### chat\_template
+### chat\_template?
 
-• `Optional` **chat\_template**: `string`
+> `optional` **chat\_template**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.chat\_template
+`AILavaModelSettings.chat_template`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:248
 
-___
+***
 
-### config
+### config?
 
-• `Optional` **config**: `AIOptions`
+> `optional` **config**: `AIOptions`
 
 #### Inherited from
 
-AILavaModelSettings.config
+`AILavaModelSettings.config`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:249
 
-___
+***
 
-### content\_size
+### content\_size?
 
-• `Optional` **content\_size**: `number`
+> `optional` **content\_size**: `number`
 
 the content length in train
 
 #### Inherited from
 
-AILavaModelSettings.content\_size
+`AILavaModelSettings.content_size`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:228
 
-___
+***
 
-### createdAt
+### createdAt?
 
-• `Optional` **createdAt**: `Date`
+> `optional` **createdAt**: `Date`
 
 #### Inherited from
 
-AILavaModelSettings.createdAt
+`AILavaModelSettings.createdAt`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:251
 
-___
+***
 
-### description
+### description?
 
-• `Optional` **description**: `string`
+> `optional` **description**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.description
+`AILavaModelSettings.description`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:244
 
-___
+***
 
-### downloaded
+### downloaded?
 
-• `Optional` **downloaded**: `boolean`
+> `optional` **downloaded**: `boolean`
 
 #### Inherited from
 
-AILavaModelSettings.downloaded
+`AILavaModelSettings.downloaded`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:253
 
-___
+***
 
-### downloads
+### downloads?
 
-• `Optional` **downloads**: `number`
+> `optional` **downloads**: `number`
 
 #### Inherited from
 
-AILavaModelSettings.downloads
+`AILavaModelSettings.downloads`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:242
 
-___
+***
 
-### featured
+### featured?
 
-• `Optional` **featured**: `boolean`
+> `optional` **featured**: `boolean`
 
 #### Inherited from
 
-AILavaModelSettings.featured
+`AILavaModelSettings.featured`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:240
 
-___
+***
 
-### files
+### files?
 
-• `Optional` **files**: `AIModelFileSettings`[]
+> `optional` **files**: `AIModelFileSettings`[]
 
 #### Inherited from
 
-AILavaModelSettings.files
+`AILavaModelSettings.files`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:258
 
-___
+***
 
-### hf\_repo
+### hf\_repo?
 
-• `Optional` **hf\_repo**: `string`
+> `optional` **hf\_repo**: `string`
 
 hugging-face repo name
 
 #### Inherited from
 
-AILavaModelSettings.hf\_repo
+`AILavaModelSettings.hf_repo`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:237
 
-___
+***
 
-### language
+### language?
 
-• `Optional` **language**: `string`[]
+> `optional` **language**: `string`[]
 
 #### Inherited from
 
-AILavaModelSettings.language
+`AILavaModelSettings.language`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:250
 
-___
+***
 
-### license
+### license?
 
-• `Optional` **license**: `string`
+> `optional` **license**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.license
+`AILavaModelSettings.license`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:246
 
-___
+***
 
-### likes
+### likes?
 
-• `Optional` **likes**: `number`
+> `optional` **likes**: `number`
 
 #### Inherited from
 
-AILavaModelSettings.likes
+`AILavaModelSettings.likes`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:241
 
-___
+***
 
-### logo
+### logo?
 
-• `Optional` **logo**: `string`
+> `optional` **logo**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.logo
+`AILavaModelSettings.logo`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:247
 
-___
+***
 
 ### model
 
-• **model**: `AIModelNameRule` \| `AIModelNameRule`[]
+> **model**: `AIModelNameRule` \| `AIModelNameRule`[]
 
 #### Inherited from
 
-AILavaModelSettings.model
+`AILavaModelSettings.model`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:261
 
-___
+***
 
-### n\_embd
+### n\_embd?
 
-• `Optional` **n\_embd**: `number`
+> `optional` **n\_embd**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L509)
+[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L509)
 
-___
+***
 
-### name
+### name?
 
-• `Optional` **name**: `string`
+> `optional` **name**: `string`
 
 the model unique name, but not the unique in db
 
 #### Inherited from
 
-AILavaModelSettings.name
+`AILavaModelSettings.name`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:217
 
-___
+***
 
-### params\_size
+### params\_size?
 
-• `Optional` **params\_size**: `number`
+> `optional` **params\_size**: `number`
 
 the model params size in bytes
 
 #### Inherited from
 
-AILavaModelSettings.params\_size
+`AILavaModelSettings.params_size`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:224
 
-___
+***
 
-### provider
+### provider?
 
-• `Optional` **provider**: `string`
+> `optional` **provider**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.provider
+`AILavaModelSettings.provider`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:239
 
-___
+***
 
-### scale
+### scale?
 
-• `Optional` **scale**: `string`
+> `optional` **scale**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.scale
+`AILavaModelSettings.scale`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:229
 
-___
+***
 
-### skills
+### skills?
 
-• `Optional` **skills**: `AIModelSkillName`[]
+> `optional` **skills**: `AIModelSkillName`[]
 
 #### Inherited from
 
-AILavaModelSettings.skills
+`AILavaModelSettings.skills`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:238
 
-___
+***
 
-### source
+### source?
 
-• `Optional` **source**: ``"huggingface"``
+> `optional` **source**: `"huggingface"`
 
 #### Inherited from
 
-AILavaModelSettings.source
+`AILavaModelSettings.source`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:220
 
-___
+***
 
-### supports
+### supports?
 
-• `Optional` **supports**: `AIModelType` \| `AIModelType`[]
+> `optional` **supports**: `AIModelType` \| `AIModelType`[]
 
 #### Inherited from
 
-AILavaModelSettings.supports
+`AILavaModelSettings.supports`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:219
 
-___
+***
 
-### title
+### title?
 
-• `Optional` **title**: `string`
+> `optional` **title**: `string`
 
 #### Inherited from
 
-AILavaModelSettings.title
+`AILavaModelSettings.title`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:243
 
-___
+***
 
-### type
+### type?
 
-• `Optional` **type**: `AIModelType`
+> `optional` **type**: `AIModelType`
 
 #### Inherited from
 
-AILavaModelSettings.type
+`AILavaModelSettings.type`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:218
 
-___
+***
 
-### updatedAt
+### updatedAt?
 
-• `Optional` **updatedAt**: `Date`
+> `optional` **updatedAt**: `Date`
 
 #### Inherited from
 
-AILavaModelSettings.updatedAt
+`AILavaModelSettings.updatedAt`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:252
 
-___
+***
 
-### url
+### url?
 
-• `Optional` **url**: `string`
+> `optional` **url**: `string`
 
 the remote url to download the model
 
 #### Inherited from
 
-AILavaModelSettings.url
+`AILavaModelSettings.url`
 
 #### Defined in
 

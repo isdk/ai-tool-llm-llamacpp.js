@@ -1,209 +1,110 @@
-[@isdk/ai-tool-llm-llamacpp](../README.md) / [Exports](../modules.md) / LlamaLoadModelOptions
+[**@isdk/ai-tool-llm-llamacpp**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-llm-llamacpp](../globals.md) / LlamaLoadModelOptions
 
 # Interface: LlamaLoadModelOptions
 
-## Hierarchy
+## Extends
 
 - `AIOptions`
 
-  ↳ **`LlamaLoadModelOptions`**
-
-## Table of contents
-
-### Properties
-
-- [api\_key](LlamaLoadModelOptions.md#api_key)
-- [attention](LlamaLoadModelOptions.md#attention)
-- [batch\_size](LlamaLoadModelOptions.md#batch_size)
-- [cache\_type\_k](LlamaLoadModelOptions.md#cache_type_k)
-- [cache\_type\_v](LlamaLoadModelOptions.md#cache_type_v)
-- [check\_tensors](LlamaLoadModelOptions.md#check_tensors)
-- [chunks](LlamaLoadModelOptions.md#chunks)
-- [cont\_batching](LlamaLoadModelOptions.md#cont_batching)
-- [conversation](LlamaLoadModelOptions.md#conversation)
-- [ctx\_size](LlamaLoadModelOptions.md#ctx_size)
-- [defrag\_thold](LlamaLoadModelOptions.md#defrag_thold)
-- [display\_prompt](LlamaLoadModelOptions.md#display_prompt)
-- [draft](LlamaLoadModelOptions.md#draft)
-- [dump\_kv\_cache](LlamaLoadModelOptions.md#dump_kv_cache)
-- [embd\_normalize](LlamaLoadModelOptions.md#embd_normalize)
-- [embd\_output\_format](LlamaLoadModelOptions.md#embd_output_format)
-- [embd\_sep](LlamaLoadModelOptions.md#embd_sep)
-- [embedding](LlamaLoadModelOptions.md#embedding)
-- [escape](LlamaLoadModelOptions.md#escape)
-- [flash\_attn](LlamaLoadModelOptions.md#flash_attn)
-- [gpu\_layers](LlamaLoadModelOptions.md#gpu_layers)
-- [gpu\_layers\_draft](LlamaLoadModelOptions.md#gpu_layers_draft)
-- [grp\_attn\_n](LlamaLoadModelOptions.md#grp_attn_n)
-- [grp\_attn\_w](LlamaLoadModelOptions.md#grp_attn_w)
-- [hf\_file](LlamaLoadModelOptions.md#hf_file)
-- [hf\_repo](LlamaLoadModelOptions.md#hf_repo)
-- [hf\_token](LlamaLoadModelOptions.md#hf_token)
-- [host](LlamaLoadModelOptions.md#host)
-- [image](LlamaLoadModelOptions.md#image)
-- [infill](LlamaLoadModelOptions.md#infill)
-- [keep](LlamaLoadModelOptions.md#keep)
-- [log\_append](LlamaLoadModelOptions.md#log_append)
-- [log\_disable](LlamaLoadModelOptions.md#log_disable)
-- [log\_enable](LlamaLoadModelOptions.md#log_enable)
-- [log\_file](LlamaLoadModelOptions.md#log_file)
-- [log\_format](LlamaLoadModelOptions.md#log_format)
-- [log\_new](LlamaLoadModelOptions.md#log_new)
-- [logdir](LlamaLoadModelOptions.md#logdir)
-- [logits\_all](LlamaLoadModelOptions.md#logits_all)
-- [logits\_file](LlamaLoadModelOptions.md#logits_file)
-- [lookup\_cache\_dynamic](LlamaLoadModelOptions.md#lookup_cache_dynamic)
-- [lookup\_cache\_static](LlamaLoadModelOptions.md#lookup_cache_static)
-- [lora](LlamaLoadModelOptions.md#lora)
-- [lora\_init\_without\_apply](LlamaLoadModelOptions.md#lora_init_without_apply)
-- [main\_gpu](LlamaLoadModelOptions.md#main_gpu)
-- [mmproj](LlamaLoadModelOptions.md#mmproj)
-- [model](LlamaLoadModelOptions.md#model)
-- [model\_alias](LlamaLoadModelOptions.md#model_alias)
-- [model\_draft](LlamaLoadModelOptions.md#model_draft)
-- [model\_url](LlamaLoadModelOptions.md#model_url)
-- [multiline\_input](LlamaLoadModelOptions.md#multiline_input)
-- [no\_cont\_batching](LlamaLoadModelOptions.md#no_cont_batching)
-- [no\_escape](LlamaLoadModelOptions.md#no_escape)
-- [no\_kv\_offload](LlamaLoadModelOptions.md#no_kv_offload)
-- [no\_slots](LlamaLoadModelOptions.md#no_slots)
-- [numa](LlamaLoadModelOptions.md#numa)
-- [p\_split](LlamaLoadModelOptions.md#p_split)
-- [parallel](LlamaLoadModelOptions.md#parallel)
-- [path\_prompt\_cache](LlamaLoadModelOptions.md#path_prompt_cache)
-- [pooling](LlamaLoadModelOptions.md#pooling)
-- [port](LlamaLoadModelOptions.md#port)
-- [predict](LlamaLoadModelOptions.md#predict)
-- [prompt\_cache\_all](LlamaLoadModelOptions.md#prompt_cache_all)
-- [prompt\_cache\_ro](LlamaLoadModelOptions.md#prompt_cache_ro)
-- [reverse\_prompt](LlamaLoadModelOptions.md#reverse_prompt)
-- [rope\_freq\_base](LlamaLoadModelOptions.md#rope_freq_base)
-- [rope\_freq\_scale](LlamaLoadModelOptions.md#rope_freq_scale)
-- [rope\_scale](LlamaLoadModelOptions.md#rope_scale)
-- [rope\_scaling](LlamaLoadModelOptions.md#rope_scaling)
-- [rpc\_servers](LlamaLoadModelOptions.md#rpc_servers)
-- [samplers](LlamaLoadModelOptions.md#samplers)
-- [samplers\_sequence](LlamaLoadModelOptions.md#samplers_sequence)
-- [sequences](LlamaLoadModelOptions.md#sequences)
-- [simple\_io](LlamaLoadModelOptions.md#simple_io)
-- [special](LlamaLoadModelOptions.md#special)
-- [split\_mode](LlamaLoadModelOptions.md#split_mode)
-- [ssl\_cert\_file](LlamaLoadModelOptions.md#ssl_cert_file)
-- [ssl\_key\_file](LlamaLoadModelOptions.md#ssl_key_file)
-- [tensor\_split](LlamaLoadModelOptions.md#tensor_split)
-- [threads](LlamaLoadModelOptions.md#threads)
-- [threads\_batch](LlamaLoadModelOptions.md#threads_batch)
-- [threads\_batch\_draft](LlamaLoadModelOptions.md#threads_batch_draft)
-- [threads\_draft](LlamaLoadModelOptions.md#threads_draft)
-- [threads\_http](LlamaLoadModelOptions.md#threads_http)
-- [timeout](LlamaLoadModelOptions.md#timeout)
-- [ubatch\_size](LlamaLoadModelOptions.md#ubatch_size)
-- [use\_mlock](LlamaLoadModelOptions.md#use_mlock)
-- [use\_mmap](LlamaLoadModelOptions.md#use_mmap)
-- [verbose\_prompt](LlamaLoadModelOptions.md#verbose_prompt)
-- [verbosity](LlamaLoadModelOptions.md#verbosity)
-- [version](LlamaLoadModelOptions.md#version)
-- [yarn\_attn\_factor](LlamaLoadModelOptions.md#yarn_attn_factor)
-- [yarn\_beta\_fast](LlamaLoadModelOptions.md#yarn_beta_fast)
-- [yarn\_beta\_slow](LlamaLoadModelOptions.md#yarn_beta_slow)
-- [yarn\_ext\_factor](LlamaLoadModelOptions.md#yarn_ext_factor)
-- [yarn\_orig\_ctx](LlamaLoadModelOptions.md#yarn_orig_ctx)
-
 ## Properties
 
-### api\_key
+### api\_key?
 
-• `Optional` **api\_key**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:285](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L285)
-
-___
-
-### attention
-
-• `Optional` **attention**: ``"causal"`` \| ``"non-causal"``
+> `optional` **api\_key**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:332](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L332)
+[packages/ai-tool-llm-llamacpp/src/options.ts:285](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L285)
 
-___
+***
 
-### batch\_size
+### attention?
 
-• `Optional` **batch\_size**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:337](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L337)
-
-___
-
-### cache\_type\_k
-
-• `Optional` **cache\_type\_k**: [`LlamaCacheQuantType`](../modules.md#llamacachequanttype)
+> `optional` **attention**: `"causal"` \| `"non-causal"`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:370](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L370)
+[packages/ai-tool-llm-llamacpp/src/options.ts:332](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L332)
 
-___
+***
 
-### cache\_type\_v
+### batch\_size?
 
-• `Optional` **cache\_type\_v**: [`LlamaCacheQuantType`](../modules.md#llamacachequanttype)
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:371](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L371)
-
-___
-
-### check\_tensors
-
-• `Optional` **check\_tensors**: `boolean`
+> `optional` **batch\_size**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:393](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L393)
+[packages/ai-tool-llm-llamacpp/src/options.ts:337](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L337)
 
-___
+***
 
-### chunks
+### cache\_type\_k?
 
-• `Optional` **chunks**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:341](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L341)
-
-___
-
-### cont\_batching
-
-• `Optional` **cont\_batching**: `boolean`
+> `optional` **cache\_type\_k**: [`LlamaCacheQuantType`](../type-aliases/LlamaCacheQuantType.md)
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:373](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L373)
+[packages/ai-tool-llm-llamacpp/src/options.ts:370](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L370)
 
-___
+***
 
-### conversation
+### cache\_type\_v?
 
-• `Optional` **conversation**: `boolean`
+> `optional` **cache\_type\_v**: [`LlamaCacheQuantType`](../type-aliases/LlamaCacheQuantType.md)
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:366](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L366)
+[packages/ai-tool-llm-llamacpp/src/options.ts:371](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L371)
 
-___
+***
 
-### ctx\_size
+### check\_tensors?
 
-• `Optional` **ctx\_size**: `number`
+> `optional` **check\_tensors**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:393](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L393)
+
+***
+
+### chunks?
+
+> `optional` **chunks**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:341](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L341)
+
+***
+
+### cont\_batching?
+
+> `optional` **cont\_batching**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:373](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L373)
+
+***
+
+### conversation?
+
+> `optional` **conversation**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:366](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L366)
+
+***
+
+### ctx\_size?
+
+> `optional` **ctx\_size**: `number`
 
 Specify the context window size of the model that you have loaded in your
 Llama.cpp server.
@@ -212,864 +113,864 @@ Llama.cpp server.
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:319](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L319)
+[packages/ai-tool-llm-llamacpp/src/options.ts:319](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L319)
 
-___
+***
 
-### defrag\_thold
+### defrag\_thold?
 
-• `Optional` **defrag\_thold**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:333](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L333)
-
-___
-
-### display\_prompt
-
-• `Optional` **display\_prompt**: `boolean`
+> `optional` **defrag\_thold**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:388](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L388)
+[packages/ai-tool-llm-llamacpp/src/options.ts:333](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L333)
 
-___
+***
 
-### draft
+### display\_prompt?
 
-• `Optional` **draft**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:340](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L340)
-
-___
-
-### dump\_kv\_cache
-
-• `Optional` **dump\_kv\_cache**: `boolean`
+> `optional` **display\_prompt**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:368](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L368)
+[packages/ai-tool-llm-llamacpp/src/options.ts:388](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L388)
 
-___
+***
 
-### embd\_normalize
+### draft?
 
-• `Optional` **embd\_normalize**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:363](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L363)
-
-___
-
-### embd\_output\_format
-
-• `Optional` **embd\_output\_format**: ``""`` \| ``"json"`` \| ``"array"`` \| ``"json+"``
+> `optional` **draft**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:364](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L364)
+[packages/ai-tool-llm-llamacpp/src/options.ts:340](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L340)
 
-___
+***
 
-### embd\_sep
+### dump\_kv\_cache?
 
-• `Optional` **embd\_sep**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:365](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L365)
-
-___
-
-### embedding
-
-• `Optional` **embedding**: `boolean`
+> `optional` **dump\_kv\_cache**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:362](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L362)
+[packages/ai-tool-llm-llamacpp/src/options.ts:368](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L368)
 
-___
+***
 
-### escape
+### embd\_normalize?
 
-• `Optional` **escape**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:307](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L307)
-
-___
-
-### flash\_attn
-
-• `Optional` **flash\_attn**: `boolean`
+> `optional` **embd\_normalize**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:375](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L375)
+[packages/ai-tool-llm-llamacpp/src/options.ts:363](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L363)
 
-___
+***
 
-### gpu\_layers
+### embd\_output\_format?
 
-• `Optional` **gpu\_layers**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:377](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L377)
-
-___
-
-### gpu\_layers\_draft
-
-• `Optional` **gpu\_layers\_draft**: `number`
+> `optional` **embd\_output\_format**: `""` \| `"json"` \| `"array"` \| `"json+"`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:378](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L378)
+[packages/ai-tool-llm-llamacpp/src/options.ts:364](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L364)
 
-___
+***
 
-### grp\_attn\_n
+### embd\_sep?
 
-• `Optional` **grp\_attn\_n**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:320](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L320)
-
-___
-
-### grp\_attn\_w
-
-• `Optional` **grp\_attn\_w**: `number`
+> `optional` **embd\_sep**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:321](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L321)
+[packages/ai-tool-llm-llamacpp/src/options.ts:365](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L365)
 
-___
+***
 
-### hf\_file
+### embedding?
 
-• `Optional` **hf\_file**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:352](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L352)
-
-___
-
-### hf\_repo
-
-• `Optional` **hf\_repo**: `string`
+> `optional` **embedding**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:351](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L351)
+[packages/ai-tool-llm-llamacpp/src/options.ts:362](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L362)
 
-___
+***
 
-### hf\_token
+### escape?
 
-• `Optional` **hf\_token**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:350](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L350)
-
-___
-
-### host
-
-• `Optional` **host**: `string`
+> `optional` **escape**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:283](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L283)
+[packages/ai-tool-llm-llamacpp/src/options.ts:307](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L307)
 
-___
+***
 
-### image
+### flash\_attn?
 
-• `Optional` **image**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:360](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L360)
-
-___
-
-### infill
-
-• `Optional` **infill**: `boolean`
+> `optional` **flash\_attn**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:367](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L367)
+[packages/ai-tool-llm-llamacpp/src/options.ts:375](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L375)
 
-___
+***
 
-### keep
+### gpu\_layers?
 
-• `Optional` **keep**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:339](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L339)
-
-___
-
-### log\_append
-
-• `Optional` **log\_append**: `boolean`
+> `optional` **gpu\_layers**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:299](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L299)
+[packages/ai-tool-llm-llamacpp/src/options.ts:377](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L377)
 
-___
+***
 
-### log\_disable
+### gpu\_layers\_draft?
 
-• `Optional` **log\_disable**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:295](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L295)
-
-___
-
-### log\_enable
-
-• `Optional` **log\_enable**: `boolean`
+> `optional` **gpu\_layers\_draft**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:296](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L296)
+[packages/ai-tool-llm-llamacpp/src/options.ts:378](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L378)
 
-___
+***
 
-### log\_file
+### grp\_attn\_n?
 
-• `Optional` **log\_file**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:297](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L297)
-
-___
-
-### log\_format
-
-• `Optional` **log\_format**: ``"json"`` \| ``"text"``
+> `optional` **grp\_attn\_n**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:292](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L292)
+[packages/ai-tool-llm-llamacpp/src/options.ts:320](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L320)
 
-___
+***
 
-### log\_new
+### grp\_attn\_w?
 
-• `Optional` **log\_new**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:298](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L298)
-
-___
-
-### logdir
-
-• `Optional` **logdir**: `string`
+> `optional` **grp\_attn\_w**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:294](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L294)
+[packages/ai-tool-llm-llamacpp/src/options.ts:321](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L321)
 
-___
+***
 
-### logits\_all
+### hf\_file?
 
-• `Optional` **logits\_all**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:392](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L392)
-
-___
-
-### logits\_file
-
-• `Optional` **logits\_file**: `string`
+> `optional` **hf\_file**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:391](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L391)
+[packages/ai-tool-llm-llamacpp/src/options.ts:352](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L352)
 
-___
+***
 
-### lookup\_cache\_dynamic
+### hf\_repo?
 
-• `Optional` **lookup\_cache\_dynamic**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:390](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L390)
-
-___
-
-### lookup\_cache\_static
-
-• `Optional` **lookup\_cache\_static**: `string`
+> `optional` **hf\_repo**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:389](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L389)
+[packages/ai-tool-llm-llamacpp/src/options.ts:351](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L351)
 
-___
+***
 
-### lora
+### hf\_token?
 
-• `Optional` **lora**: [`LoraItem`](../modules.md#loraitem) \| [`LoraItems`](../modules.md#loraitems)
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:354](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L354)
-
-___
-
-### lora\_init\_without\_apply
-
-• `Optional` **lora\_init\_without\_apply**: `boolean`
+> `optional` **hf\_token**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:355](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L355)
+[packages/ai-tool-llm-llamacpp/src/options.ts:350](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L350)
 
-___
+***
 
-### main\_gpu
+### host?
 
-• `Optional` **main\_gpu**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:379](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L379)
-
-___
-
-### mmproj
-
-• `Optional` **mmproj**: `string`
+> `optional` **host**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:359](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L359)
+[packages/ai-tool-llm-llamacpp/src/options.ts:283](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L283)
 
-___
+***
+
+### image?
+
+> `optional` **image**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:360](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L360)
+
+***
+
+### infill?
+
+> `optional` **infill**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:367](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L367)
+
+***
+
+### keep?
+
+> `optional` **keep**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:339](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L339)
+
+***
+
+### log\_append?
+
+> `optional` **log\_append**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:299](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L299)
+
+***
+
+### log\_disable?
+
+> `optional` **log\_disable**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:295](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L295)
+
+***
+
+### log\_enable?
+
+> `optional` **log\_enable**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:296](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L296)
+
+***
+
+### log\_file?
+
+> `optional` **log\_file**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:297](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L297)
+
+***
+
+### log\_format?
+
+> `optional` **log\_format**: `"json"` \| `"text"`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:292](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L292)
+
+***
+
+### log\_new?
+
+> `optional` **log\_new**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:298](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L298)
+
+***
+
+### logdir?
+
+> `optional` **logdir**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:294](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L294)
+
+***
+
+### logits\_all?
+
+> `optional` **logits\_all**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:392](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L392)
+
+***
+
+### logits\_file?
+
+> `optional` **logits\_file**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:391](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L391)
+
+***
+
+### lookup\_cache\_dynamic?
+
+> `optional` **lookup\_cache\_dynamic**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:390](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L390)
+
+***
+
+### lookup\_cache\_static?
+
+> `optional` **lookup\_cache\_static**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:389](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L389)
+
+***
+
+### lora?
+
+> `optional` **lora**: [`LoraItem`](../type-aliases/LoraItem.md) \| [`LoraItems`](../type-aliases/LoraItems.md)
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:354](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L354)
+
+***
+
+### lora\_init\_without\_apply?
+
+> `optional` **lora\_init\_without\_apply**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:355](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L355)
+
+***
+
+### main\_gpu?
+
+> `optional` **main\_gpu**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:379](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L379)
+
+***
+
+### mmproj?
+
+> `optional` **mmproj**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:359](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L359)
+
+***
 
 ### model
 
-• **model**: `string`
+> **model**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:346](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L346)
+[packages/ai-tool-llm-llamacpp/src/options.ts:346](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L346)
 
-___
+***
 
-### model\_alias
+### model\_alias?
 
-• `Optional` **model\_alias**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:348](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L348)
-
-___
-
-### model\_draft
-
-• `Optional` **model\_draft**: `string`
+> `optional` **model\_alias**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:347](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L347)
+[packages/ai-tool-llm-llamacpp/src/options.ts:348](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L348)
 
-___
+***
 
-### model\_url
+### model\_draft?
 
-• `Optional` **model\_url**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:349](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L349)
-
-___
-
-### multiline\_input
-
-• `Optional` **multiline\_input**: `boolean`
+> `optional` **model\_draft**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:372](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L372)
+[packages/ai-tool-llm-llamacpp/src/options.ts:347](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L347)
 
-___
+***
 
-### no\_cont\_batching
+### model\_url?
 
-• `Optional` **no\_cont\_batching**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:374](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L374)
-
-___
-
-### no\_escape
-
-• `Optional` **no\_escape**: `boolean`
+> `optional` **model\_url**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:308](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L308)
+[packages/ai-tool-llm-llamacpp/src/options.ts:349](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L349)
 
-___
+***
 
-### no\_kv\_offload
+### multiline\_input?
 
-• `Optional` **no\_kv\_offload**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:369](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L369)
-
-___
-
-### no\_slots
-
-• `Optional` **no\_slots**: `boolean`
+> `optional` **multiline\_input**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:301](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L301)
+[packages/ai-tool-llm-llamacpp/src/options.ts:372](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L372)
 
-___
+***
 
-### numa
+### no\_cont\_batching?
 
-• `Optional` **numa**: ``"distribute"`` \| ``"isolate"`` \| ``"numactl"``
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:384](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L384)
-
-___
-
-### p\_split
-
-• `Optional` **p\_split**: `number`
+> `optional` **no\_cont\_batching**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:344](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L344)
+[packages/ai-tool-llm-llamacpp/src/options.ts:374](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L374)
 
-___
+***
 
-### parallel
+### no\_escape?
 
-• `Optional` **parallel**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:342](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L342)
-
-___
-
-### path\_prompt\_cache
-
-• `Optional` **path\_prompt\_cache**: `string`
+> `optional` **no\_escape**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:309](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L309)
+[packages/ai-tool-llm-llamacpp/src/options.ts:308](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L308)
 
-___
+***
 
-### pooling
+### no\_kv\_offload?
 
-• `Optional` **pooling**: ``"none"`` \| ``"mean"`` \| ``"cls"`` \| ``"last"``
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:331](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L331)
-
-___
-
-### port
-
-• `Optional` **port**: `number`
+> `optional` **no\_kv\_offload**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:284](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L284)
+[packages/ai-tool-llm-llamacpp/src/options.ts:369](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L369)
 
-___
+***
 
-### predict
+### no\_slots?
 
-• `Optional` **predict**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:312](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L312)
-
-___
-
-### prompt\_cache\_all
-
-• `Optional` **prompt\_cache\_all**: `boolean`
+> `optional` **no\_slots**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:310](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L310)
+[packages/ai-tool-llm-llamacpp/src/options.ts:301](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L301)
 
-___
+***
 
-### prompt\_cache\_ro
+### numa?
 
-• `Optional` **prompt\_cache\_ro**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:311](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L311)
-
-___
-
-### reverse\_prompt
-
-• `Optional` **reverse\_prompt**: `boolean`
+> `optional` **numa**: `"distribute"` \| `"isolate"` \| `"numactl"`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:387](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L387)
+[packages/ai-tool-llm-llamacpp/src/options.ts:384](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L384)
 
-___
+***
 
-### rope\_freq\_base
+### p\_split?
 
-• `Optional` **rope\_freq\_base**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:322](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L322)
-
-___
-
-### rope\_freq\_scale
-
-• `Optional` **rope\_freq\_scale**: `number`
+> `optional` **p\_split**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:323](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L323)
+[packages/ai-tool-llm-llamacpp/src/options.ts:344](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L344)
 
-___
+***
 
-### rope\_scale
+### parallel?
 
-• `Optional` **rope\_scale**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:325](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L325)
-
-___
-
-### rope\_scaling
-
-• `Optional` **rope\_scaling**: [`LlamaRopeScalingType`](../modules.md#llamaropescalingtype)
+> `optional` **parallel**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:324](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L324)
+[packages/ai-tool-llm-llamacpp/src/options.ts:342](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L342)
 
-___
+***
 
-### rpc\_servers
+### path\_prompt\_cache?
 
-• `Optional` **rpc\_servers**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:382](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L382)
-
-___
-
-### samplers
-
-• `Optional` **samplers**: `string`
+> `optional` **path\_prompt\_cache**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:334](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L334)
+[packages/ai-tool-llm-llamacpp/src/options.ts:309](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L309)
 
-___
+***
 
-### samplers\_sequence
+### pooling?
 
-• `Optional` **samplers\_sequence**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:335](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L335)
-
-___
-
-### sequences
-
-• `Optional` **sequences**: `number`
+> `optional` **pooling**: `"none"` \| `"mean"` \| `"cls"` \| `"last"`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:343](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L343)
+[packages/ai-tool-llm-llamacpp/src/options.ts:331](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L331)
 
-___
+***
 
-### simple\_io
+### port?
 
-• `Optional` **simple\_io**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:293](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L293)
-
-___
-
-### special
-
-• `Optional` **special**: `boolean`
+> `optional` **port**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:361](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L361)
+[packages/ai-tool-llm-llamacpp/src/options.ts:284](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L284)
 
-___
+***
 
-### split\_mode
+### predict?
 
-• `Optional` **split\_mode**: [`LlamaSplitMode`](../enums/LlamaSplitMode.md)
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:380](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L380)
-
-___
-
-### ssl\_cert\_file
-
-• `Optional` **ssl\_cert\_file**: `string`
+> `optional` **predict**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:287](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L287)
+[packages/ai-tool-llm-llamacpp/src/options.ts:312](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L312)
 
-___
+***
 
-### ssl\_key\_file
+### prompt\_cache\_all?
 
-• `Optional` **ssl\_key\_file**: `string`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:286](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L286)
-
-___
-
-### tensor\_split
-
-• `Optional` **tensor\_split**: `string`
+> `optional` **prompt\_cache\_all**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:381](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L381)
+[packages/ai-tool-llm-llamacpp/src/options.ts:310](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L310)
 
-___
+***
 
-### threads
+### prompt\_cache\_ro?
 
-• `Optional` **threads**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:303](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L303)
-
-___
-
-### threads\_batch
-
-• `Optional` **threads\_batch**: `number`
+> `optional` **prompt\_cache\_ro**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:304](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L304)
+[packages/ai-tool-llm-llamacpp/src/options.ts:311](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L311)
 
-___
+***
 
-### threads\_batch\_draft
+### reverse\_prompt?
 
-• `Optional` **threads\_batch\_draft**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:306](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L306)
-
-___
-
-### threads\_draft
-
-• `Optional` **threads\_draft**: `number`
+> `optional` **reverse\_prompt**: `boolean`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:305](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L305)
+[packages/ai-tool-llm-llamacpp/src/options.ts:387](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L387)
 
-___
+***
 
-### threads\_http
+### rope\_freq\_base?
 
-• `Optional` **threads\_http**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:289](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L289)
-
-___
-
-### timeout
-
-• `Optional` **timeout**: `number`
+> `optional` **rope\_freq\_base**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:288](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L288)
+[packages/ai-tool-llm-llamacpp/src/options.ts:322](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L322)
 
-___
+***
 
-### ubatch\_size
+### rope\_freq\_scale?
 
-• `Optional` **ubatch\_size**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:338](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L338)
-
-___
-
-### use\_mlock
-
-• `Optional` **use\_mlock**: `boolean`
+> `optional` **rope\_freq\_scale**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:376](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L376)
+[packages/ai-tool-llm-llamacpp/src/options.ts:323](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L323)
 
-___
+***
 
-### use\_mmap
+### rope\_scale?
 
-• `Optional` **use\_mmap**: `boolean`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:383](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L383)
-
-___
-
-### verbose\_prompt
-
-• `Optional` **verbose\_prompt**: `boolean`
+> `optional` **rope\_scale**: `number`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:386](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L386)
+[packages/ai-tool-llm-llamacpp/src/options.ts:325](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L325)
 
-___
+***
 
-### verbosity
+### rope\_scaling?
 
-• `Optional` **verbosity**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:385](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L385)
-
-___
-
-### version
-
-• `Optional` **version**: `boolean`
+> `optional` **rope\_scaling**: [`LlamaRopeScalingType`](../type-aliases/LlamaRopeScalingType.md)
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:290](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L290)
+[packages/ai-tool-llm-llamacpp/src/options.ts:324](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L324)
 
-___
+***
 
-### yarn\_attn\_factor
+### rpc\_servers?
 
-• `Optional` **yarn\_attn\_factor**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:328](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L328)
-
-___
-
-### yarn\_beta\_fast
-
-• `Optional` **yarn\_beta\_fast**: `number`
+> `optional` **rpc\_servers**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:329](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L329)
+[packages/ai-tool-llm-llamacpp/src/options.ts:382](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L382)
 
-___
+***
 
-### yarn\_beta\_slow
+### samplers?
 
-• `Optional` **yarn\_beta\_slow**: `number`
-
-#### Defined in
-
-[packages/ai-tool-llm-llamacpp/src/options.ts:330](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L330)
-
-___
-
-### yarn\_ext\_factor
-
-• `Optional` **yarn\_ext\_factor**: `number`
+> `optional` **samplers**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:327](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L327)
+[packages/ai-tool-llm-llamacpp/src/options.ts:334](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L334)
 
-___
+***
 
-### yarn\_orig\_ctx
+### samplers\_sequence?
 
-• `Optional` **yarn\_orig\_ctx**: `number`
+> `optional` **samplers\_sequence**: `string`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:326](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/options.ts#L326)
+[packages/ai-tool-llm-llamacpp/src/options.ts:335](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L335)
+
+***
+
+### sequences?
+
+> `optional` **sequences**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:343](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L343)
+
+***
+
+### simple\_io?
+
+> `optional` **simple\_io**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:293](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L293)
+
+***
+
+### special?
+
+> `optional` **special**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:361](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L361)
+
+***
+
+### split\_mode?
+
+> `optional` **split\_mode**: [`LlamaSplitMode`](../enumerations/LlamaSplitMode.md)
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:380](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L380)
+
+***
+
+### ssl\_cert\_file?
+
+> `optional` **ssl\_cert\_file**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:287](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L287)
+
+***
+
+### ssl\_key\_file?
+
+> `optional` **ssl\_key\_file**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:286](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L286)
+
+***
+
+### tensor\_split?
+
+> `optional` **tensor\_split**: `string`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:381](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L381)
+
+***
+
+### threads?
+
+> `optional` **threads**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:303](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L303)
+
+***
+
+### threads\_batch?
+
+> `optional` **threads\_batch**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:304](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L304)
+
+***
+
+### threads\_batch\_draft?
+
+> `optional` **threads\_batch\_draft**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:306](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L306)
+
+***
+
+### threads\_draft?
+
+> `optional` **threads\_draft**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:305](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L305)
+
+***
+
+### threads\_http?
+
+> `optional` **threads\_http**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:289](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L289)
+
+***
+
+### timeout?
+
+> `optional` **timeout**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:288](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L288)
+
+***
+
+### ubatch\_size?
+
+> `optional` **ubatch\_size**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:338](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L338)
+
+***
+
+### use\_mlock?
+
+> `optional` **use\_mlock**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:376](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L376)
+
+***
+
+### use\_mmap?
+
+> `optional` **use\_mmap**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:383](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L383)
+
+***
+
+### verbose\_prompt?
+
+> `optional` **verbose\_prompt**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:386](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L386)
+
+***
+
+### verbosity?
+
+> `optional` **verbosity**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:385](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L385)
+
+***
+
+### version?
+
+> `optional` **version**: `boolean`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:290](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L290)
+
+***
+
+### yarn\_attn\_factor?
+
+> `optional` **yarn\_attn\_factor**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:328](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L328)
+
+***
+
+### yarn\_beta\_fast?
+
+> `optional` **yarn\_beta\_fast**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:329](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L329)
+
+***
+
+### yarn\_beta\_slow?
+
+> `optional` **yarn\_beta\_slow**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:330](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L330)
+
+***
+
+### yarn\_ext\_factor?
+
+> `optional` **yarn\_ext\_factor**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:327](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L327)
+
+***
+
+### yarn\_orig\_ctx?
+
+> `optional` **yarn\_orig\_ctx**: `number`
+
+#### Defined in
+
+[packages/ai-tool-llm-llamacpp/src/options.ts:326](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/options.ts#L326)

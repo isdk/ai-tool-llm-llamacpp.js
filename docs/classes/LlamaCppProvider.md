@@ -1,172 +1,26 @@
-[@isdk/ai-tool-llm-llamacpp](../README.md) / [Exports](../modules.md) / LlamaCppProvider
+[**@isdk/ai-tool-llm-llamacpp**](../README.md) • **Docs**
+
+***
+
+[@isdk/ai-tool-llm-llamacpp](../globals.md) / LlamaCppProvider
 
 # Class: LlamaCppProvider
 
-## Hierarchy
+## Extends
 
-- `CancelableAbility`
-
-- `LLMProvider`
-
-  ↳ **`LlamaCppProvider`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LlamaCppProvider.md#constructor)
-
-### Properties
-
-- [$attributes](LlamaCppProvider.md#$attributes)
-- [\_\_task\_aborter](LlamaCppProvider.md#__task_aborter)
-- [\_\_task\_semaphore](LlamaCppProvider.md#__task_semaphore)
-- [\_asyncFeatures](LlamaCppProvider.md#_asyncfeatures)
-- [\_maxTaskConcurrency](LlamaCppProvider.md#_maxtaskconcurrency)
-- [apiKey](LlamaCppProvider.md#apikey)
-- [apiUrl](LlamaCppProvider.md#apiurl)
-- [cleanMultiTaskAborter](LlamaCppProvider.md#cleanmultitaskaborter)
-- [constructor](LlamaCppProvider.md#constructor-1)
-- [defaultOptions](LlamaCppProvider.md#defaultoptions)
-- [depends](LlamaCppProvider.md#depends)
-- [description](LlamaCppProvider.md#description)
-- [generateAsyncTaskId](LlamaCppProvider.md#generateasynctaskid)
-- [isApi](LlamaCppProvider.md#isapi)
-- [name](LlamaCppProvider.md#name)
-- [nonExported1stChar](LlamaCppProvider.md#nonexported1stchar)
-- [params](LlamaCppProvider.md#params)
-- [prior](LlamaCppProvider.md#prior)
-- [result](LlamaCppProvider.md#result)
-- [rule](LlamaCppProvider.md#rule)
-- [scope](LlamaCppProvider.md#scope)
-- [setup](LlamaCppProvider.md#setup)
-- [stream](LlamaCppProvider.md#stream)
-- [supports](LlamaCppProvider.md#supports)
-- [tags](LlamaCppProvider.md#tags)
-- [current](LlamaCppProvider.md#current)
-- [dataPath](LlamaCppProvider.md#datapath)
-- [items](LlamaCppProvider.md#items)
-
-### Accessors
-
-- [maxTaskConcurrency](LlamaCppProvider.md#maxtaskconcurrency)
-- [semaphore](LlamaCppProvider.md#semaphore)
-
-### Methods
-
-- [$cleanMultiTaskAborter](LlamaCppProvider.md#$cleanmultitaskaborter)
-- [$generateAsyncTaskId](LlamaCppProvider.md#$generateasynctaskid)
-- [\_cleanMultiTaskAborter](LlamaCppProvider.md#_cleanmultitaskaborter)
-- [\_generateAsyncTaskId](LlamaCppProvider.md#_generateasynctaskid)
-- [abort](LlamaCppProvider.md#abort)
-- [addModel](LlamaCppProvider.md#addmodel)
-- [arr2ObjParams](LlamaCppProvider.md#arr2objparams)
-- [assign](LlamaCppProvider.md#assign)
-- [assignProperty](LlamaCppProvider.md#assignproperty)
-- [assignPropertyTo](LlamaCppProvider.md#assignpropertyto)
-- [assignTo](LlamaCppProvider.md#assignto)
-- [cleanTaskAborter](LlamaCppProvider.md#cleantaskaborter)
-- [clone](LlamaCppProvider.md#clone)
-- [cloneTo](LlamaCppProvider.md#cloneto)
-- [createAborter](LlamaCppProvider.md#createaborter)
-- [createTaskPromise](LlamaCppProvider.md#createtaskpromise)
-- [defineProperties](LlamaCppProvider.md#defineproperties)
-- [deleteModel](LlamaCppProvider.md#deletemodel)
-- [exportTo](LlamaCppProvider.md#exportto)
-- [formatPrompt](LlamaCppProvider.md#formatprompt)
-- [func](LlamaCppProvider.md#func)
-- [getChatTemplate](LlamaCppProvider.md#getchattemplate)
-- [getCurrentProvider](LlamaCppProvider.md#getcurrentprovider)
-- [getDefaultParameters](LlamaCppProvider.md#getdefaultparameters)
-- [getFunc](LlamaCppProvider.md#getfunc)
-- [getFuncWithPos](LlamaCppProvider.md#getfuncwithpos)
-- [getModelInfo](LlamaCppProvider.md#getmodelinfo)
-- [getProperties](LlamaCppProvider.md#getproperties)
-- [getRunningTask](LlamaCppProvider.md#getrunningtask)
-- [getRunningTaskCount](LlamaCppProvider.md#getrunningtaskcount)
-- [hasAsyncFeature](LlamaCppProvider.md#hasasyncfeature)
-- [hasOwnProperty](LlamaCppProvider.md#hasownproperty)
-- [initialize](LlamaCppProvider.md#initialize)
-- [isAborted](LlamaCppProvider.md#isaborted)
-- [isModelNameMatched](LlamaCppProvider.md#ismodelnamematched)
-- [isPrototypeOf](LlamaCppProvider.md#isprototypeof)
-- [isSame](LlamaCppProvider.md#issame)
-- [isStream](LlamaCppProvider.md#isstream)
-- [listModels](LlamaCppProvider.md#listmodels)
-- [listProviders](LlamaCppProvider.md#listproviders)
-- [loadModel](LlamaCppProvider.md#loadmodel)
-- [mergeTo](LlamaCppProvider.md#mergeto)
-- [obj2ArrParams](LlamaCppProvider.md#obj2arrparams)
-- [processModelOptions](LlamaCppProvider.md#processmodeloptions)
-- [propertyIsEnumerable](LlamaCppProvider.md#propertyisenumerable)
-- [register](LlamaCppProvider.md#register)
-- [run](LlamaCppProvider.md#run)
-- [runAs](LlamaCppProvider.md#runas)
-- [runAsSync](LlamaCppProvider.md#runassync)
-- [runAsyncCancelableTask](LlamaCppProvider.md#runasynccancelabletask)
-- [runSync](LlamaCppProvider.md#runsync)
-- [runWithPos](LlamaCppProvider.md#runwithpos)
-- [runWithPosAs](LlamaCppProvider.md#runwithposas)
-- [runWithPosAsSync](LlamaCppProvider.md#runwithposassync)
-- [runWithPosSync](LlamaCppProvider.md#runwithpossync)
-- [setCurrentProvider](LlamaCppProvider.md#setcurrentprovider)
-- [toJSON](LlamaCppProvider.md#tojson)
-- [toLocaleString](LlamaCppProvider.md#tolocalestring)
-- [toObject](LlamaCppProvider.md#toobject)
-- [toString](LlamaCppProvider.md#tostring)
-- [unregister](LlamaCppProvider.md#unregister)
-- [updateModel](LlamaCppProvider.md#updatemodel)
-- [valueOf](LlamaCppProvider.md#valueof)
-- [assign](LlamaCppProvider.md#assign-1)
-- [create](LlamaCppProvider.md#create)
-- [defineProperties](LlamaCppProvider.md#defineproperties-1)
-- [defineProperty](LlamaCppProvider.md#defineproperty)
-- [entries](LlamaCppProvider.md#entries)
-- [freeze](LlamaCppProvider.md#freeze)
-- [fromEntries](LlamaCppProvider.md#fromentries)
-- [get](LlamaCppProvider.md#get)
-- [getAllByTag](LlamaCppProvider.md#getallbytag)
-- [getByModel](LlamaCppProvider.md#getbymodel)
-- [getByTag](LlamaCppProvider.md#getbytag)
-- [getCurrentProvider](LlamaCppProvider.md#getcurrentprovider-1)
-- [getFunc](LlamaCppProvider.md#getfunc-1)
-- [getFuncWithPos](LlamaCppProvider.md#getfuncwithpos-1)
-- [getOwnPropertyDescriptor](LlamaCppProvider.md#getownpropertydescriptor)
-- [getOwnPropertyDescriptors](LlamaCppProvider.md#getownpropertydescriptors)
-- [getOwnPropertyNames](LlamaCppProvider.md#getownpropertynames)
-- [getOwnPropertySymbols](LlamaCppProvider.md#getownpropertysymbols)
-- [getProperties](LlamaCppProvider.md#getproperties-1)
-- [getPrototypeOf](LlamaCppProvider.md#getprototypeof)
-- [hasAsyncFeature](LlamaCppProvider.md#hasasyncfeature-1)
-- [is](LlamaCppProvider.md#is)
-- [isExtensible](LlamaCppProvider.md#isextensible)
-- [isFrozen](LlamaCppProvider.md#isfrozen)
-- [isSealed](LlamaCppProvider.md#issealed)
-- [keys](LlamaCppProvider.md#keys)
-- [list](LlamaCppProvider.md#list)
-- [preventExtensions](LlamaCppProvider.md#preventextensions)
-- [register](LlamaCppProvider.md#register-1)
-- [run](LlamaCppProvider.md#run-1)
-- [runSync](LlamaCppProvider.md#runsync-1)
-- [runWithPos](LlamaCppProvider.md#runwithpos-1)
-- [runWithPosSync](LlamaCppProvider.md#runwithpossync-1)
-- [seal](LlamaCppProvider.md#seal)
-- [setPrototypeOf](LlamaCppProvider.md#setprototypeof)
-- [unregister](LlamaCppProvider.md#unregister-1)
-- [values](LlamaCppProvider.md#values)
+- `CancelableAbility`.`LLMProvider`
 
 ## Constructors
 
-### constructor
+### new LlamaCppProvider()
 
-• **new LlamaCppProvider**(`name`, `options?`): [`LlamaCppProvider`](LlamaCppProvider.md)
+> **new LlamaCppProvider**(`name`, `options`?): [`LlamaCppProvider`](LlamaCppProvider.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `FuncItem` |
-| `options?` | `any` |
+• **name**: `string` \| `Function` \| `FuncItem`
+
+• **options?**: `any`
 
 #### Returns
 
@@ -174,394 +28,411 @@
 
 #### Inherited from
 
-CancelableAbility.constructor
+`CancelableAbility.constructor`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:80
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:80
 
 ## Properties
 
-### $attributes
-
-• **$attributes**: `Properties`
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:5
-
-___
-
 ### \_\_task\_aborter
 
-• **\_\_task\_aborter**: `undefined` \| `TaskAbortController` \| `TaskAbortControllers`
+> **\_\_task\_aborter**: `undefined` \| `TaskAbortController` \| `TaskAbortControllers`
 
 #### Inherited from
 
-CancelableAbility.\_\_task\_aborter
+`CancelableAbility.__task_aborter`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:212
 
-___
+***
 
 ### \_\_task\_semaphore
 
-• **\_\_task\_semaphore**: `undefined` \| `Semaphore`
+> **\_\_task\_semaphore**: `undefined` \| `Semaphore`
 
 #### Inherited from
 
-CancelableAbility.\_\_task\_semaphore
+`CancelableAbility.__task_semaphore`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:213
 
-___
+***
 
-### \_asyncFeatures
+### \_asyncFeatures?
 
-• `Optional` **\_asyncFeatures**: `number`
+> `optional` **\_asyncFeatures**: `number`
 
 #### Inherited from
 
-CancelableAbility.\_asyncFeatures
+`CancelableAbility._asyncFeatures`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:205
 
-___
+***
 
 ### \_maxTaskConcurrency
 
-• **\_maxTaskConcurrency**: `undefined` \| `number`
+> **\_maxTaskConcurrency**: `undefined` \| `number`
 
 #### Inherited from
 
-CancelableAbility.\_maxTaskConcurrency
+`CancelableAbility._maxTaskConcurrency`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:206
 
-___
+***
 
-### apiKey
+### $attributes
 
-• `Optional` **apiKey**: `string`
+> **$attributes**: `Properties`
+
+#### Defined in
+
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:5
+
+***
+
+### apiKey?
+
+> `optional` **apiKey**: `string`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:152
 
-___
+***
 
-### apiUrl
+### apiUrl?
 
-• `Optional` **apiUrl**: `string`
+> `optional` **apiUrl**: `string`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:153
 
-___
+***
 
-### cleanMultiTaskAborter
+### cleanMultiTaskAborter()
 
-• **cleanMultiTaskAborter**: (`id`: `AsyncTaskId`, `aborters`: `TaskAbortControllers`) => `void`
+> **cleanMultiTaskAborter**: (`id`, `aborters`) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`id`, `aborters`): `void`
+• **id**: `AsyncTaskId`
 
-##### Parameters
+• **aborters**: `TaskAbortControllers`
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `AsyncTaskId` |
-| `aborters` | `TaskAbortControllers` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Inherited from
 
-CancelableAbility.cleanMultiTaskAborter
+`CancelableAbility.cleanMultiTaskAborter`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:211
 
-___
+***
 
 ### constructor
 
-• **constructor**: `Function`
+> **constructor**: `Function`
 
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:125
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:125
 
-___
+***
 
 ### defaultOptions
 
-• **defaultOptions**: `Object`
+> **defaultOptions**: `object`
 
 The default options for export and assign
 
-#### Type declaration
+#### assign?
 
-| Name | Type |
-| :------ | :------ |
-| `assign?` | `IMergeOptions` |
-| `export?` | `IMergeOptions` |
+> `optional` **assign**: `IMergeOptions`
+
+#### export?
+
+> `optional` **export**: `IMergeOptions`
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:74
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:74
 
-___
+***
 
 ### depends
 
-• **depends**: `Object`
+> **depends**: `object`
 
-#### Index signature
+#### Index Signature
 
-▪ [name: `string`]: `ToolFunc`
+ \[`name`: `string`\]: `ToolFunc`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:325
 
-___
+***
 
 ### description
 
-• **description**: `string`
+> **description**: `string`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:306
 
-___
+***
 
-### generateAsyncTaskId
+### generateAsyncTaskId()
 
-• **generateAsyncTaskId**: (`taskId?`: `AsyncTaskId`, `aborters?`: `TaskAbortControllers`) => `AsyncTaskId`
+> **generateAsyncTaskId**: (`taskId`?, `aborters`?) => `AsyncTaskId`
 
-#### Type declaration
+#### Parameters
 
-▸ (`taskId?`, `aborters?`): `AsyncTaskId`
+• **taskId?**: `AsyncTaskId`
 
-##### Parameters
+• **aborters?**: `TaskAbortControllers`
 
-| Name | Type |
-| :------ | :------ |
-| `taskId?` | `AsyncTaskId` |
-| `aborters?` | `TaskAbortControllers` |
-
-##### Returns
+#### Returns
 
 `AsyncTaskId`
 
 #### Inherited from
 
-CancelableAbility.generateAsyncTaskId
+`CancelableAbility.generateAsyncTaskId`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:210
 
-___
+***
 
-### isApi
+### isApi?
 
-• `Optional` **isApi**: `boolean`
-
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:42
-
-___
-
-### name
-
-• `Optional` **name**: `string`
+> `optional` **isApi**: `boolean`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:36
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
 
-___
+***
+
+### name?
+
+> `optional` **name**: `string`
+
+#### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:36
+
+***
 
 ### nonExported1stChar
 
-• **nonExported1stChar**: `string`
+> **nonExported1stChar**: `string`
 
 the property with the default prefix '$' will not be exported.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:78
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:78
 
-___
+***
 
 ### params
 
-• **params**: `Object`
+> **params**: `object`
 
-#### Type declaration
+#### model
 
-| Name | Type |
-| :------ | :------ |
-| `model` | \{ `description`: `string` ; `name`: `string` ; `type`: `string`  } |
-| `model.description` | `string` |
-| `model.name` | `string` |
-| `model.type` | `string` |
-| `options` | \{ `description`: `string` ; `name`: `string` ; `type`: `string`  } |
-| `options.description` | `string` |
-| `options.name` | `string` |
-| `options.type` | `string` |
-| `value` | \{ `description`: `string` ; `name`: `string` ; `type`: `string`  } |
-| `value.description` | `string` |
-| `value.name` | `string` |
-| `value.type` | `string` |
+> **model**: `object`
+
+#### model.description
+
+> **description**: `string`
+
+#### model.name
+
+> **name**: `string`
+
+#### model.type
+
+> **type**: `string`
+
+#### options
+
+> **options**: `object`
+
+#### options.description
+
+> **description**: `string`
+
+#### options.name
+
+> **name**: `string`
+
+#### options.type
+
+> **type**: `string`
+
+#### value
+
+> **value**: `object`
+
+#### value.description
+
+> **description**: `string`
+
+#### value.name
+
+> **name**: `string`
+
+#### value.type
+
+> **type**: `string`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:307
 
-___
+***
 
 ### prior
 
-• **prior**: `number`
+> **prior**: `number`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:150
 
-___
+***
 
 ### result
 
-• **result**: `string`
+> **result**: `string`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:324
 
-___
+***
 
 ### rule
 
-• **rule**: `RegExp`
+> **rule**: `RegExp`
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L41)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L41)
 
-___
+***
 
-### scope
+### scope?
 
-• `Optional` **scope**: `any`
+> `optional` **scope**: `any`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:39
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:39
 
-___
+***
 
-### setup
+### setup()?
 
-• `Optional` **setup**: (`this`: `ToolFunc`, `options?`: `FuncItem`) => `void`
+> `optional` **setup**: (`this`, `options`?) => `void`
 
-#### Type declaration
+#### Parameters
 
-▸ (`this`, `options?`): `void`
+• **this**: `ToolFunc`
 
-##### Parameters
+• **options?**: `FuncItem`
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `ToolFunc` |
-| `options?` | `FuncItem` |
-
-##### Returns
+#### Returns
 
 `void`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:41
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:41
 
-___
+***
 
-### stream
+### stream?
 
-• `Optional` **stream**: `boolean`
+> `optional` **stream**: `boolean`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:43
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
-___
+***
 
 ### supports
 
-• **supports**: `AIModelType` \| `AIModelType`[]
+> **supports**: `AIModelType` \| `AIModelType`[]
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:151
 
-___
+***
 
-### tags
+### tags?
 
-• `Optional` **tags**: `string` \| `string`[]
+> `optional` **tags**: `string` \| `string`[]
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:40
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:40
 
-___
+***
 
-### current
+### current?
 
-▪ `Static` `Optional` **current**: `string`
+> `static` `optional` **current**: `string`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:302
 
-___
+***
 
 ### dataPath
 
-▪ `Static` **dataPath**: `string`
+> `static` **dataPath**: `string`
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:64
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:64
 
-___
+***
 
 ### items
 
-▪ `Static` **items**: `Object`
+> `static` **items**: `object`
 
-#### Index signature
+#### Index Signature
 
-▪ [name: `string`]: `LLMProvider`
+ \[`name`: `string`\]: `LLMProvider`
 
 #### Defined in
 
@@ -571,7 +442,7 @@ packages/ai-tool-llm/dist/index.d.ts:303
 
 ### maxTaskConcurrency
 
-• `get` **maxTaskConcurrency**(): `undefined` \| `number`
+> `get` **maxTaskConcurrency**(): `undefined` \| `number`
 
 #### Returns
 
@@ -579,17 +450,17 @@ packages/ai-tool-llm/dist/index.d.ts:303
 
 #### Inherited from
 
-CancelableAbility.maxTaskConcurrency
+`CancelableAbility.maxTaskConcurrency`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:214
 
-___
+***
 
 ### semaphore
 
-• `get` **semaphore**(): `undefined` \| `Semaphore`
+> `get` **semaphore**(): `undefined` \| `Semaphore`
 
 #### Returns
 
@@ -597,7 +468,7 @@ ___
 
 #### Inherited from
 
-CancelableAbility.semaphore
+`CancelableAbility.semaphore`
 
 #### Defined in
 
@@ -605,16 +476,15 @@ packages/ai-tool/dist/index.d.ts:215
 
 ## Methods
 
-### $cleanMultiTaskAborter
+### \_cleanMultiTaskAborter()
 
-▸ **$cleanMultiTaskAborter**(`id`, `aborters`): `void`
+> **\_cleanMultiTaskAborter**(`id`, `aborters`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `AsyncTaskId` |
-| `aborters` | `TaskAbortControllers` |
+• **id**: `AsyncTaskId`
+
+• **aborters**: `TaskAbortControllers`
 
 #### Returns
 
@@ -622,74 +492,23 @@ packages/ai-tool/dist/index.d.ts:215
 
 #### Inherited from
 
-CancelableAbility.$cleanMultiTaskAborter
-
-#### Defined in
-
-packages/ai-tool/dist/index.d.ts:222
-
-___
-
-### $generateAsyncTaskId
-
-▸ **$generateAsyncTaskId**(`taskId?`, `aborters?`): `undefined` \| `AsyncTaskId`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `taskId?` | `AsyncTaskId` |
-| `aborters?` | `TaskAbortControllers` |
-
-#### Returns
-
-`undefined` \| `AsyncTaskId`
-
-#### Inherited from
-
-CancelableAbility.$generateAsyncTaskId
-
-#### Defined in
-
-packages/ai-tool/dist/index.d.ts:220
-
-___
-
-### \_cleanMultiTaskAborter
-
-▸ **_cleanMultiTaskAborter**(`id`, `aborters`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `AsyncTaskId` |
-| `aborters` | `TaskAbortControllers` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-CancelableAbility.\_cleanMultiTaskAborter
+`CancelableAbility._cleanMultiTaskAborter`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:224
 
-___
+***
 
-### \_generateAsyncTaskId
+### \_generateAsyncTaskId()
 
-▸ **_generateAsyncTaskId**(`taskId?`, `aborters?`): `AsyncTaskId`
+> **\_generateAsyncTaskId**(`taskId`?, `aborters`?): `AsyncTaskId`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `taskId?` | `AsyncTaskId` |
-| `aborters?` | `TaskAbortControllers` |
+• **taskId?**: `AsyncTaskId`
+
+• **aborters?**: `TaskAbortControllers`
 
 #### Returns
 
@@ -697,24 +516,23 @@ ___
 
 #### Inherited from
 
-CancelableAbility.\_generateAsyncTaskId
+`CancelableAbility._generateAsyncTaskId`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:219
 
-___
+***
 
-### abort
+### $cleanMultiTaskAborter()
 
-▸ **abort**(`reason?`, `data?`): `void`
+> **$cleanMultiTaskAborter**(`id`, `aborters`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `reason?` | `string` |
-| `data?` | `any` |
+• **id**: `AsyncTaskId`
+
+• **aborters**: `TaskAbortControllers`
 
 #### Returns
 
@@ -722,24 +540,71 @@ ___
 
 #### Inherited from
 
-CancelableAbility.abort
+`CancelableAbility.$cleanMultiTaskAborter`
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:222
+
+***
+
+### $generateAsyncTaskId()
+
+> **$generateAsyncTaskId**(`taskId`?, `aborters`?): `undefined` \| `AsyncTaskId`
+
+#### Parameters
+
+• **taskId?**: `AsyncTaskId`
+
+• **aborters?**: `TaskAbortControllers`
+
+#### Returns
+
+`undefined` \| `AsyncTaskId`
+
+#### Inherited from
+
+`CancelableAbility.$generateAsyncTaskId`
+
+#### Defined in
+
+packages/ai-tool/dist/index.d.ts:220
+
+***
+
+### abort()
+
+> **abort**(`reason`?, `data`?): `void`
+
+#### Parameters
+
+• **reason?**: `string`
+
+• **data?**: `any`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`CancelableAbility.abort`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:233
 
-___
+***
 
-### addModel
+### addModel()?
 
-▸ **addModel**(`modelName`, `model`): `Promise`\<`any`\>
+> `optional` **addModel**(`modelName`, `model`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelName` | `string` |
-| `model` | `any` |
+• **modelName**: `string`
+
+• **model**: `any`
 
 #### Returns
 
@@ -749,17 +614,15 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:298
 
-___
+***
 
-### arr2ObjParams
+### arr2ObjParams()
 
-▸ **arr2ObjParams**(`params`): `any`[]
+> **arr2ObjParams**(`params`): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `any`[] |
+• **params**: `any`[]
 
 #### Returns
 
@@ -767,22 +630,23 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:83
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:83
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**(`src`, `options?`): `this`
+> **assign**(`src`, `options`?): `this`
 
 Assign the values from the src object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+the source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -792,25 +656,35 @@ this object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:106
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:106
 
-___
+***
 
-### assignProperty
+### assignProperty()
 
-▸ **assignProperty**(`src`, `name`, `value`, `attrs?`, `options?`): `void`
+> **assignProperty**(`src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign a property of src to this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | the src object |
-| `name` | `string` | the property name to assign |
-| `value` | `any` | the property value to assign |
-| `attrs?` | `any` | the attributes object |
-| `options?` | `IMergeOptions` |  |
+• **src**: `any`
+
+the src object
+
+• **name**: `string`
+
+the property name to assign
+
+• **value**: `any`
+
+the property value to assign
+
+• **attrs?**: `any`
+
+the attributes object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -818,51 +692,63 @@ Assign a property of src to this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:117
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:117
 
-___
+***
 
-### assignPropertyTo
+### assignPropertyTo()
 
-▸ **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs?`, `options?`): `void`
+> `abstract` **assignPropertyTo**(`dest`, `src`, `name`, `value`, `attrs`?, `options`?): `void`
 
 Assign the property value from the src to destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `src` | `any` | The src object |
-| `name` | `string` | The property name |
-| `value` | `any` | The property value |
-| `attrs?` | `any` | The attributes object of the property |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+The destination object
+
+• **src**: `any`
+
+The src object
+
+• **name**: `string`
+
+The property name
+
+• **value**: `any`
+
+The property value
+
+• **attrs?**: `any`
+
+The attributes object of the property
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
 `void`
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:131
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:131
 
-___
+***
 
-### assignTo
+### assignTo()
 
-▸ **assignTo**(`dest?`, `options?`): `any`
+> **assignTo**(`dest`?, `options`?): `any`
 
 Assign this attributes to the dest object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest?` | `any` | the destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest?**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -872,19 +758,17 @@ the dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:191
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:191
 
-___
+***
 
-### cleanTaskAborter
+### cleanTaskAborter()
 
-▸ **cleanTaskAborter**(`aborter`): `void`
+> **cleanTaskAborter**(`aborter`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `aborter` | `TaskAbortController` |
+• **aborter**: `TaskAbortController`
 
 #### Returns
 
@@ -892,25 +776,23 @@ ___
 
 #### Inherited from
 
-CancelableAbility.cleanTaskAborter
+`CancelableAbility.cleanTaskAborter`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:223
 
-___
+***
 
-### clone
+### clone()
 
-▸ **clone**(`options?`): `any`
+> **clone**(`options`?): `any`
 
 Create a new object with the same values of attributes.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `IMergeOptions` |
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -920,22 +802,23 @@ the new object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:155
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:155
 
-___
+***
 
-### cloneTo
+### cloneTo()
 
-▸ **cloneTo**(`dest`, `options?`): `any`
+> **cloneTo**(`dest`, `options`?): `any`
 
 Create and assign the values to the destination object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IMergeOptions` |  |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -945,21 +828,21 @@ the new dest object
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:148
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:148
 
-___
+***
 
-### createAborter
+### createAborter()
 
-▸ **createAborter**(`params?`, `taskId?`, `raiseError?`): `TaskAbortController`
+> **createAborter**(`params`?, `taskId`?, `raiseError`?): `TaskAbortController`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
-| `taskId?` | `AsyncTaskId` |
-| `raiseError?` | `boolean` |
+• **params?**: `any`
+
+• **taskId?**: `AsyncTaskId`
+
+• **raiseError?**: `boolean`
 
 #### Returns
 
@@ -967,33 +850,33 @@ ___
 
 #### Inherited from
 
-CancelableAbility.createAborter
+`CancelableAbility.createAborter`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:221
 
-___
+***
 
-### createTaskPromise
+### createTaskPromise()
 
-▸ **createTaskPromise**\<`Output`\>(`runTask`, `params`, `options?`): `TaskPromise`\<`Output`\>
+> **createTaskPromise**\<`Output`\>(`runTask`, `params`, `options`?): `TaskPromise`\<`Output`\>
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Output` | `any` |
+• **Output** = `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `runTask` | (`params`: `Record`\<`string`, `any`\>, `aborter`: `TaskAbortController`) => `Promise`\<`Output`\> |
-| `params` | `Record`\<`string`, `any`\> |
-| `options?` | `Object` |
-| `options.raiseError?` | `boolean` |
-| `options.taskId?` | `AsyncTaskId` |
+• **runTask**
+
+• **params**: `Record`\<`string`, `any`\>
+
+• **options?**
+
+• **options.raiseError?**: `boolean`
+
+• **options.taskId?**: `AsyncTaskId`
 
 #### Returns
 
@@ -1001,47 +884,43 @@ ___
 
 #### Inherited from
 
-CancelableAbility.createTaskPromise
+`CancelableAbility.createTaskPromise`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:225
 
-___
+***
 
-### defineProperties
+### defineProperties()
 
-▸ **defineProperties**(`aProperties`): `any`
+> `abstract` **defineProperties**(`aProperties`): `any`
 
 Define the attributes of this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `aProperties` | `SimplePropDescriptors` | the defined attributes of the object |
+• **aProperties**: `SimplePropDescriptors`
+
+the defined attributes of the object
 
 #### Returns
 
 `any`
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:89
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:89
 
-___
+***
 
-### deleteModel
+### deleteModel()?
 
-▸ **deleteModel**(`modelName`): `Promise`\<`any`\>
+> `optional` **deleteModel**(`modelName`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelName` | `string` |
+• **modelName**: `string`
 
 #### Returns
 
@@ -1051,20 +930,21 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:299
 
-___
+***
 
-### exportTo
+### exportTo()
 
-▸ **exportTo**(`dest`, `options?`): `any`
+> **exportTo**(`dest`, `options`?): `any`
 
 Export attributes to the dest json object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | the destination object |
-| `options?` | `IExportOptions` | - |
+• **dest**: `any`
+
+the destination object
+
+• **options?**: `IExportOptions`
 
 #### Returns
 
@@ -1074,26 +954,31 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:173
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:173
 
-___
+***
 
-### formatPrompt
+### formatPrompt()
 
-▸ **formatPrompt**(`messages`, `modelInfo?`, `options?`): `Promise`\<`undefined` \| `string`\>
+> **formatPrompt**(`messages`, `modelInfo`?, `options`?): `Promise`\<`undefined` \| `string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `messages` | `AIChatMessageParam`[] |
-| `modelInfo?` | `string` \| `AIModelParams` |
-| `options?` | `Object` |
-| `options.add_generation_prompt?` | `boolean` |
-| `options.chatTemplate?` | `AIPromptResult` |
-| `options.defaultTemplate?` | `boolean` |
-| `options.prompt?` | `any` |
-| `options.type?` | `AIPromptType` |
+• **messages**: `AIChatMessageParam`[]
+
+• **modelInfo?**: `string` \| `AIModelParams`
+
+• **options?**
+
+• **options.add\_generation\_prompt?**: `boolean`
+
+• **options.chatTemplate?**: `AIPromptResult`
+
+• **options.defaultTemplate?**: `boolean`
+
+• **options.prompt?**: `any`
+
+• **options.type?**: `AIPromptType`
 
 #### Returns
 
@@ -1103,20 +988,21 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:346
 
-___
+***
 
-### func
+### func()
 
-▸ **func**(`«destructured»`): `Promise`\<`any`\>
+> **func**(`__namedParameters`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `Object` |
-| › `model` | `string` |
-| › `options` | `AIOptions` |
-| › `value` | `any` |
+• **\_\_namedParameters**
+
+• **\_\_namedParameters.model**: `string`
+
+• **\_\_namedParameters.options**: `AIOptions`
+
+• **\_\_namedParameters.value**: `any`
 
 #### Returns
 
@@ -1124,22 +1010,23 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L140)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L140)
 
-___
+***
 
-### getChatTemplate
+### getChatTemplate()
 
-▸ **getChatTemplate**(`modelInfo?`, `options?`): `Promise`\<`undefined` \| `AIPromptResult`\>
+> **getChatTemplate**(`modelInfo`?, `options`?): `Promise`\<`undefined` \| `AIPromptResult`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelInfo?` | `string` \| `AIModelParams` |
-| `options?` | `Object` |
-| `options.defaultTemplate?` | `boolean` |
-| `options.type?` | `AIPromptType` |
+• **modelInfo?**: `string` \| `AIModelParams`
+
+• **options?**
+
+• **options.defaultTemplate?**: `boolean`
+
+• **options.type?**: `AIPromptType`
 
 #### Returns
 
@@ -1149,11 +1036,11 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:342
 
-___
+***
 
-### getCurrentProvider
+### getCurrentProvider()
 
-▸ **getCurrentProvider**(): `undefined` \| `LLMProvider`
+> **getCurrentProvider**(): `undefined` \| `LLMProvider`
 
 #### Returns
 
@@ -1163,18 +1050,17 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:339
 
-___
+***
 
-### getDefaultParameters
+### getDefaultParameters()
 
-▸ **getDefaultParameters**(`chatTemplate`, `model`): `any`
+> **getDefaultParameters**(`chatTemplate`, `model`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chatTemplate` | `AIPromptSettings` |
-| `model` | `string` |
+• **chatTemplate**: `AIPromptSettings`
+
+• **model**: `string`
 
 #### Returns
 
@@ -1184,17 +1070,15 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:353
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name?`): `any`
+> **getFunc**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -1202,19 +1086,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:89
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:89
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name?`): `any`
+> **getFuncWithPos**(`name`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name?` | `string` |
+• **name?**: `string`
 
 #### Returns
 
@@ -1222,19 +1104,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:94
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:94
 
-___
+***
 
-### getModelInfo
+### getModelInfo()
 
-▸ **getModelInfo**(`modelName?`): `Promise`\<`AIModelParams`\>
+> **getModelInfo**(`modelName`?): `Promise`\<`AIModelParams`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelName?` | `string` |
+• **modelName?**: `string`
 
 #### Returns
 
@@ -1242,13 +1122,13 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L214)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L214)
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `abstract` **getProperties**(): `PropDescriptors`
 
 Get the defined attributes.
 
@@ -1258,23 +1138,19 @@ Get the defined attributes.
 
 the descriptors of properties object
 
-**`Abstract`**
-
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:98
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:98
 
-___
+***
 
-### getRunningTask
+### getRunningTask()
 
-▸ **getRunningTask**(`taskId?`): `undefined` \| `TaskAbortController`
+> **getRunningTask**(`taskId`?): `undefined` \| `TaskAbortController`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `taskId?` | `AsyncTaskId` |
+• **taskId?**: `AsyncTaskId`
 
 #### Returns
 
@@ -1282,17 +1158,17 @@ ___
 
 #### Inherited from
 
-CancelableAbility.getRunningTask
+`CancelableAbility.getRunningTask`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:217
 
-___
+***
 
-### getRunningTaskCount
+### getRunningTaskCount()
 
-▸ **getRunningTaskCount**(): `number`
+> **getRunningTaskCount**(): `number`
 
 #### Returns
 
@@ -1300,23 +1176,21 @@ ___
 
 #### Inherited from
 
-CancelableAbility.getRunningTaskCount
+`CancelableAbility.getRunningTaskCount`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:218
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -1324,21 +1198,21 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:95
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:95
 
-___
+***
 
-### hasOwnProperty
+### hasOwnProperty()
 
-▸ **hasOwnProperty**(`v`): `boolean`
+> **hasOwnProperty**(`v`): `boolean`
 
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1346,21 +1220,19 @@ Determines whether an object has a property with the specified name.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:140
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:140
 
-___
+***
 
-### initialize
+### initialize()
 
-▸ **initialize**(`src?`): `this`
+> **initialize**(`src`?): `this`
 
 Initialize object and assign attribute values from src if src exists.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `src?` | `any` |
+• **src?**: `any`
 
 #### Returns
 
@@ -1370,19 +1242,17 @@ this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:139
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:139
 
-___
+***
 
-### isAborted
+### isAborted()
 
-▸ **isAborted**(`taskId?`): `boolean`
+> **isAborted**(`taskId`?): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `taskId?` | `AsyncTaskId` |
+• **taskId?**: `AsyncTaskId`
 
 #### Returns
 
@@ -1390,24 +1260,23 @@ ___
 
 #### Inherited from
 
-CancelableAbility.isAborted
+`CancelableAbility.isAborted`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:216
 
-___
+***
 
-### isModelNameMatched
+### isModelNameMatched()
 
-▸ **isModelNameMatched**(`modelName`, `rule?`): `undefined` \| `string` \| `RegExpExecArray`
+> **isModelNameMatched**(`modelName`, `rule`?): `undefined` \| `string` \| `RegExpExecArray`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelName` | `string` |
-| `rule?` | `AIModelNameRules` |
+• **modelName**: `string`
+
+• **rule?**: `AIModelNameRules`
 
 #### Returns
 
@@ -1417,19 +1286,19 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:330
 
-___
+***
 
-### isPrototypeOf
+### isPrototypeOf()
 
-▸ **isPrototypeOf**(`v`): `boolean`
+> **isPrototypeOf**(`v`): `boolean`
 
 Determines whether an object exists in another object's prototype chain.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `Object` | Another object whose prototype chain is to be checked. |
+• **v**: `Object`
+
+Another object whose prototype chain is to be checked.
 
 #### Returns
 
@@ -1437,22 +1306,23 @@ Determines whether an object exists in another object's prototype chain.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:146
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:146
 
-___
+***
 
-### isSame
+### isSame()
 
-▸ **isSame**(`src`, `options?`): `boolean`
+> **isSame**(`src`, `options`?): `boolean`
 
 Check the src object whether “equals” this object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `src` | `any` | The source object |
-| `options?` | `IMergeOptions` | - |
+• **src**: `any`
+
+The source object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1460,19 +1330,17 @@ Check the src object whether “equals” this object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:200
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:200
 
-___
+***
 
-### isStream
+### isStream()
 
-▸ **isStream**(`params`): `any`
+> **isStream**(`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `ServerFuncParams` |
+• **params**: `ServerFuncParams`
 
 #### Returns
 
@@ -1482,11 +1350,11 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:331
 
-___
+***
 
-### listModels
+### listModels()?
 
-▸ **listModels**(): `Promise`\<`undefined` \| `string`[]\>
+> `optional` **listModels**(): `Promise`\<`undefined` \| `string`[]\>
 
 #### Returns
 
@@ -1496,39 +1364,37 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:296
 
-___
+***
 
-### listProviders
+### listProviders()
 
-▸ **listProviders**(`options?`): `Object`
+> **listProviders**(`options`?): `object`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `Object` |
-| `options.all?` | `boolean` |
-| `options.filter?` | `AIModelNameRules` |
+• **options?**
+
+• **options.all?**: `boolean`
+
+• **options.filter?**: `AIModelNameRules`
 
 #### Returns
 
-`Object`
+`object`
 
 #### Defined in
 
 packages/ai-tool-llm/dist/index.d.ts:333
 
-___
+***
 
-### loadModel
+### loadModel()
 
-▸ **loadModel**(`model`): `Promise`\<`any`\>
+> **loadModel**(`model`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | [`LlamaLoadModelOptions`](../interfaces/LlamaLoadModelOptions.md) |
+• **model**: [`LlamaLoadModelOptions`](../interfaces/LlamaLoadModelOptions.md)
 
 #### Returns
 
@@ -1536,22 +1402,23 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L209)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L209)
 
-___
+***
 
-### mergeTo
+### mergeTo()
 
-▸ **mergeTo**(`dest`, `options?`): `any`
+> **mergeTo**(`dest`, `options`?): `any`
 
 Merge this attributes to dest object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dest` | `any` | The destination object |
-| `options?` | `IMergeOptions` | - |
+• **dest**: `any`
+
+The destination object
+
+• **options?**: `IMergeOptions`
 
 #### Returns
 
@@ -1561,19 +1428,17 @@ the dest object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:164
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:164
 
-___
+***
 
-### obj2ArrParams
+### obj2ArrParams()
 
-▸ **obj2ArrParams**(`params?`): `any`[]
+> **obj2ArrParams**(`params`?): `any`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1581,21 +1446,21 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:84
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
-___
+***
 
-### processModelOptions
+### processModelOptions()
 
-▸ **processModelOptions**(`model`, `value`, `options`): `Promise`\<`AIOptions`\>
+> **processModelOptions**(`model`, `value`, `options`): `Promise`\<`AIOptions`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | `string` |
-| `value` | `any` |
-| `options` | `AIOptions` |
+• **model**: `string`
+
+• **value**: `any`
+
+• **options**: `AIOptions`
 
 #### Returns
 
@@ -1603,21 +1468,21 @@ ___
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/f98652bc726258c43e820ee0ee0870e0c0aa57df/src/llamacpp.ts#L43)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L43)
 
-___
+***
 
-### propertyIsEnumerable
+### propertyIsEnumerable()
 
-▸ **propertyIsEnumerable**(`v`): `boolean`
+> **propertyIsEnumerable**(`v`): `boolean`
 
 Determines whether a specified property is enumerable.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `v` | `PropertyKey` | A property name. |
+• **v**: `PropertyKey`
+
+A property name.
 
 #### Returns
 
@@ -1625,13 +1490,13 @@ Determines whether a specified property is enumerable.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:152
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:152
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(): `boolean` \| `ToolFunc`
+> **register**(): `boolean` \| `ToolFunc`
 
 #### Returns
 
@@ -1639,19 +1504,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:81
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:81
 
-___
+***
 
-### run
+### run()
 
-▸ **run**(`params?`): `Promise`\<`any`\>
+> **run**(`params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1659,20 +1522,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:86
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:86
 
-___
+***
 
-### runAs
+### runAs()
 
-▸ **runAs**(`name`, `params?`): `Promise`\<`any`\>
+> **runAs**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1680,20 +1542,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:87
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:87
 
-___
+***
 
-### runAsSync
+### runAsSync()
 
-▸ **runAsSync**(`name`, `params?`): `any`
+> **runAsSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -1701,29 +1562,29 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:88
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:88
 
-___
+***
 
-### runAsyncCancelableTask
+### runAsyncCancelableTask()
 
-▸ **runAsyncCancelableTask**\<`Output`\>(`params`, `runTask`, `options?`): `TaskPromise`\<`Output`\>
+> **runAsyncCancelableTask**\<`Output`\>(`params`, `runTask`, `options`?): `TaskPromise`\<`Output`\>
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Output` | `any` |
+• **Output** = `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `undefined` \| `Record`\<`string`, `any`\> |
-| `runTask` | (`params`: `Record`\<`string`, `any`\>, `aborter`: `TaskAbortController`) => `Promise`\<`Output`\> |
-| `options?` | `Object` |
-| `options.raiseError?` | `boolean` |
-| `options.taskId?` | `AsyncTaskId` |
+• **params**: `undefined` \| `Record`\<`string`, `any`\>
+
+• **runTask**
+
+• **options?**
+
+• **options.raiseError?**: `boolean`
+
+• **options.taskId?**: `AsyncTaskId`
 
 #### Returns
 
@@ -1731,23 +1592,21 @@ ___
 
 #### Inherited from
 
-CancelableAbility.runAsyncCancelableTask
+`CancelableAbility.runAsyncCancelableTask`
 
 #### Defined in
 
 packages/ai-tool/dist/index.d.ts:229
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`params?`): `any`
+> **runSync**(`params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params?` | `any` |
+• **params?**: `any`
 
 #### Returns
 
@@ -1755,19 +1614,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:85
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:85
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`...params`): `Promise`\<`any`\>
+> **runWithPos**(...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1775,20 +1632,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:92
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:92
 
-___
+***
 
-### runWithPosAs
+### runWithPosAs()
 
-▸ **runWithPosAs**(`name`, `...params`): `Promise`\<`any`\>
+> **runWithPosAs**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1796,20 +1652,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:93
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:93
 
-___
+***
 
-### runWithPosAsSync
+### runWithPosAsSync()
 
-▸ **runWithPosAsSync**(`name`, `...params`): `any`
+> **runWithPosAsSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1817,19 +1672,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:91
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:91
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`...params`): `any`
+> **runWithPosSync**(...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...params` | `any`[] |
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -1837,19 +1690,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:90
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:90
 
-___
+***
 
-### setCurrentProvider
+### setCurrentProvider()
 
-▸ **setCurrentProvider**(`name`): `void`
+> **setCurrentProvider**(`name`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -1859,11 +1710,11 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:340
 
-___
+***
 
-### toJSON
+### toJSON()
 
-▸ **toJSON**(): `any`
+> **toJSON**(): `any`
 
 #### Returns
 
@@ -1871,13 +1722,13 @@ ___
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:182
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:182
 
-___
+***
 
-### toLocaleString
+### toLocaleString()
 
-▸ **toLocaleString**(): `string`
+> **toLocaleString**(): `string`
 
 Returns a date converted to a string using the current locale.
 
@@ -1887,21 +1738,19 @@ Returns a date converted to a string using the current locale.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:131
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:131
 
-___
+***
 
-### toObject
+### toObject()
 
-▸ **toObject**(`options?`): `any`
+> **toObject**(`options`?): `any`
 
 Convert the attributes to the json object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `any` |
+• **options?**: `any`
 
 #### Returns
 
@@ -1911,13 +1760,13 @@ the json object.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/abstract.d.ts:181
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/abstract.d.ts:181
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of an object.
 
@@ -1927,13 +1776,13 @@ Returns a string representation of an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:128
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:128
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(): `any`
+> **unregister**(): `any`
 
 #### Returns
 
@@ -1941,20 +1790,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:82
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:82
 
-___
+***
 
-### updateModel
+### updateModel()?
 
-▸ **updateModel**(`modelName`, `model`): `Promise`\<`any`\>
+> `optional` **updateModel**(`modelName`, `model`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelName` | `string` |
-| `model` | `any` |
+• **modelName**: `string`
+
+• **model**: `any`
 
 #### Returns
 
@@ -1964,11 +1812,11 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:297
 
-___
+***
 
-### valueOf
+### valueOf()
 
-▸ **valueOf**(): `Object`
+> **valueOf**(): `Object`
 
 Returns the primitive value of the specified object.
 
@@ -1978,151 +1826,211 @@ Returns the primitive value of the specified object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:134
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:134
 
-___
+***
 
-### assign
+### assign()
 
-▸ **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
+#### assign(target, source)
+
+> `static` **assign**\<`T`, `U`\>(`target`, `source`): `T` & `U`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source` | `U` | The source object from which to copy properties. |
+##### Parameters
 
-#### Returns
+• **target**: `T`
+
+The target object to copy to.
+
+• **source**: `U`
+
+The source object from which to copy properties.
+
+##### Returns
 
 `T` & `U`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:284
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:286
 
-▸ **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
+#### assign(target, source1, source2)
+
+> `static` **assign**\<`T`, `U`, `V`\>(`target`, `source1`, `source2`): `T` & `U` & `V`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
+• **V**
 
-#### Returns
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:293
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:295
 
-▸ **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
+#### assign(target, source1, source2, source3)
+
+> `static` **assign**\<`T`, `U`, `V`, `W`\>(`target`, `source1`, `source2`, `source3`): `T` & `U` & `V` & `W`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | `U` |
-| `V` | `V` |
-| `W` | `W` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `T` | The target object to copy to. |
-| `source1` | `U` | The first source object from which to copy properties. |
-| `source2` | `V` | The second source object from which to copy properties. |
-| `source3` | `W` | The third source object from which to copy properties. |
+• **V**
 
-#### Returns
+• **W**
+
+##### Parameters
+
+• **target**: `T`
+
+The target object to copy to.
+
+• **source1**: `U`
+
+The first source object from which to copy properties.
+
+• **source2**: `V`
+
+The second source object from which to copy properties.
+
+• **source3**: `W`
+
+The third source object from which to copy properties.
+
+##### Returns
 
 `T` & `U` & `V` & `W`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:303
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:305
 
-▸ **assign**(`target`, `...sources`): `any`
+#### assign(target, sources)
+
+> `static` **assign**(`target`, ...`sources`): `any`
 
 Copy the values of all of the enumerable own properties from one or more source objects to a
 target object. Returns the target object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `target` | `object` | The target object to copy to. |
-| `...sources` | `any`[] | One or more source objects from which to copy properties |
+• **target**: `object`
 
-#### Returns
+The target object to copy to.
+
+• ...**sources**: `any`[]
+
+One or more source objects from which to copy properties
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:311
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:313
 
-___
+***
 
-### create
+### create()
 
-▸ **create**(`o`): `any`
+#### create(o)
+
+> `static` **create**(`o`): `any`
 
 Creates an object that has the specified prototype or that has null prototype.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null. |
+• **o**: `null` \| `object`
 
-#### Returns
+Object to use as a prototype. May be null.
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:188
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:188
 
-▸ **create**(`o`, `properties`): `any`
+#### create(o, properties)
+
+> `static` **create**(`o`, `properties`): `any`
 
 Creates an object that has the specified prototype, and that optionally contains specified properties.
 
+##### Parameters
+
+• **o**: `null` \| `object`
+
+Object to use as a prototype. May be null
+
+• **properties**: `PropertyDescriptorMap` & `ThisType`\<`any`\>
+
+JavaScript object that contains one or more property descriptors.
+
+##### Returns
+
+`any`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:195
+
+***
+
+### defineProperties()
+
+> `static` **defineProperties**(`aTarget`, `aProperties`, `recreate`?): `any`
+
+Adds one or more properties to an object, and/or modifies attributes of existing properties.
+
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | ``null`` \| `object` | Object to use as a prototype. May be null |
-| `properties` | `PropertyDescriptorMap` & `ThisType`\<`any`\> | JavaScript object that contains one or more property descriptors. |
+• **aTarget**: `any`
+
+• **aProperties**: `PropDescriptors`
+
+• **recreate?**: `boolean`
 
 #### Returns
 
@@ -2130,51 +2038,33 @@ Creates an object that has the specified prototype, and that optionally contains
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:195
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:11
 
-___
+***
 
-### defineProperties
+### defineProperty()
 
-▸ **defineProperties**(`aTarget`, `aProperties`, `recreate?`): `any`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `aTarget` | `any` |
-| `aProperties` | `PropDescriptors` |
-| `recreate?` | `boolean` |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:11
-
-___
-
-### defineProperty
-
-▸ **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
+> `static` **defineProperty**\<`T`\>(`o`, `p`, `attributes`): `T`
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object. |
-| `p` | `PropertyKey` | The property name. |
-| `attributes` | `PropertyDescriptor` & `ThisType`\<`any`\> | Descriptor for the property. It can be for a data property or an accessor property. |
+• **o**: `T`
+
+Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+
+• **p**: `PropertyKey`
+
+The property name.
+
+• **attributes**: `PropertyDescriptor` & `ThisType`\<`any`\>
+
+Descriptor for the property. It can be for a data property or an accessor property.
 
 #### Returns
 
@@ -2182,188 +2072,191 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:203
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:203
 
-___
+***
 
-### entries
+### entries()
 
-▸ **entries**\<`T`\>(`o`): [`string`, `T`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**\<`T`\>(`o`): [`string`, `T`][]
 
-#### Type parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `T`][]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:36
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:36
 
-▸ **entries**(`o`): [`string`, `any`][]
+#### entries(o)
 
-Returns an array of key/values of the enumerable properties of an object
+> `static` **entries**(`o`): [`string`, `any`][]
 
-#### Parameters
+Returns an array of key/values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 [`string`, `any`][]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:42
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:42
 
-___
+***
 
-### freeze
+### freeze()
 
-▸ **freeze**\<`T`\>(`f`): `T`
+#### freeze(f)
+
+> `static` **freeze**\<`T`\>(`f`): `T`
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Function` |
+• **T** *extends* `Function`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `f` | `T` | Object on which to lock the attributes. |
+• **f**: `T`
 
-#### Returns
+Object on which to lock the attributes.
+
+##### Returns
 
 `T`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:222
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:222
 
-▸ **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
+#### freeze(o)
 
-Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `Object` |
-| `U` | extends `string` \| `number` \| `bigint` \| `boolean` \| `symbol` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
-
-#### Returns
-
-`Readonly`\<`T`\>
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:228
-
-▸ **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
+> `static` **freeze**\<`T`, `U`\>(`o`): `Readonly`\<`T`\>
 
 Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
 
-#### Type parameters
+##### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T** *extends* `object`
 
-#### Parameters
+• **U** *extends* `string` \| `number` \| `bigint` \| `boolean` \| `symbol`
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+##### Parameters
 
-#### Returns
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
 
 `Readonly`\<`T`\>
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:234
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:228
 
-___
+#### freeze(o)
 
-### fromEntries
+> `static` **freeze**\<`T`\>(`o`): `Readonly`\<`T`\>
 
-▸ **fromEntries**\<`T`\>(`entries`): `Object`
+Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+
+##### Type Parameters
+
+• **T**
+
+##### Parameters
+
+• **o**: `T`
+
+Object on which to lock the attributes.
+
+##### Returns
+
+`Readonly`\<`T`\>
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:234
+
+***
+
+### fromEntries()
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**\<`T`\>(`entries`): `object`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Type parameters
+##### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `any` |
+• **T** = `any`
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly [`PropertyKey`, `T`]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly [`PropertyKey`, `T`], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
 
-`Object`
+##### Returns
 
-#### Defined in
+`object`
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:26
+##### Defined in
 
-▸ **fromEntries**(`entries`): `any`
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:26
+
+#### fromEntries(entries)
+
+> `static` **fromEntries**(`entries`): `any`
 
 Returns an object created by key-value entries for properties and methods
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `entries` | `Iterable`\<readonly `any`[]\> | An iterable object that contains key-value entries for properties and methods. |
+• **entries**: `Iterable`\<readonly `any`[], `any`, `any`\>
 
-#### Returns
+An iterable object that contains key-value entries for properties and methods.
+
+##### Returns
 
 `any`
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2019.object.d.ts:32
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2019.object.d.ts:32
 
-___
+***
 
-### get
+### get()
 
-▸ **get**(`name`): `ToolFunc`
+> `static` **get**(`name`): `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2371,19 +2264,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:65
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:65
 
-___
+***
 
-### getAllByTag
+### getAllByTag()
 
-▸ **getAllByTag**(`tagName`): `ToolFunc`[]
+> `static` **getAllByTag**(`tagName`): `ToolFunc`[]
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2391,19 +2282,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:68
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:68
 
-___
+***
 
-### getByModel
+### getByModel()
 
-▸ **getByModel**(`modelName?`): `undefined` \| `LLMProvider`
+> `static` **getByModel**(`modelName`?): `undefined` \| `LLMProvider`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `modelName?` | `string` |
+• **modelName?**: `string`
 
 #### Returns
 
@@ -2413,17 +2302,15 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:328
 
-___
+***
 
-### getByTag
+### getByTag()
 
-▸ **getByTag**(`tagName`): `undefined` \| `ToolFunc`
+> `static` **getByTag**(`tagName`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+• **tagName**: `string`
 
 #### Returns
 
@@ -2431,13 +2318,13 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:67
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:67
 
-___
+***
 
-### getCurrentProvider
+### getCurrentProvider()
 
-▸ **getCurrentProvider**(): `undefined` \| `LLMProvider`
+> `static` **getCurrentProvider**(): `undefined` \| `LLMProvider`
 
 #### Returns
 
@@ -2447,17 +2334,15 @@ ___
 
 packages/ai-tool-llm/dist/index.d.ts:329
 
-___
+***
 
-### getFunc
+### getFunc()
 
-▸ **getFunc**(`name`): `any`
+> `static` **getFunc**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2465,19 +2350,17 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:72
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:72
 
-___
+***
 
-### getFuncWithPos
+### getFuncWithPos()
 
-▸ **getFuncWithPos**(`name`): `any`
+> `static` **getFuncWithPos**(`name`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -2485,23 +2368,26 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:75
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:75
 
-___
+***
 
-### getOwnPropertyDescriptor
+### getOwnPropertyDescriptor()
 
-▸ **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
+> `static` **getOwnPropertyDescriptor**(`o`, `p`): `undefined` \| `PropertyDescriptor`
 
 Gets the own property descriptor of the specified object.
 An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the property. |
-| `p` | `PropertyKey` | Name of the property. |
+• **o**: `any`
+
+Object that contains the property.
+
+• **p**: `PropertyKey`
+
+Name of the property.
 
 #### Returns
 
@@ -2509,50 +2395,48 @@ An own property descriptor is one that is defined directly on the object and is 
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:175
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:175
 
-___
+***
 
-### getOwnPropertyDescriptors
+### getOwnPropertyDescriptors()
 
-▸ **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+> `static` **getOwnPropertyDescriptors**\<`T`\>(`o`): \{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 Returns an object containing all own property descriptors of an object
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `T`
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
 
 #### Returns
 
-\{ [P in string \| number \| symbol]: TypedPropertyDescriptor\<T[P]\> } & \{ `[x: string]`: `PropertyDescriptor`;  }
+\{ \[P in string \| number \| symbol\]: TypedPropertyDescriptor\<T\[P\]\> \} & `object`
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:48
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:48
 
-___
+***
 
-### getOwnPropertyNames
+### getOwnPropertyNames()
 
-▸ **getOwnPropertyNames**(`o`): `string`[]
+> `static` **getOwnPropertyNames**(`o`): `string`[]
 
 Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
 on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object that contains the own properties. |
+• **o**: `any`
+
+Object that contains the own properties.
 
 #### Returns
 
@@ -2560,21 +2444,21 @@ on that object, and are not inherited from the object's prototype. The propertie
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:182
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:182
 
-___
+***
 
-### getOwnPropertySymbols
+### getOwnPropertySymbols()
 
-▸ **getOwnPropertySymbols**(`o`): `symbol`[]
+> `static` **getOwnPropertySymbols**(`o`): `symbol`[]
 
 Returns an array of all symbol properties found directly on object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to retrieve the symbols from. |
+• **o**: `any`
+
+Object to retrieve the symbols from.
 
 #### Returns
 
@@ -2582,13 +2466,13 @@ Returns an array of all symbol properties found directly on object o.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:317
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:319
 
-___
+***
 
-### getProperties
+### getProperties()
 
-▸ **getProperties**(): `PropDescriptors`
+> `static` **getProperties**(): `PropDescriptors`
 
 get all properties descriptor include inherited.
 
@@ -2598,21 +2482,21 @@ get all properties descriptor include inherited.
 
 #### Defined in
 
-node_modules/.pnpm/property-manager@2.0.0/node_modules/property-manager/lib/advance.d.ts:10
+node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/advance.d.ts:10
 
-___
+***
 
-### getPrototypeOf
+### getPrototypeOf()
 
-▸ **getPrototypeOf**(`o`): `any`
+> `static` **getPrototypeOf**(`o`): `any`
 
 Returns the prototype of an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object that references the prototype. |
+• **o**: `any`
+
+The object that references the prototype.
 
 #### Returns
 
@@ -2620,19 +2504,17 @@ Returns the prototype of an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:167
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:167
 
-___
+***
 
-### hasAsyncFeature
+### hasAsyncFeature()
 
-▸ **hasAsyncFeature**(`feature`): `boolean`
+> `static` **hasAsyncFeature**(`feature`): `boolean`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `feature` | `AsyncFeatureBits` |
+• **feature**: `AsyncFeatureBits`
 
 #### Returns
 
@@ -2640,22 +2522,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:69
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:69
 
-___
+***
 
-### is
+### is()
 
-▸ **is**(`value1`, `value2`): `boolean`
+> `static` **is**(`value1`, `value2`): `boolean`
 
 Returns true if the values are the same value, false otherwise.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value1` | `any` | The first value. |
-| `value2` | `any` | The second value. |
+• **value1**: `any`
+
+The first value.
+
+• **value2**: `any`
+
+The second value.
 
 #### Returns
 
@@ -2663,21 +2548,21 @@ Returns true if the values are the same value, false otherwise.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:330
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:332
 
-___
+***
 
-### isExtensible
+### isExtensible()
 
-▸ **isExtensible**(`o`): `boolean`
+> `static` **isExtensible**(`o`): `boolean`
 
 Returns a value that indicates whether new properties can be added to an object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2685,21 +2570,21 @@ Returns a value that indicates whether new properties can be added to an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:258
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:258
 
-___
+***
 
-### isFrozen
+### isFrozen()
 
-▸ **isFrozen**(`o`): `boolean`
+> `static` **isFrozen**(`o`): `boolean`
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2707,21 +2592,21 @@ Returns true if existing property attributes and values cannot be modified in an
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:252
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:252
 
-___
+***
 
-### isSealed
+### isSealed()
 
-▸ **isSealed**(`o`): `boolean`
+> `static` **isSealed**(`o`): `boolean`
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | Object to test. |
+• **o**: `any`
+
+Object to test.
 
 #### Returns
 
@@ -2729,53 +2614,57 @@ Returns true if existing property attributes cannot be modified in an object and
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:246
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:246
 
-___
+***
 
-### keys
+### keys()
 
-▸ **keys**(`o`): `string`[]
+#### keys(o)
 
-Returns the names of the enumerable string properties and methods of an object.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
-
-#### Returns
-
-`string`[]
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:264
-
-▸ **keys**(`o`): `string`[]
+> `static` **keys**(`o`): `string`[]
 
 Returns the names of the enumerable string properties and methods of an object.
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+• **o**: `object`
 
-#### Returns
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `string`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:323
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:264
 
-___
+#### keys(o)
 
-### list
+> `static` **keys**(`o`): `string`[]
 
-▸ **list**(): `Funcs`
+Returns the names of the enumerable string properties and methods of an object.
+
+##### Parameters
+
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
+
+`string`[]
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:325
+
+***
+
+### list()
+
+> `static` **list**(): `Funcs`
 
 #### Returns
 
@@ -2783,27 +2672,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:66
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:66
 
-___
+***
 
-### preventExtensions
+### preventExtensions()
 
-▸ **preventExtensions**\<`T`\>(`o`): `T`
+> `static` **preventExtensions**\<`T`\>(`o`): `T`
 
 Prevents the addition of new properties to an object.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object to make non-extensible. |
+• **o**: `T`
+
+Object to make non-extensible.
 
 #### Returns
 
@@ -2811,75 +2698,77 @@ Prevents the addition of new properties to an object.
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:240
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:240
 
-___
+***
 
-### register
+### register()
 
-▸ **register**(`name`, `options`): `boolean` \| `ToolFunc`
+#### register(name, options)
 
-#### Parameters
+> `static` **register**(`name`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **name**: `string`
 
-`boolean` \| `ToolFunc`
+• **options**: `FuncItem`
 
-#### Defined in
-
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:76
-
-▸ **register**(`func`, `options`): `boolean` \| `ToolFunc`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `func` | `Function` |
-| `options` | `FuncItem` |
-
-#### Returns
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:77
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:76
 
-▸ **register**(`name`, `options?`): `boolean` \| `ToolFunc`
+#### register(func, options)
 
-#### Parameters
+> `static` **register**(`func`, `options`): `boolean` \| `ToolFunc`
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` \| `Function` \| `ToolFunc` \| `FuncItem` |
-| `options?` | `FuncItem` |
+##### Parameters
 
-#### Returns
+• **func**: `Function`
+
+• **options**: `FuncItem`
+
+##### Returns
 
 `boolean` \| `ToolFunc`
 
-#### Defined in
+##### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:78
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:77
 
-___
+#### register(name, options)
 
-### run
+> `static` **register**(`name`, `options`?): `boolean` \| `ToolFunc`
 
-▸ **run**(`name`, `params?`): `Promise`\<`any`\>
+##### Parameters
+
+• **name**: `string` \| `Function` \| `ToolFunc` \| `FuncItem`
+
+• **options?**: `FuncItem`
+
+##### Returns
+
+`boolean` \| `ToolFunc`
+
+##### Defined in
+
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:78
+
+***
+
+### run()
+
+> `static` **run**(`name`, `params`?): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -2887,20 +2776,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:70
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:70
 
-___
+***
 
-### runSync
+### runSync()
 
-▸ **runSync**(`name`, `params?`): `any`
+> `static` **runSync**(`name`, `params`?): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `params?` | `any` |
+• **name**: `string`
+
+• **params?**: `any`
 
 #### Returns
 
@@ -2908,20 +2796,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:71
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:71
 
-___
+***
 
-### runWithPos
+### runWithPos()
 
-▸ **runWithPos**(`name`, `...params`): `Promise`\<`any`\>
+> `static` **runWithPos**(`name`, ...`params`): `Promise`\<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -2929,20 +2816,19 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:73
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:73
 
-___
+***
 
-### runWithPosSync
+### runWithPosSync()
 
-▸ **runWithPosSync**(`name`, `...params`): `any`
+> `static` **runWithPosSync**(`name`, ...`params`): `any`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `...params` | `any`[] |
+• **name**: `string`
+
+• ...**params**: `any`[]
 
 #### Returns
 
@@ -2950,27 +2836,25 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:74
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:74
 
-___
+***
 
-### seal
+### seal()
 
-▸ **seal**\<`T`\>(`o`): `T`
+> `static` **seal**\<`T`\>(`o`): `T`
 
 Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
 
-#### Type parameters
+#### Type Parameters
 
-| Name |
-| :------ |
-| `T` |
+• **T**
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `T` | Object on which to lock the attributes. |
+• **o**: `T`
+
+Object on which to lock the attributes.
 
 #### Returns
 
@@ -2978,22 +2862,25 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es5.d.ts:216
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es5.d.ts:216
 
-___
+***
 
-### setPrototypeOf
+### setPrototypeOf()
 
-▸ **setPrototypeOf**(`o`, `proto`): `any`
+> `static` **setPrototypeOf**(`o`, `proto`): `any`
 
 Sets the prototype of a specified object o to object proto or null. Returns the object o.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `any` | The object to change its prototype. |
-| `proto` | ``null`` \| `object` | The value of the new prototype or null. |
+• **o**: `any`
+
+The object to change its prototype.
+
+• **proto**: `null` \| `object`
+
+The value of the new prototype or null.
 
 #### Returns
 
@@ -3001,19 +2888,17 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 #### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2015.core.d.ts:337
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2015.core.d.ts:339
 
-___
+***
 
-### unregister
+### unregister()
 
-▸ **unregister**(`name`): `undefined` \| `ToolFunc`
+> `static` **unregister**(`name`): `undefined` \| `ToolFunc`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+• **name**: `string`
 
 #### Returns
 
@@ -3021,50 +2906,52 @@ ___
 
 #### Defined in
 
-packages/ai-tool/dist/index-nP9lSU6E.d.ts:79
+packages/ai-tool/dist/index-DUEs7T8M.d.ts:79
 
-___
+***
 
-### values
+### values()
 
-▸ **values**\<`T`\>(`o`): `T`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**\<`T`\>(`o`): `T`[]
 
-#### Type parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name |
-| :------ |
-| `T` |
+##### Type Parameters
 
-#### Parameters
+• **T**
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | \{ `[s: string]`: `T`;  } \| `ArrayLike`\<`T`\> | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**: `object` \| `ArrayLike`\<`T`\>
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `T`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:24
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:24
 
-▸ **values**(`o`): `any`[]
+#### values(o)
 
-Returns an array of values of the enumerable properties of an object
+> `static` **values**(`o`): `any`[]
 
-#### Parameters
+Returns an array of values of the enumerable own properties of an object
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `o` | `Object` | Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object. |
+##### Parameters
 
-#### Returns
+• **o**
+
+Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+##### Returns
 
 `any`[]
 
-#### Defined in
+##### Defined in
 
-node_modules/.pnpm/typescript@5.4.5/node_modules/typescript/lib/lib.es2017.object.d.ts:30
+node\_modules/.pnpm/typescript@5.6.2/node\_modules/typescript/lib/lib.es2017.object.d.ts:30

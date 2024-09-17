@@ -1,4 +1,6 @@
-@isdk/ai-tool-llm-llamacpp / [Exports](modules.md)
+**@isdk/ai-tool-llm-llamacpp** • [**Docs**](globals.md)
+
+***
 
 # ai-tool-llm-llamacpp
 
