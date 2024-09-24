@@ -70,6 +70,7 @@ export class LlamaCppProvider extends LLMProvider {
     if (!modelInfo) {
       throwError('llamaCpp no current model', this.name)
     }
+    options.model = model
 
     let chatTemplate: any
     let endOfTokens: undefined|string[]
@@ -165,7 +166,6 @@ export class LlamaCppProvider extends LLMProvider {
 
       const body = {
         ...params,
-        model,
         prompt: value,
       }
       // delete body.aborter
