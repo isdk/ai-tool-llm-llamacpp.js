@@ -108,7 +108,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ad
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:152
+packages/ai-tool-llm/dist/index.d.ts:154
 
 ***
 
@@ -118,7 +118,7 @@ packages/ai-tool-llm/dist/index.d.ts:152
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:153
+packages/ai-tool-llm/dist/index.d.ts:155
 
 ***
 
@@ -188,7 +188,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:325
+packages/ai-tool-llm/dist/index.d.ts:331
 
 ***
 
@@ -198,7 +198,7 @@ packages/ai-tool-llm/dist/index.d.ts:325
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:306
+packages/ai-tool-llm/dist/index.d.ts:312
 
 ***
 
@@ -233,6 +233,16 @@ packages/ai-tool/dist/index.d.ts:210
 #### Defined in
 
 packages/ai-tool/dist/index-DUEs7T8M.d.ts:42
+
+***
+
+### model?
+
+> `optional` **model**: `string`
+
+#### Defined in
+
+packages/ai-tool-llm/dist/index.d.ts:305
 
 ***
 
@@ -312,7 +322,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:307
+packages/ai-tool-llm/dist/index.d.ts:313
 
 ***
 
@@ -322,7 +332,7 @@ packages/ai-tool-llm/dist/index.d.ts:307
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:150
+packages/ai-tool-llm/dist/index.d.ts:152
 
 ***
 
@@ -332,7 +342,7 @@ packages/ai-tool-llm/dist/index.d.ts:150
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:324
+packages/ai-tool-llm/dist/index.d.ts:330
 
 ***
 
@@ -342,7 +352,7 @@ packages/ai-tool-llm/dist/index.d.ts:324
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L41)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L41)
 
 ***
 
@@ -392,7 +402,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:43
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:151
+packages/ai-tool-llm/dist/index.d.ts:153
 
 ***
 
@@ -412,7 +422,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:40
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:302
+packages/ai-tool-llm/dist/index.d.ts:308
 
 ***
 
@@ -436,7 +446,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:64
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:303
+packages/ai-tool-llm/dist/index.d.ts:309
 
 ## Accessors
 
@@ -612,7 +622,7 @@ packages/ai-tool/dist/index.d.ts:233
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:298
+packages/ai-tool-llm/dist/index.d.ts:303
 
 ***
 
@@ -928,7 +938,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:299
+packages/ai-tool-llm/dist/index.d.ts:304
 
 ***
 
@@ -986,7 +996,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:346
+packages/ai-tool-llm/dist/index.d.ts:352
 
 ***
 
@@ -1010,7 +1020,7 @@ packages/ai-tool-llm/dist/index.d.ts:346
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:140](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L140)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:144](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L144)
 
 ***
 
@@ -1034,7 +1044,7 @@ packages/ai-tool-llm/dist/index.d.ts:346
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:342
+packages/ai-tool-llm/dist/index.d.ts:348
 
 ***
 
@@ -1048,7 +1058,7 @@ packages/ai-tool-llm/dist/index.d.ts:342
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:339
+packages/ai-tool-llm/dist/index.d.ts:345
 
 ***
 
@@ -1068,7 +1078,7 @@ packages/ai-tool-llm/dist/index.d.ts:339
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:353
+packages/ai-tool-llm/dist/index.d.ts:359
 
 ***
 
@@ -1122,7 +1132,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:94
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:214](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L214)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:217](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L217)
 
 ***
 
@@ -1284,7 +1294,7 @@ packages/ai-tool/dist/index.d.ts:216
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:330
+packages/ai-tool-llm/dist/index.d.ts:336
 
 ***
 
@@ -1348,7 +1358,7 @@ node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-manager/lib/ab
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:331
+packages/ai-tool-llm/dist/index.d.ts:337
 
 ***
 
@@ -1362,7 +1372,7 @@ packages/ai-tool-llm/dist/index.d.ts:331
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:296
+packages/ai-tool-llm/dist/index.d.ts:301
 
 ***
 
@@ -1384,7 +1394,7 @@ packages/ai-tool-llm/dist/index.d.ts:296
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:333
+packages/ai-tool-llm/dist/index.d.ts:339
 
 ***
 
@@ -1402,7 +1412,7 @@ packages/ai-tool-llm/dist/index.d.ts:333
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:209](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L209)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:212](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L212)
 
 ***
 
@@ -1468,7 +1478,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/8f51a4283b3e77570baf51d31337f2435a8d5fac/src/llamacpp.ts#L43)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L43)
 
 ***
 
@@ -1708,7 +1718,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:90
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:340
+packages/ai-tool-llm/dist/index.d.ts:346
 
 ***
 
@@ -1810,7 +1820,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:82
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:297
+packages/ai-tool-llm/dist/index.d.ts:302
 
 ***
 
@@ -2300,7 +2310,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:68
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:328
+packages/ai-tool-llm/dist/index.d.ts:334
 
 ***
 
@@ -2332,7 +2342,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:67
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:329
+packages/ai-tool-llm/dist/index.d.ts:335
 
 ***
 
