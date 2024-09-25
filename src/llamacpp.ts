@@ -52,6 +52,9 @@ export class LlamaCppProvider extends LLMProvider {
     }
 
     let modelInfo: AIModelParams
+    if (!model && this.model) {
+      model = this.model
+    }
     if (model) {
       if (model.endsWith('.gguf')) {model = model.slice(0, -5)}
       if (model.startsWith(this.name + '://')) {model = model.slice(this.name!.length + 3)}
