@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.3.12](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.11...v0.3.12) (2024-09-25)
+
+
+### Bug Fixes
+
+* forget to pass model ([edd1ceb](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/edd1ceb91a1f9822c57d5ee3f3ffd8be5fd667de))
+
+
+### Refactor
+
+* add default model supports ([e3f6ebe](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/e3f6ebe5837fed6d620d192f65e20fcce33196a5))
+
 ## [0.3.11](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.10...v0.3.11) (2024-09-17)
 
 ## [0.3.10](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.9...v0.3.10) (2024-09-16)
