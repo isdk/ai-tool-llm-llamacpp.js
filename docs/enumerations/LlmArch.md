@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:252](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L252)
+[packages/ai-tool-llm-llamacpp/src/options.ts:252](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L252)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:225](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L225)
+[packages/ai-tool-llm-llamacpp/src/options.ts:225](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L225)
 
 ***
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:228](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L228)
+[packages/ai-tool-llm-llamacpp/src/options.ts:228](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L228)
 
 ***
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:255](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L255)
+[packages/ai-tool-llm-llamacpp/src/options.ts:255](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L255)
 
 ***
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:231](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L231)
+[packages/ai-tool-llm-llamacpp/src/options.ts:231](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L231)
 
 ***
 
@@ -64,7 +64,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:254](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L254)
+[packages/ai-tool-llm-llamacpp/src/options.ts:254](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L254)
 
 ***
 
@@ -74,7 +74,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:239](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L239)
+[packages/ai-tool-llm-llamacpp/src/options.ts:239](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L239)
 
 ***
 
@@ -84,7 +84,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:248](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L248)
+[packages/ai-tool-llm-llamacpp/src/options.ts:248](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L248)
 
 ***
 
@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:249](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L249)
+[packages/ai-tool-llm-llamacpp/src/options.ts:249](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L249)
 
 ***
 
@@ -104,7 +104,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:253](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L253)
+[packages/ai-tool-llm-llamacpp/src/options.ts:253](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L253)
 
 ***
 
@@ -114,7 +114,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:260](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L260)
+[packages/ai-tool-llm-llamacpp/src/options.ts:260](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L260)
 
 ***
 
@@ -124,7 +124,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:219](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L219)
+[packages/ai-tool-llm-llamacpp/src/options.ts:219](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L219)
 
 ***
 
@@ -134,7 +134,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:243](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L243)
+[packages/ai-tool-llm-llamacpp/src/options.ts:243](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L243)
 
 ***
 
@@ -144,7 +144,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:244](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L244)
+[packages/ai-tool-llm-llamacpp/src/options.ts:244](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L244)
 
 ***
 
@@ -154,7 +154,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:221](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L221)
+[packages/ai-tool-llm-llamacpp/src/options.ts:221](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L221)
 
 ***
 
@@ -164,7 +164,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:222](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L222)
+[packages/ai-tool-llm-llamacpp/src/options.ts:222](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L222)
 
 ***
 
@@ -174,7 +174,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:223](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L223)
+[packages/ai-tool-llm-llamacpp/src/options.ts:223](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L223)
 
 ***
 
@@ -184,7 +184,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:220](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L220)
+[packages/ai-tool-llm-llamacpp/src/options.ts:220](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L220)
 
 ***
 
@@ -194,7 +194,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:241](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L241)
+[packages/ai-tool-llm-llamacpp/src/options.ts:241](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L241)
 
 ***
 
@@ -204,7 +204,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:258](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L258)
+[packages/ai-tool-llm-llamacpp/src/options.ts:258](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L258)
 
 ***
 
@@ -214,7 +214,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:230](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L230)
+[packages/ai-tool-llm-llamacpp/src/options.ts:230](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L230)
 
 ***
 
@@ -224,7 +224,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:218](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L218)
+[packages/ai-tool-llm-llamacpp/src/options.ts:218](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L218)
 
 ***
 
@@ -234,7 +234,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:246](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L246)
+[packages/ai-tool-llm-llamacpp/src/options.ts:246](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L246)
 
 ***
 
@@ -244,7 +244,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:242](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L242)
+[packages/ai-tool-llm-llamacpp/src/options.ts:242](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L242)
 
 ***
 
@@ -254,7 +254,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:224](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L224)
+[packages/ai-tool-llm-llamacpp/src/options.ts:224](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L224)
 
 ***
 
@@ -264,7 +264,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:259](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L259)
+[packages/ai-tool-llm-llamacpp/src/options.ts:259](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L259)
 
 ***
 
@@ -274,7 +274,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:229](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L229)
+[packages/ai-tool-llm-llamacpp/src/options.ts:229](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L229)
 
 ***
 
@@ -284,7 +284,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:250](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L250)
+[packages/ai-tool-llm-llamacpp/src/options.ts:250](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L250)
 
 ***
 
@@ -294,7 +294,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:251](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L251)
+[packages/ai-tool-llm-llamacpp/src/options.ts:251](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L251)
 
 ***
 
@@ -304,7 +304,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:240](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L240)
+[packages/ai-tool-llm-llamacpp/src/options.ts:240](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L240)
 
 ***
 
@@ -314,7 +314,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:236](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L236)
+[packages/ai-tool-llm-llamacpp/src/options.ts:236](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L236)
 
 ***
 
@@ -324,7 +324,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:237](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L237)
+[packages/ai-tool-llm-llamacpp/src/options.ts:237](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L237)
 
 ***
 
@@ -334,7 +334,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:238](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L238)
+[packages/ai-tool-llm-llamacpp/src/options.ts:238](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L238)
 
 ***
 
@@ -344,7 +344,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:233](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L233)
+[packages/ai-tool-llm-llamacpp/src/options.ts:233](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L233)
 
 ***
 
@@ -354,7 +354,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:234](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L234)
+[packages/ai-tool-llm-llamacpp/src/options.ts:234](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L234)
 
 ***
 
@@ -364,7 +364,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:235](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L235)
+[packages/ai-tool-llm-llamacpp/src/options.ts:235](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L235)
 
 ***
 
@@ -374,7 +374,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:227](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L227)
+[packages/ai-tool-llm-llamacpp/src/options.ts:227](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L227)
 
 ***
 
@@ -384,7 +384,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:232](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L232)
+[packages/ai-tool-llm-llamacpp/src/options.ts:232](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L232)
 
 ***
 
@@ -394,7 +394,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:226](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L226)
+[packages/ai-tool-llm-llamacpp/src/options.ts:226](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L226)
 
 ***
 
@@ -404,7 +404,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:245](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L245)
+[packages/ai-tool-llm-llamacpp/src/options.ts:245](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L245)
 
 ***
 
@@ -414,7 +414,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:256](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L256)
+[packages/ai-tool-llm-llamacpp/src/options.ts:256](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L256)
 
 ***
 
@@ -424,7 +424,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:257](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L257)
+[packages/ai-tool-llm-llamacpp/src/options.ts:257](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L257)
 
 ***
 
@@ -434,7 +434,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:261](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L261)
+[packages/ai-tool-llm-llamacpp/src/options.ts:261](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L261)
 
 ***
 
@@ -444,4 +444,4 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:247](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/options.ts#L247)
+[packages/ai-tool-llm-llamacpp/src/options.ts:247](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L247)

@@ -352,7 +352,7 @@ packages/ai-tool-llm/dist/index.d.ts:330
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L41)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:41](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/llamacpp.ts#L41)
 
 ***
 
@@ -1020,7 +1020,7 @@ packages/ai-tool-llm/dist/index.d.ts:352
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:144](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L144)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:144](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/llamacpp.ts#L144)
 
 ***
 
@@ -1132,7 +1132,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:94
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:217](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L217)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:217](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/llamacpp.ts#L217)
 
 ***
 
@@ -1412,7 +1412,7 @@ packages/ai-tool-llm/dist/index.d.ts:339
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:212](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L212)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:212](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/llamacpp.ts#L212)
 
 ***
 
@@ -1478,7 +1478,7 @@ packages/ai-tool/dist/index-DUEs7T8M.d.ts:84
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/e3f6ebe5837fed6d620d192f65e20fcce33196a5/src/llamacpp.ts#L43)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:43](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/llamacpp.ts#L43)
 
 ***
 
