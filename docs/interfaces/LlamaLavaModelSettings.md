@@ -260,7 +260,7 @@ packages/ai-tool-llm/dist/index.d.ts:263
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/7287783d46f995e107854e485be3e5797b423e85/src/options.ts#L509)
+[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L509)
 
 ***
 
