@@ -289,7 +289,7 @@ export interface LlamaLoadModelOptions extends AIOptions {
   threads_http?: number
   version?: boolean
 
-  log_format?: 'json' | 'text'
+  // log_format?: 'json' | 'text'
   simple_io?: boolean   // use basic IO for better compatibility in subprocesses and limited consoles
   logdir?: string       // path under which to save YAML logs (no logging if unset)
   log_disable?: boolean // Disable trace logs
@@ -297,6 +297,11 @@ export interface LlamaLoadModelOptions extends AIOptions {
   log_file?: string     // Specify a log filename (without extension)
   log_new?: boolean     // Create a separate new log file on start. Each log file will have unique name: "<name>.<ID>.log"
   log_append?: boolean  // Don't truncate the old log file.
+  log_colors?: boolean
+  log_verbose?: boolean
+  log_verbosity?: number // Set the verbosity threshold. Messages with a higher verbosity will be
+  log_prefix?: boolean
+  log_timestamps?: boolean
 
   no_slots?: boolean
 
