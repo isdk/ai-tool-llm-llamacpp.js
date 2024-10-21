@@ -232,6 +232,32 @@ export class LlamaCppProvider extends LLMProvider {
     result.name = path.basename(result.name)
     return result as AIModelParams
   }
+
+  async tokenize(content: string, {add_special, with_pieces}: {with_pieces?: boolean, add_special?: boolean, modelId?: string} = {}) {
+    const url = this.apiUrl ?? 'http://localhost:8080'
+    const response = await fetch(joinUrl(url, '/tokenize'), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({content, add_special, with_pieces}),
+    })
+    const obj = await response.json()
+    const err = obj.error
+    if (err) {
+      if (err.code) {
+        throw new CommonError(err.message, 'tokenize', err.code)
+      } else {
+        throw new CommonError(err, 'tokenize')
+      }
+    }
+    return obj.tokens
+  }
+
+  async countTokens(text: string, options?: {with_pieces?: boolean, add_special?: boolean, modelId?: string}) {
+    const tokens = await this.tokenize(text, options)
+    return tokens.length
+  }
 }
 makeToolFuncCancelable(LlamaCppProvider, {asyncFeatures: AsyncFeatures.MultiTask})
 

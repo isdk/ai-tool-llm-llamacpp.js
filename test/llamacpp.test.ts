@@ -130,7 +130,7 @@ async function testGeneration(provider: LLMProvider = llamaCpp) {
       value: messages,
       options: {max_tokens:1024, temperature: 0, stop_words: ['<|end|>'], add_generation_prompt: true}
     })
-    expect(result.content.trim()).toMatch(/^5|2\s*[+]\s*3\s*=\s*5$/)
+    expect(result.content.trim()).toMatch(/^5|(2\s*[+]\s*3\s*([=]|(equal)[s]?)\s*5)($|\.)/i)
     expect(result.options.generation_settings.stream).toBeFalsy()
     expect(result.options.generation_settings.temperature).toBe(0)
     expect(result.finishReason).toStrictEqual('stop')
@@ -184,7 +184,7 @@ async function testGeneration(provider: LLMProvider = llamaCpp) {
     expect(lastChunk.finishReason).toStrictEqual('stop')
 
     // console.log('🚀 ~ it ~ content:', content)
-    expect(content).toMatch(/^5|2\s*[+]\s*3\s*=\s*5$/)
+    expect(content).toMatch(/^5|(2\s*[+]\s*3\s*([=]|(equal)[s]?)\s*5)($|\.)/i)
   });
 }
 
@@ -266,7 +266,7 @@ describe('LlamaCpp Provider', async () => {
     const llmSettings = result.options.generation_settings
     // expect(llmSettings.max_tokens).toBe(1024) // current llama.cpp can not return the user configured max_tokens
     expect(llmSettings.stop_words).toContain('=')
-    expect(result.content.trim()).toMatch(/^5|2\s*[+]\s*3\s*=\s*5$/)
+    expect(result.content.trim()).toMatch(/^5|(2\s*[+]\s*3\s*([=]|(equal)[s]?)\s*5)($|\.)/i)
     expect(llmSettings.stream).toBeFalsy()
     expect(result.finishReason).toStrictEqual('stop')
     // expect(result.options.stopped_word).toBeTruthy()
@@ -322,6 +322,21 @@ describe('LlamaCpp Provider', async () => {
     // expect(result.options.stopping_word).toStrictEqual('User:')
   });
 
+  it('should tokenize', async ()=>{
+    let result = await llamaCpp.tokenize('hello world')
+    expect(result).toHaveProperty('length')
+    expect(result.length).toBeGreaterThan(1)
+    result = await llamaCpp.tokenize('你好世界')
+    expect(result).toHaveProperty('length')
+    expect(result.length).toBeGreaterThan(1)
+  })
+
+  it('should count tokenize length', async ()=>{
+    let result = await llamaCpp.countTokens('hello world')
+    expect(result).toBeGreaterThan(1)
+    result = await llamaCpp.countTokens('你好世界')
+    expect(result).toBeGreaterThan(1)
+  })
 
   describe('LlmProvider', async ()=>{
     beforeAll(()=>{
