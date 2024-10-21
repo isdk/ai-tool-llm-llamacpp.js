@@ -1,6 +1,6 @@
 import path from 'path'
-import { AIStream, AsyncFeatures, type CancelableAbility, CommonError, ErrorCode, NotFoundError, TaskAbortController, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
-import { AIModelParams, LLMProvider, joinUrl, mapApiOptions, AIOptions } from "@isdk/ai-tool-llm";
+import { AIChatMessageParam, AIStream, AsyncFeatures, type CancelableAbility, CommonError, ErrorCode, NotFoundError, TaskAbortController, getResponseErrorReadableStream, makeToolFuncCancelable, throwError } from "@isdk/ai-tool";
+import { AIModelParams, LLMProvider, joinUrl, mapApiOptions, AIOptions, AITokenizeOptions } from "@isdk/ai-tool-llm";
 import {
   LLamaCppResult,
   LlamaModelOptions,
@@ -12,6 +12,11 @@ import {
   LlamaLoadModelOptionsKeys,
   LlamaLoadModelOptions,
 } from "./options";
+
+export interface AILlamaCppTokenizeOptions extends AITokenizeOptions {
+  with_pieces?: boolean
+  add_special?: boolean
+}
 
 export const LlamaCppProviderName = 'llamacpp'
 
@@ -40,18 +45,9 @@ export interface LlamaCppProvider extends CancelableAbility {}
 export class LlamaCppProvider extends LLMProvider {
   rule = /.gguf$/
 
-  async processModelOptions(model: string, value: any, options: AIOptions) {
-    const vIsString = typeof value === 'string'
-    if (!value || (!vIsString && !Array.isArray(value))) {
-      throwError('missing prompt value', 'LlamaCppProvider')
-    }
-
-    options = toLlamaCppOptions(options) as AIOptions
-    if (options.stop && typeof options.stop === 'string') {
-      options.stop = [options.stop]
-    }
-
+  async tryGetModelInfo(model: string|undefined, options: AIOptions) {
     let modelInfo: AIModelParams
+
     if (!model && this.model) {
       model = this.model
     }
@@ -69,6 +65,22 @@ export class LlamaCppProvider extends LLMProvider {
     } else {
       modelInfo = await this.getModelInfo()
     }
+
+    return modelInfo
+  }
+
+  async processModelOptions(model: string, value: any, options: AIOptions) {
+    const vIsString = typeof value === 'string'
+    if (!value || (!vIsString && !Array.isArray(value))) {
+      throwError('missing prompt value', 'LlamaCppProvider')
+    }
+
+    options = toLlamaCppOptions(options) as AIOptions
+    if (options.stop && typeof options.stop === 'string') {
+      options.stop = [options.stop]
+    }
+
+    let modelInfo: AIModelParams = await this.tryGetModelInfo(model, options)
 
     if (!modelInfo) {
       throwError('llamaCpp no current model', this.name)
@@ -233,7 +245,21 @@ export class LlamaCppProvider extends LLMProvider {
     return result as AIModelParams
   }
 
-  async tokenize(content: string, {add_special, with_pieces}: {with_pieces?: boolean, add_special?: boolean, modelId?: string} = {}) {
+  async tokenize(content: string|AIChatMessageParam[], options: AILlamaCppTokenizeOptions = {}) {
+    const {add_special, with_pieces} = options
+
+    const vIsString = typeof content === 'string'
+    if (!content || (!vIsString && !Array.isArray(content))) {
+      throwError('missing content to tokenize', 'LlamaCppProvider')
+    }
+    options = toLlamaCppOptions(options)
+    if (!vIsString) {
+      const modelInfo = await this.tryGetModelInfo(options.model, options)
+      const prompt = await this.formatPrompt(content as any, modelInfo, options as any)
+      if (!prompt) {throw new NotFoundError('ChatTemplate:'+ modelInfo.name, 'llamaCpp.tokenize')}
+      content = prompt
+    }
+
     const url = this.apiUrl ?? 'http://localhost:8080'
     const response = await fetch(joinUrl(url, '/tokenize'), {
       method: 'POST',
@@ -254,7 +280,7 @@ export class LlamaCppProvider extends LLMProvider {
     return obj.tokens
   }
 
-  async countTokens(text: string, options?: {with_pieces?: boolean, add_special?: boolean, modelId?: string}) {
+  async countTokens(text: string|AIChatMessageParam[], options?: AILlamaCppTokenizeOptions) {
     const tokens = await this.tokenize(text, options)
     return tokens.length
   }
