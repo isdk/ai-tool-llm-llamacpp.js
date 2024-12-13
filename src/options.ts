@@ -555,6 +555,7 @@ export interface LLamaCppResult {
   tokens_evaluated: number
   tokens_predicted: number
   truncated: boolean
+  stop_type: 'none'|'eos'|'limit'|'word'
   chatTemplateId?: {id: string, version?: string}
   taskId?: AsyncTaskId
 }
@@ -569,9 +570,9 @@ function toApiOptions(opts: LlamaModelOptions) {
 export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
   const result: LlamaCppAIResult = {content: data.content, options: data}
   if (data.stop) {
-    if ((data as LLamaCppResult).stopped_eos || (data as LLamaCppResult).stopped_word) {
+    if (data.stopped_eos || data.stopped_word || data.stop_type === 'eos' || data.stop_type === 'word') {
       result.finishReason = 'stop'
-    } else if ((data as LLamaCppResult).stopped_limit) {
+    } else if (data.stopped_limit || data.stop_type === 'limit') {
       result.finishReason = 'length'
     } else {
       result.finishReason = null
