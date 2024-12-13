@@ -241,7 +241,7 @@ export class LlamaCppProvider extends LLMProvider {
     const generation_settings = obj.default_generation_settings
     delete obj.default_generation_settings
     const result = mapApiOptions({...obj, ...generation_settings}, AIModelSettingsMap)
-    result.name = path.basename(result.name)
+    result.name = path.basename(result.name || result.model_path)
     return result as AIModelParams
   }
 
