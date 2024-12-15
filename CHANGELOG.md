@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.4.0](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.14...v0.4.0) (2024-12-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* add new llamacpp protocol supports
+
+### Features
+
+* add tokenize and countTokens ([c7de3d2](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/c7de3d294587fa6d2837babbd0e4eed1d2ca0465))
+
+
+### Bug Fixes
+
+* add new llamacpp protocol supports ([4a295ab](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/4a295abe49bf283a8ebce2bd5c5b428e7aeec859))
+* for new llama-server /props spec ([9bd500c](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/9bd500cbc57f5f013d0fa5f67df260298f13c3d3))
+
+
+### Refactor
+
+* add AIChatMessageParam[] supports ([b5e6b88](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/b5e6b8874ef97a0fe766a3a24ea99b175014f6a6))
+* update options ([4cd8088](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/4cd8088f8689fc990ef2be6724cce6bbfee7c2df))
+
 ## [0.3.14](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.13...v0.3.14) (2024-10-04)
 
 ## [0.3.13](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.3.12...v0.3.13) (2024-09-30)
