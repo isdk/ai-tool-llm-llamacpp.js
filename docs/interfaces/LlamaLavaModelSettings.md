@@ -22,7 +22,7 @@
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:215
+packages/ai-tool-llm/dist/index.d.ts:219
 
 ***
 
@@ -36,7 +36,7 @@ packages/ai-tool-llm/dist/index.d.ts:215
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:247
+packages/ai-tool-llm/dist/index.d.ts:251
 
 ***
 
@@ -50,7 +50,7 @@ packages/ai-tool-llm/dist/index.d.ts:247
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:250
+packages/ai-tool-llm/dist/index.d.ts:254
 
 ***
 
@@ -64,7 +64,7 @@ packages/ai-tool-llm/dist/index.d.ts:250
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:251
+packages/ai-tool-llm/dist/index.d.ts:255
 
 ***
 
@@ -80,7 +80,7 @@ the content length in train
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:230
+packages/ai-tool-llm/dist/index.d.ts:234
 
 ***
 
@@ -94,7 +94,7 @@ packages/ai-tool-llm/dist/index.d.ts:230
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:253
+packages/ai-tool-llm/dist/index.d.ts:257
 
 ***
 
@@ -108,7 +108,7 @@ packages/ai-tool-llm/dist/index.d.ts:253
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:246
+packages/ai-tool-llm/dist/index.d.ts:250
 
 ***
 
@@ -122,7 +122,7 @@ packages/ai-tool-llm/dist/index.d.ts:246
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:255
+packages/ai-tool-llm/dist/index.d.ts:259
 
 ***
 
@@ -136,7 +136,7 @@ packages/ai-tool-llm/dist/index.d.ts:255
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:244
+packages/ai-tool-llm/dist/index.d.ts:248
 
 ***
 
@@ -150,7 +150,7 @@ packages/ai-tool-llm/dist/index.d.ts:244
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:242
+packages/ai-tool-llm/dist/index.d.ts:246
 
 ***
 
@@ -164,7 +164,7 @@ packages/ai-tool-llm/dist/index.d.ts:242
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:260
+packages/ai-tool-llm/dist/index.d.ts:264
 
 ***
 
@@ -180,7 +180,7 @@ hugging-face repo name
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:239
+packages/ai-tool-llm/dist/index.d.ts:243
 
 ***
 
@@ -194,7 +194,7 @@ packages/ai-tool-llm/dist/index.d.ts:239
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:252
+packages/ai-tool-llm/dist/index.d.ts:256
 
 ***
 
@@ -208,7 +208,7 @@ packages/ai-tool-llm/dist/index.d.ts:252
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:248
+packages/ai-tool-llm/dist/index.d.ts:252
 
 ***
 
@@ -222,7 +222,7 @@ packages/ai-tool-llm/dist/index.d.ts:248
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:243
+packages/ai-tool-llm/dist/index.d.ts:247
 
 ***
 
@@ -236,7 +236,7 @@ packages/ai-tool-llm/dist/index.d.ts:243
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:249
+packages/ai-tool-llm/dist/index.d.ts:253
 
 ***
 
@@ -250,7 +250,7 @@ packages/ai-tool-llm/dist/index.d.ts:249
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:263
+packages/ai-tool-llm/dist/index.d.ts:267
 
 ***
 
@@ -260,7 +260,7 @@ packages/ai-tool-llm/dist/index.d.ts:263
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L509)
+[packages/ai-tool-llm-llamacpp/src/options.ts:514](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L514)
 
 ***
 
@@ -276,7 +276,7 @@ the model unique name, but not the unique in db
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:219
+packages/ai-tool-llm/dist/index.d.ts:223
 
 ***
 
@@ -292,7 +292,7 @@ the model params size in bytes
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:226
+packages/ai-tool-llm/dist/index.d.ts:230
 
 ***
 
@@ -306,7 +306,7 @@ packages/ai-tool-llm/dist/index.d.ts:226
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:241
+packages/ai-tool-llm/dist/index.d.ts:245
 
 ***
 
@@ -320,7 +320,7 @@ packages/ai-tool-llm/dist/index.d.ts:241
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:231
+packages/ai-tool-llm/dist/index.d.ts:235
 
 ***
 
@@ -334,7 +334,7 @@ packages/ai-tool-llm/dist/index.d.ts:231
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:240
+packages/ai-tool-llm/dist/index.d.ts:244
 
 ***
 
@@ -348,7 +348,7 @@ packages/ai-tool-llm/dist/index.d.ts:240
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:222
+packages/ai-tool-llm/dist/index.d.ts:226
 
 ***
 
@@ -362,7 +362,7 @@ packages/ai-tool-llm/dist/index.d.ts:222
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:221
+packages/ai-tool-llm/dist/index.d.ts:225
 
 ***
 
@@ -376,7 +376,7 @@ packages/ai-tool-llm/dist/index.d.ts:221
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:245
+packages/ai-tool-llm/dist/index.d.ts:249
 
 ***
 
@@ -390,7 +390,7 @@ packages/ai-tool-llm/dist/index.d.ts:245
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:220
+packages/ai-tool-llm/dist/index.d.ts:224
 
 ***
 
@@ -404,7 +404,7 @@ packages/ai-tool-llm/dist/index.d.ts:220
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:254
+packages/ai-tool-llm/dist/index.d.ts:258
 
 ***
 
@@ -420,4 +420,4 @@ the remote url to download the model
 
 #### Defined in
 
-packages/ai-tool-llm/dist/index.d.ts:235
+packages/ai-tool-llm/dist/index.d.ts:239

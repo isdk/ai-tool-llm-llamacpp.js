@@ -17,6 +17,7 @@
 
 ## Interfaces
 
+- [AILlamaCppTokenizeOptions](interfaces/AILlamaCppTokenizeOptions.md)
 - [LLamaCppModelGenerationSettings](interfaces/LLamaCppModelGenerationSettings.md)
 - [LLamaCppModelTimings](interfaces/LLamaCppModelTimings.md)
 - [LLamaCppPartResult](interfaces/LLamaCppPartResult.md)

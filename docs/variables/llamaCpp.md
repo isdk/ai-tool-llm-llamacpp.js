@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:238](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/llamacpp.ts#L238)
+[packages/ai-tool-llm-llamacpp/src/llamacpp.ts:290](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/llamacpp.ts#L290)

@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:486](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L486)
+[packages/ai-tool-llm-llamacpp/src/options.ts:491](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L491)
 
 ***
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:504](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L504)
+[packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L509)
 
 ***
 
@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:484](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L484)
+[packages/ai-tool-llm-llamacpp/src/options.ts:489](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L489)
 
 ***
 
@@ -50,7 +50,7 @@ the content length in train
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:494](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L494)
+[packages/ai-tool-llm-llamacpp/src/options.ts:499](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L499)
 
 ***
 
@@ -60,7 +60,7 @@ the content length in train
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:503](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L503)
+[packages/ai-tool-llm-llamacpp/src/options.ts:508](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L508)
 
 ***
 
@@ -72,7 +72,7 @@ the model params size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:498](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L498)
+[packages/ai-tool-llm-llamacpp/src/options.ts:503](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L503)
 
 ***
 
@@ -84,7 +84,7 @@ the quanted model size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:502](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L502)
+[packages/ai-tool-llm-llamacpp/src/options.ts:507](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L507)
 
 ***
 
@@ -94,7 +94,7 @@ the quanted model size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:489](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L489)
+[packages/ai-tool-llm-llamacpp/src/options.ts:494](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L494)
 
 ***
 
@@ -104,7 +104,7 @@ the quanted model size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:488](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L488)
+[packages/ai-tool-llm-llamacpp/src/options.ts:493](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L493)
 
 ***
 
@@ -114,7 +114,7 @@ the quanted model size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:487](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L487)
+[packages/ai-tool-llm-llamacpp/src/options.ts:492](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L492)
 
 ***
 
@@ -124,7 +124,7 @@ the quanted model size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:485](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L485)
+[packages/ai-tool-llm-llamacpp/src/options.ts:490](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L490)
 
 ***
 
@@ -134,4 +134,4 @@ the quanted model size in bytes
 
 #### Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:490](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/881246bc2c8fda9337c000f2556d31a0b31f7d27/src/options.ts#L490)
+[packages/ai-tool-llm-llamacpp/src/options.ts:495](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L495)
