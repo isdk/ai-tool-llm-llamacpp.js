@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[packages/ai-tool-llm-llamacpp/src/options.ts:606](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/4a295abe49bf283a8ebce2bd5c5b428e7aeec859/src/options.ts#L606)
+[packages/ai-tool-llm-llamacpp/src/options.ts:606](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/6da1b2e45fa070275822118925c6d1e2ef4f49b5/src/options.ts#L606)
