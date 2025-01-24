@@ -150,6 +150,7 @@ export class LlamaCppProvider extends LLMProvider {
 
     if (chatTemplateId) {options.chatTemplateId = chatTemplateId}
     options.value = value
+    delete options.SystemTemplate
     return options
   }
 
