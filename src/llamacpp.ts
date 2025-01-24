@@ -223,7 +223,7 @@ export class LlamaCppProvider extends LLMProvider {
 
   async loadModel(model: LlamaLoadModelOptions): Promise<any> {
     const currentModel = model.currentModel
-    throw new CommonError(`the model(${model}) is not the current llamaCpp running model(${currentModel})`, this.name, ErrorCode.InvalidArgument)
+    throw new CommonError(`the model(${model.model}) is not the current llamaCpp running model(${currentModel})`, this.name, ErrorCode.InvalidArgument)
   }
 
   async getModelInfo(modelName?: string) {
