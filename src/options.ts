@@ -582,6 +582,8 @@ export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
   if (data.generation_settings) {
     const max_tokens = data.generation_settings.max_tokens
     data.generation_settings = toApiOptions(data.generation_settings) as any
+    data.generation_settings.model_id = data.model
+
     if (max_tokens) {data.generation_settings.max_tokens = max_tokens}
   }
 

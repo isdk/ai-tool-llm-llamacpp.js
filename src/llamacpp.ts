@@ -85,6 +85,7 @@ export class LlamaCppProvider extends LLMProvider {
     if (!modelInfo) {
       throwError('llamaCpp no current model', this.name)
     }
+    if (!model || (model === '.' && modelInfo.name)) {model = modelInfo.name as string}
     options.model = model
 
     let chatTemplate: any

@@ -253,9 +253,10 @@ describe('LlamaCpp Provider', async () => {
   it('should get model info', async ()=>{
     let result = await llamaCpp.getModelInfo()
     expect(result).toHaveProperty('name')
-    expect(result).toHaveProperty('max_tokens')
     expect(result).toHaveProperty('content_size')
-    expect(result).toHaveProperty('temperature')
+    const params = result.params
+    expect(params).toHaveProperty('max_tokens')
+    expect(params).toHaveProperty('temperature')
   })
 
   it('should generate text with custom stop words merged', async () => {
@@ -350,9 +351,10 @@ describe('LlamaCpp Provider', async () => {
     it('should get current model info', async ()=>{
       const model = await llm.getModelInfo('llamacpp://.')
       expect(model).toHaveProperty('name')
-      expect(model).toHaveProperty('max_tokens')
       expect(model).toHaveProperty('content_size')
-      expect(model).toHaveProperty('temperature')
+      const params = model!.params
+      expect(params).toHaveProperty('max_tokens')
+      expect(params).toHaveProperty('temperature')
       expect(model?.provider).toStrictEqual(LlamaCppProviderName)
     })
 
