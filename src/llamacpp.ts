@@ -145,6 +145,9 @@ export class LlamaCppProvider extends LLMProvider {
         if (options.chatTemplate.version) {
           chatTemplateId.version = options.chatTemplate.version
         }
+        if (options.chatTemplate.prompt.shouldThink) {
+          chatTemplateId.shouldThink = options.chatTemplate.prompt.shouldThink
+        }
       }
       delete options.chatTemplate
     }
