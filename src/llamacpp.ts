@@ -158,67 +158,72 @@ export class LlamaCppProvider extends LLMProvider {
     return options
   }
 
+  async fetch(params: any) {
+    const aborter = params.aborter as TaskAbortController
+    const signal = aborter.signal
+    delete params.aborter
+
+    const url = this.apiUrl ?? 'http://localhost:8080'
+    const headers: HeadersInit = {
+      'Content-Type': 'application/json',
+    }
+    const isStream = params.stream
+    if (isStream) {
+      headers.Connection = 'keep-alive'
+      headers.Accept = 'text/event-stream'
+    }
+
+
+    const chatTemplateId = params.chatTemplateId
+    if (chatTemplateId) {delete params.chatTemplateId}
+
+    const prompt = params.value
+    delete params.value
+
+    const body = {
+      ...params,
+      prompt,
+    }
+    // delete body.aborter
+
+    const response = await fetch(joinUrl(url, '/completion'), {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(body),
+      signal,
+    })
+
+    let result: LlamaCppAIResult | ReadableStream<LlamaCppAIResult>
+
+    if (!response.ok) {
+      const processed = this.emitError ? this.emitError(response, url, body) : undefined
+      if (!processed) {
+        if (isStream) {
+          result = getResponseErrorReadableStream(response.body)
+        } else {
+          throw new CommonError(await response.text(), 'LlamaCppProvider')
+        }
+      } else {
+        result = processed
+      }
+    } else if (!isStream) {
+      const text = await response.text()
+      // const obj = await response.json() as LLamaCppResult
+      const obj = JSON.parse(text)
+      obj.chatTemplateId = chatTemplateId
+      result = llamaCppToAIResult(obj)
+    } else {
+      result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId}))
+    }
+
+    return result
+  }
+
   func({model, value, options}: {model: string, value: any, options: AIOptions}): Promise<any> {
     const taskPromise = this.runAsyncCancelableTask(options, async (params: any) => {
-      const aborter = params.aborter as TaskAbortController
-      const signal = aborter.signal
-
       params= {...params}
-      delete params.aborter
       params = await this.processModelOptions(model, value, params)
-
-      const url = this.apiUrl ?? 'http://localhost:8080'
-      const headers: HeadersInit = {
-        'Content-Type': 'application/json',
-      }
-      const isStream = options!.stream
-      if (isStream) {
-        headers.Connection = 'keep-alive'
-        headers.Accept = 'text/event-stream'
-      }
-
-
-      const chatTemplateId = params.chatTemplateId
-      if (chatTemplateId) {delete params.chatTemplateId}
-
-      value = params.value
-      delete params.value
-
-      const body = {
-        ...params,
-        prompt: value,
-      }
-      // delete body.aborter
-
-      const response = await fetch(joinUrl(url, '/completion'), {
-        method: 'POST',
-        headers,
-        body: JSON.stringify(body),
-        signal,
-      })
-
-      let result: LlamaCppAIResult | ReadableStream<LlamaCppAIResult>
-
-      if (!response.ok) {
-        const processed = this.emitError ? this.emitError(response, url, body) : undefined
-        if (!processed) {
-          if (isStream) {
-            result = getResponseErrorReadableStream(response.body)
-          } else {
-            throw new CommonError(await response.text(), 'LlamaCppProvider')
-          }
-        } else {
-          result = processed
-        }
-      } else if (!isStream) {
-        const text = await response.text()
-        // const obj = await response.json() as LLamaCppResult
-        const obj = JSON.parse(text)
-        obj.chatTemplateId = chatTemplateId
-        result = llamaCppToAIResult(obj)
-      } else {
-        result = AIStream<string, LLamaCppResult>(response, parseLlamaCppStream({chatTemplateId}))
-      }
+      const result = await this.fetch(params)
 
       return result
     });
