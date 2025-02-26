@@ -255,9 +255,21 @@ export class LlamaCppProvider extends LLMProvider {
     return result as AIModelParams
   }
 
-  async tokenize(content: string|AIChatMessageParam[], options: AILlamaCppTokenizeOptions = {}) {
+  async _tokenize(content: string, options: AILlamaCppTokenizeOptions = {}) {
     const {add_special, with_pieces} = options
+    const url = this.apiUrl ?? 'http://localhost:8080'
+    const response = await fetch(joinUrl(url, '/tokenize'), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({content, add_special, with_pieces}),
+    })
+    const obj = await response.json()
+    return obj
+  }
 
+  async tokenize(content: string|AIChatMessageParam[], options: AILlamaCppTokenizeOptions = {}) {
     const vIsString = typeof content === 'string'
     if (!content || (!vIsString && !Array.isArray(content))) {
       throwError('missing content to tokenize', 'LlamaCppProvider')
@@ -270,15 +282,7 @@ export class LlamaCppProvider extends LLMProvider {
       content = prompt
     }
 
-    const url = this.apiUrl ?? 'http://localhost:8080'
-    const response = await fetch(joinUrl(url, '/tokenize'), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({content, add_special, with_pieces}),
-    })
-    const obj = await response.json()
+    const obj = await this._tokenize(content as string, options)
     const err = obj.error
     if (err) {
       if (err.code) {
