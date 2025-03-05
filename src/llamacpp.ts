@@ -57,7 +57,7 @@ export class LlamaCppProvider extends LLMProvider {
       modelInfo = await this.getModelInfo()
       if (model !== '.') {
         const currentModel = modelInfo?.name
-        if ((currentModel && currentModel.indexOf(model) < 0) || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
+        if (!currentModel || currentModel.indexOf(model) < 0 || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
           await this.loadModel({...options, model, currentModel})
           modelInfo = await this.getModelInfo(model)
         }
