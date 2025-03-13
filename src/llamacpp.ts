@@ -54,12 +54,12 @@ export class LlamaCppProvider extends LLMProvider {
     if (model) {
       if (model.endsWith('.gguf')) {model = model.slice(0, -5)}
       if (model.startsWith(this.name + '://')) {model = model.slice(this.name!.length + 3)}
-      modelInfo = await this.getModelInfo()
+      modelInfo = await this.getModelInfo(undefined, options)
       if (model !== '.') {
         const currentModel = modelInfo?.name
         if (!currentModel || currentModel.indexOf(model) < 0 || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
           await this.loadModel({...options, model, currentModel})
-          modelInfo = await this.getModelInfo(model)
+          modelInfo = await this.getModelInfo(model, options)
         }
       }
     } else {
@@ -236,7 +236,7 @@ export class LlamaCppProvider extends LLMProvider {
     throw new CommonError(`the model(${model.model}) is not the current llamaCpp running model(${currentModel})`, this.name, ErrorCode.InvalidArgument)
   }
 
-  async getModelInfo(modelName?: string) {
+  async getModelInfo(modelName?: string, options?: any) {
     const url = this.apiUrl ?? 'http://localhost:8080'
     const response = await fetch(joinUrl(url, '/props'))
     const obj = await response.json()
