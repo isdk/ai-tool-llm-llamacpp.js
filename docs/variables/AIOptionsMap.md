@@ -8,7 +8,7 @@
 
 > `const` **AIOptionsMap**: `object`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:600](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/ca923ecb2e8ca4c64dcab7f085c92fb099fbd048/src/options.ts#L600)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:600](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/518858851e2f538474e91b57f5b1e7e12c3272ed/src/options.ts#L600)
 
 ## Type declaration
 

@@ -8,4 +8,4 @@
 
 > `const` **LlamaCppProviderName**: `"llamacpp"` = `'llamacpp'`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:21](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/ca923ecb2e8ca4c64dcab7f085c92fb099fbd048/src/llamacpp.ts#L21)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:21](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/518858851e2f538474e91b57f5b1e7e12c3272ed/src/llamacpp.ts#L21)
