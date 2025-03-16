@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.5.0](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.4.2...v0.5.0) (2025-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* add options to getModelInfo
+
+### Features
+
+* pass shouldThink option ([66ad5ad](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/66ad5ad432ff1dec3d3da01005965f9159916f99))
+
+
+### Bug Fixes
+
+* loadModel raise error should display model ([a9acc54](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/a9acc549f8d180df405235fb2e08253be34f19b4))
+* should loadModel without currentModel ([bd7e166](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/bd7e166c61d200f558dd03113efbf20e54b25660))
+* should return the model id correctly ([1ff6d37](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/1ff6d375e2e4f3559b66ecc0198b670801360a90))
+
+
+### Refactor
+
+* add options to getModelInfo ([3f00df7](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/3f00df749837b4a9452f6e30f053c39c794fdd18))
+* extract _tokenize from tokenize ([2d90966](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/2d90966dfebe54415429ec5e53b803585d6cc6ab))
+* extract fetch from func ([9066d49](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/9066d491538859f83f2aee46bd128650748c7769))
+
 ## [0.4.2](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.4.1...v0.4.2) (2024-12-18)
 
 ## [0.4.1](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.4.0...v0.4.1) (2024-12-17)
