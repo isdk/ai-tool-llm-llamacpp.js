@@ -8,4 +8,4 @@
 
 > `const` **ReverseAIOptionsMap**: `Record`\<`string`, `string` \| `string`[]\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:608](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/518858851e2f538474e91b57f5b1e7e12c3272ed/src/options.ts#L608)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:608](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L608)
