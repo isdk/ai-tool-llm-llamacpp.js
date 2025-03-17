@@ -6,7 +6,7 @@
 
 # Interface: LLamaCppModelTimings
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:524](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L524)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:524](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L524)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:524](https://github.co
 
 > **predicted\_ms**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:525](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L525)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:525](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L525)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:525](https://github.co
 
 > **predicted\_n**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:526](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L526)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:526](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L526)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:526](https://github.co
 
 > **predicted\_per\_second**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:527](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L527)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:527](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L527)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:527](https://github.co
 
 > **predicted\_per\_token\_ms**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:528](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L528)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:528](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L528)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:528](https://github.co
 
 > **prompt\_ms**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:529](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L529)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:529](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L529)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:529](https://github.co
 
 > **prompt\_n**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:530](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L530)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:530](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L530)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:530](https://github.co
 
 > **prompt\_per\_second**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:531](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L531)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:531](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L531)
 
 ***
 
@@ -70,4 +70,4 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:531](https://github.co
 
 > **prompt\_per\_token\_ms**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:532](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L532)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:532](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L532)

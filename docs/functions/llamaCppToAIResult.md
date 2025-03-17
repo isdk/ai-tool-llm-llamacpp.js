@@ -8,7 +8,7 @@
 
 > **llamaCppToAIResult**(`data`): [`LlamaCppAIResult`](../type-aliases/LlamaCppAIResult.md)
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:570](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/474332917999cc9529d7dcbcd5079ae3a0f5177d/src/options.ts#L570)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:570](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L570)
 
 ## Parameters
 
