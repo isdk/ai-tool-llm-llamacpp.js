@@ -6,7 +6,7 @@
 
 # Interface: LlamaLavaModelSettings
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:513](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L513)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:513](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/options.ts#L513)
 
 ## Extends
 
@@ -230,7 +230,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:265
 
 > `optional` **n\_embd**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:514](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/98c88069640b24b5eaf5e6da1e4f97586559b4a8/src/options.ts#L514)
+Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:514](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/options.ts#L514)
 
 ***
 
