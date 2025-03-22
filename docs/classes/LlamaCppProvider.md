@@ -6,7 +6,7 @@
 
 # Class: LlamaCppProvider
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:44](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L44)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:44](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L44)
 
 ## Extends
 
@@ -346,7 +346,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:335
 
 > **rule**: `RegExp`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:46](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L46)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:46](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L46)
 
 ***
 
@@ -536,7 +536,7 @@ Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:556
 
 > **\_tokenize**(`content`, `options`): `Promise`\<`any`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:258](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L258)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:258](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L258)
 
 #### Parameters
 
@@ -898,7 +898,7 @@ the new dest object
 
 > **countTokens**(`text`, `options`?): `Promise`\<`any`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:297](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L297)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:297](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L297)
 
 #### Parameters
 
@@ -1058,7 +1058,7 @@ the dest object.
 
 > **fetch**(`params`): `Promise`\<[`LlamaCppAIResult`](../type-aliases/LlamaCppAIResult.md) \| `ReadableStream`\<[`LlamaCppAIResult`](../type-aliases/LlamaCppAIResult.md)\>\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:161](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L161)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:161](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L161)
 
 #### Parameters
 
@@ -1076,7 +1076,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:161](https://github.c
 
 > **formatPrompt**(`messages`, `modelInfo`?, `options`?): `Promise`\<`undefined` \| `string`\>
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:358
+Defined in: packages/ai-tool-llm/dist/index.d.ts:359
 
 #### Parameters
 
@@ -1124,7 +1124,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:358
 
 > **func**(`__namedParameters`): `Promise`\<`any`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:222](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L222)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:222](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L222)
 
 #### Parameters
 
@@ -1166,6 +1166,10 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:354
 
 `boolean`
 
+###### provider?
+
+`string`
+
 ###### type?
 
 `AIPromptType`
@@ -1192,7 +1196,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:351
 
 > **getDefaultParameters**(`chatTemplate`, `model`): `any`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:366
+Defined in: packages/ai-tool-llm/dist/index.d.ts:367
 
 #### Parameters
 
@@ -1250,7 +1254,7 @@ Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:87
 
 > **getModelInfo**(`modelName`?, `options`?): `Promise`\<`AIModelParams`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:239](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L239)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:239](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L239)
 
 #### Parameters
 
@@ -1578,7 +1582,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:344
 
 > **loadModel**(`model`): `Promise`\<`any`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:234](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L234)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:234](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L234)
 
 #### Parameters
 
@@ -1642,7 +1646,7 @@ Defined in: packages/ai-tool/dist/index-BkwhCK1q.d.ts:77
 
 > **processModelOptions**(`model`, `value`, `options`): `Promise`\<`AIOptions`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:72](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L72)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:72](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L72)
 
 #### Parameters
 
@@ -1936,7 +1940,7 @@ Defined in: node\_modules/.pnpm/property-manager@2.0.0/node\_modules/property-ma
 
 > **tokenize**(`content`, `options`): `Promise`\<`any`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:272](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L272)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:272](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L272)
 
 #### Parameters
 
@@ -2008,7 +2012,7 @@ Returns a string representation of an object.
 
 > **tryGetModelInfo**(`model`, `options`): `Promise`\<`AIModelParams`\>
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:48](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/3f7e092bd0619c7931954697b6c0586d6fa354ff/src/llamacpp.ts#L48)
+Defined in: [packages/ai-tool-llm-llamacpp/src/llamacpp.ts:48](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/b3c6428c9dc34d63fcfc676dacdbb58e0dab6ec2/src/llamacpp.ts#L48)
 
 #### Parameters
 
