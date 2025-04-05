@@ -63,7 +63,7 @@ export class LlamaCppProvider extends LLMProvider {
         }
       }
     } else {
-      modelInfo = await this.getModelInfo()
+      modelInfo = await this.getModelInfo(undefined, options)
     }
 
     return modelInfo
