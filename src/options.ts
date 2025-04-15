@@ -1,4 +1,4 @@
-import { AIResult, AIStreamParser, AsyncTaskId } from "@isdk/ai-tool";
+import { AIResult, AIStreamParser, AsyncTaskId, calcPerplexity } from "@isdk/ai-tool";
 import { AIOptions, AILavaModelSettings, AIModelQuantType, AITextGenerationOptions, flip, mapApiOptions, } from "@isdk/ai-tool-llm";
 
 export interface LlamaModelOptions extends AITextGenerationOptions {
@@ -539,6 +539,13 @@ export interface LLamaCppPartResult {
   stop: boolean
 }
 
+export interface LlamaCppProbabilityItem {
+  id: number
+  token: string
+  logprob: number
+  top_logprobs: LlamaCppProbabilityItem[]
+}
+
 export interface LLamaCppResult {
   content: string
   generation_settings: LLamaCppModelGenerationSettings
@@ -558,6 +565,8 @@ export interface LLamaCppResult {
   stop_type: 'none'|'eos'|'limit'|'word'
   chatTemplateId?: {id: string, version?: string}
   taskId?: AsyncTaskId
+  completion_probabilities?: LlamaCppProbabilityItem[]
+  perplexity?: number
 }
 
 export type LlamaCppAIStreamParser<T = LLamaCppResult> = AIStreamParser<string, T>
@@ -585,6 +594,13 @@ export function llamaCppToAIResult(data: LLamaCppResult): LlamaCppAIResult {
     data.generation_settings.model_id = data.model
 
     if (max_tokens) {data.generation_settings.max_tokens = max_tokens}
+  }
+  if (Array.isArray(data.completion_probabilities)) {
+    const probabilities = data.completion_probabilities.map(p => ({id: p.id, token: p.token, probability: p.logprob}))
+    const perplexity = calcPerplexity(probabilities, {exclude: {punctuation: true, stopWords: true, whitespace: true}})
+    if (perplexity !== undefined) {
+      data.perplexity = perplexity
+    }
   }
 
   return result
