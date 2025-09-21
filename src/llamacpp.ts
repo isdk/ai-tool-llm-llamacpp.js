@@ -99,7 +99,7 @@ export class LlamaCppProvider extends LLMProvider {
         chatTemplate = options.chatTemplate.prompt
       }
     } else {
-      chatTemplate = await this.getChatTemplate(modelInfo, options)
+      chatTemplate = await this.getChatTemplate(undefined, {...options, modelInfo})
       if (chatTemplate) {
         endOfTokens = getEndOfTokensFromPromptTemplate(chatTemplate)
         chatTemplate = chatTemplate.prompt
@@ -140,13 +140,17 @@ export class LlamaCppProvider extends LLMProvider {
 
     let chatTemplateId: any
     if (options.chatTemplate) {
-      if (options.chatTemplate.prompt?._id) {
-        chatTemplateId = {id: options.chatTemplate.prompt._id}
-        if (options.chatTemplate.version) {
-          chatTemplateId.version = options.chatTemplate.version
+      const chatTemplate = options.chatTemplate
+      if (chatTemplate.prompt?._id) {
+        chatTemplateId = {id: chatTemplate.prompt._id}
+        if (chatTemplate.version) {
+          chatTemplateId.version = chatTemplate.version
         }
-        if (options.chatTemplate.prompt.shouldThink) {
-          chatTemplateId.shouldThink = options.chatTemplate.prompt.shouldThink
+        if (chatTemplate.prompt.shouldThink) {
+          chatTemplateId.shouldThink = chatTemplate.prompt.shouldThink
+        }
+        if (chatTemplate.prompt.supports) {
+          chatTemplateId.supports = chatTemplate.prompt.supports
         }
       }
       delete options.chatTemplate
