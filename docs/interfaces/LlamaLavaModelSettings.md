@@ -6,7 +6,7 @@
 
 # Interface: LlamaLavaModelSettings
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:513](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L513)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:513](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L513)
 
 ## Extends
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:513](https://github.co
 
 > `optional` **\_id**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:217
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:217
 
 #### Inherited from
 
@@ -34,7 +34,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:217
 
 > `optional` **author**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:249
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:249
 
 #### Inherited from
 
@@ -46,7 +46,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:249
 
 > `optional` **chat\_template**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:252
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:252
 
 #### Inherited from
 
@@ -58,7 +58,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:252
 
 > `optional` **config**: `AIOptions`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:253
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:253
 
 #### Inherited from
 
@@ -70,7 +70,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:253
 
 > `optional` **content\_size**: `number`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:232
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:232
 
 the content length in train
 
@@ -84,7 +84,7 @@ the content length in train
 
 > `optional` **createdAt**: `Date`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:255
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:255
 
 #### Inherited from
 
@@ -96,7 +96,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:255
 
 > `optional` **description**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:248
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:248
 
 #### Inherited from
 
@@ -108,7 +108,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:248
 
 > `optional` **downloaded**: `boolean`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:257
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:257
 
 #### Inherited from
 
@@ -120,7 +120,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:257
 
 > `optional` **downloads**: `number`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:246
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:246
 
 #### Inherited from
 
@@ -132,7 +132,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:246
 
 > `optional` **featured**: `boolean`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:244
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:244
 
 #### Inherited from
 
@@ -144,7 +144,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:244
 
 > `optional` **files**: `AIModelFileSettings`[]
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:262
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:262
 
 #### Inherited from
 
@@ -156,7 +156,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:262
 
 > `optional` **hf\_repo**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:241
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:241
 
 hugging-face repo name
 
@@ -170,7 +170,7 @@ hugging-face repo name
 
 > `optional` **language**: `string`[]
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:254
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:254
 
 #### Inherited from
 
@@ -182,7 +182,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:254
 
 > `optional` **license**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:250
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:250
 
 #### Inherited from
 
@@ -194,7 +194,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:250
 
 > `optional` **likes**: `number`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:245
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:245
 
 #### Inherited from
 
@@ -206,7 +206,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:245
 
 > `optional` **logo**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:251
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:251
 
 #### Inherited from
 
@@ -218,7 +218,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:251
 
 > **model**: `AIModelNameRule` \| `AIModelNameRule`[]
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:265
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:265
 
 #### Inherited from
 
@@ -230,7 +230,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:265
 
 > `optional` **n\_embd**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:514](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L514)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:514](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L514)
 
 ***
 
@@ -238,7 +238,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:514](https://github.co
 
 > `optional` **name**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:221
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:221
 
 the model unique name, but not the unique in db
 
@@ -252,7 +252,7 @@ the model unique name, but not the unique in db
 
 > `optional` **params\_size**: `number`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:228
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:228
 
 the model params size in bytes
 
@@ -266,7 +266,7 @@ the model params size in bytes
 
 > `optional` **provider**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:243
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:243
 
 #### Inherited from
 
@@ -278,7 +278,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:243
 
 > `optional` **scale**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:233
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:233
 
 #### Inherited from
 
@@ -290,7 +290,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:233
 
 > `optional` **skills**: `AIModelSkillName`[]
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:242
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:242
 
 #### Inherited from
 
@@ -302,7 +302,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:242
 
 > `optional` **source**: `"huggingface"`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:224
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:224
 
 #### Inherited from
 
@@ -314,7 +314,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:224
 
 > `optional` **supports**: `AIModelType` \| `AIModelType`[]
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:223
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:223
 
 #### Inherited from
 
@@ -326,7 +326,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:223
 
 > `optional` **title**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:247
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:247
 
 #### Inherited from
 
@@ -338,7 +338,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:247
 
 > `optional` **type**: `AIModelType`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:222
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:222
 
 #### Inherited from
 
@@ -350,7 +350,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:222
 
 > `optional` **updatedAt**: `Date`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:256
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:256
 
 #### Inherited from
 
@@ -362,7 +362,7 @@ Defined in: packages/ai-tool-llm/dist/index.d.ts:256
 
 > `optional` **url**: `string`
 
-Defined in: packages/ai-tool-llm/dist/index.d.ts:237
+Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:237
 
 the remote url to download the model
 

@@ -21,6 +21,7 @@
 - [LLamaCppModelGenerationSettings](interfaces/LLamaCppModelGenerationSettings.md)
 - [LLamaCppModelTimings](interfaces/LLamaCppModelTimings.md)
 - [LLamaCppPartResult](interfaces/LLamaCppPartResult.md)
+- [LlamaCppProbabilityItem](interfaces/LlamaCppProbabilityItem.md)
 - [LLamaCppResult](interfaces/LLamaCppResult.md)
 - [LlamaLavaModelSettings](interfaces/LlamaLavaModelSettings.md)
 - [LlamaLoadModelOptions](interfaces/LlamaLoadModelOptions.md)

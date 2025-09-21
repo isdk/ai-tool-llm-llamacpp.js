@@ -6,7 +6,7 @@
 
 # Interface: LLamaCppPartResult
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:535](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L535)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:535](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L535)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:535](https://github.co
 
 > **content**: `string`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:536](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L536)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:536](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L536)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:536](https://github.co
 
 > `optional` **multimodal**: `boolean`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:537](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L537)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:537](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L537)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:537](https://github.co
 
 > **slot\_id**: `number`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:538](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L538)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:538](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L538)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:538](https://github.co
 
 > **stop**: `boolean`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:539](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L539)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:539](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L539)

@@ -8,9 +8,9 @@
 
 > `const` **AIOptionsMap**: `object`
 
-Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:600](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/151b8bdfe7d8b8a8be547948f716da692b2f3c67/src/options.ts#L600)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:616](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L616)
 
-## Type declaration
+## Type Declaration
 
 ### content\_size
 
@@ -22,11 +22,11 @@ Defined in: [packages/ai-tool-llm-llamacpp/src/options.ts:600](https://github.co
 
 #### response\_format.schema
 
-> **schema**: `string` = `'json_schema'`
+> **response\_format.schema**: `string` = `'json_schema'`
 
 #### response\_format.type
 
-> **type**: `string` = `'grammar_id'`
+> **response\_format.type**: `string` = `'grammar_id'`
 
 ### stop\_words
 
