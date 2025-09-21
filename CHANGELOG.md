@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.5.8](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.5.7...v0.5.8) (2025-09-21)
+
+
+### Features
+
+* add perplexity into result if any completion_probabilities ([5396c80](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/5396c8012aea162a006ae95735df11e66edaf3d0))
+
+
+### Bug Fixes
+
+* should pass options too ([80d20b7](https://github.com/isdk/ai-tool-llm-llamacpp.js/commit/80d20b7fa3518bb2323c508c2b9f6dbc6eb22671))
+
 ## [0.5.7](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.5.6...v0.5.7) (2025-04-04)
 
 ## [0.5.6](https://github.com/isdk/ai-tool-llm-llamacpp.js/compare/v0.5.5...v0.5.6) (2025-03-22)
