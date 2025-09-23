@@ -6,7 +6,7 @@
 
 # Interface: LlamaCppProbabilityItem
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:542](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L542)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:542](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L542)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:542](ht
 
 > **id**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:543](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L543)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:543](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L543)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:543](ht
 
 > **logprob**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:545](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L545)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:545](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L545)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:545](ht
 
 > **token**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:544](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L544)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:544](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L544)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:544](ht
 
 > **top\_logprobs**: `LlamaCppProbabilityItem`[]
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:546](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L546)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:546](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L546)

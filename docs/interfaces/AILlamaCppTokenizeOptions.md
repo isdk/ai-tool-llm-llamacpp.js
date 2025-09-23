@@ -6,7 +6,7 @@
 
 # Interface: AILlamaCppTokenizeOptions
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:16](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/llamacpp.ts#L16)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:16](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/llamacpp.ts#L16)
 
 ## Extends
 
@@ -22,7 +22,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:16](ht
 
 > `optional` **add\_special**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:18](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/llamacpp.ts#L18)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:18](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/llamacpp.ts#L18)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: @isdk/ai-tools/packages/ai-tool-llm/dist/index.d.ts:302
 
 > `optional` **with\_pieces**: `boolean`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:17](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/llamacpp.ts#L17)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/llamacpp.ts:17](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/llamacpp.ts#L17)

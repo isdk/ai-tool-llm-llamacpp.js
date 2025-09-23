@@ -6,7 +6,7 @@
 
 # Enumeration: LlamaSplitMode
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:274](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L274)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:274](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L274)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:274](ht
 
 > **SPLIT\_MODE\_LAYER**: `1`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:276](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L276)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:276](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L276)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:276](ht
 
 > **SPLIT\_MODE\_NONE**: `0`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:275](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L275)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:275](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L275)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:275](ht
 
 > **SPLIT\_MODE\_ROW**: `2`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:277](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/17d967afd0fac7d88c746125459fe87825a001bb/src/options.ts#L277)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:277](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L277)
