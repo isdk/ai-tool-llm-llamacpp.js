@@ -6,7 +6,7 @@
 
 # Interface: LlamaModelSettings
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:488](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L488)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:488](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L488)
 
 ## Indexable
 
@@ -18,7 +18,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:488](ht
 
 > `optional` **arch**: [`LlmArch`](../enumerations/LlmArch.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:491](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L491)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:491](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L491)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:491](ht
 
 > `optional` **chat\_template**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L509)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:509](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L509)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:509](ht
 
 > **model**: `string`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:489](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L489)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:489](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L489)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:489](ht
 
 > `optional` **n\_ctx\_train**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:499](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L499)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:499](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L499)
 
 the content length in train
 
@@ -52,7 +52,7 @@ the content length in train
 
 > `optional` **n\_embd**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:508](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L508)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:508](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L508)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:508](ht
 
 > `optional` **n\_params**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:503](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L503)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:503](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L503)
 
 the model params size in bytes
 
@@ -70,7 +70,7 @@ the model params size in bytes
 
 > `optional` **n\_vocab**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:507](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L507)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:507](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L507)
 
 the quanted model size in bytes
 
@@ -80,7 +80,7 @@ the quanted model size in bytes
 
 > `optional` **quant**: `AIModelQuantType`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:494](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L494)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:494](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L494)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:494](ht
 
 > `optional` **size**: `number`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:493](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L493)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:493](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L493)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:493](ht
 
 > `optional` **size\_type**: [`LlmSizeType`](../enumerations/LlmSizeType.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:492](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L492)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:492](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L492)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:492](ht
 
 > `optional` **state**: `LlamaCppServerState`
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:490](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L490)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:490](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L490)
 
 ***
 
@@ -112,4 +112,4 @@ Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:490](ht
 
 > `optional` **vocab\_type**: [`LlamaVocabType`](../enumerations/LlamaVocabType.md)
 
-Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:495](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/0d16068f52cb374c4608ded739a170f44769754f/src/options.ts#L495)
+Defined in: [@isdk/ai-tools/packages/ai-tool-llm-llamacpp/src/options.ts:495](https://github.com/isdk/ai-tool-llm-llamacpp.js/blob/36832ad8b482c3073a371029074008b9f0db3472/src/options.ts#L495)
