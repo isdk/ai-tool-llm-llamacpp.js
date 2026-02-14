@@ -46,7 +46,7 @@ export class LlamaCppProvider extends LLMProvider {
   rule = /.gguf$/
 
   async tryGetModelInfo(model: string|undefined, options: AIOptions) {
-    let modelInfo: AIModelParams
+    let modelInfo: AIModelParams|undefined
 
     if (!model && this.model) {
       model = this.model
@@ -54,18 +54,19 @@ export class LlamaCppProvider extends LLMProvider {
     if (model) {
       if (model.endsWith('.gguf')) {model = model.slice(0, -5)}
       if (model.startsWith(this.name + '://')) {model = model.slice(this.name!.length + 3)}
-      modelInfo = await this.getModelInfo(undefined, options)
       if (model !== '.') {
-        const currentModel = modelInfo?.name
+        const currentModel = this.defaultModelName // modelInfo?.name
         if (!currentModel || currentModel.indexOf(model) < 0 || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
           await this.loadModel({...options, model, currentModel})
           modelInfo = await this.getModelInfo(model, options)
+        } else {
+          modelInfo = await this.getModelInfo(model, options)
         }
       }
-    } else {
+    }
+    if (!modelInfo) {
       modelInfo = await this.getModelInfo(undefined, options)
     }
-
     return modelInfo
   }
 
