@@ -61,8 +61,6 @@ export class LlamaCppProvider extends LLMProvider {
       if (model !== '.') {
         const currentModel = this.defaultModelName // modelInfo?.name
         options = defaultsDeep({}, ctor.loadModelOptions, options)
-        console.log('🚀 ~ file: llamacpp.ts:68 ~ this.loadModelOptions:', ctor.loadModelOptions)
-        console.log('🚀 ~ file: llamacpp.ts:66 ~tryGetModelInfo options:', options)
         if (!currentModel || currentModel.indexOf(model) < 0 || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
           await this.loadModel({...options, model, currentModel})
           modelInfo = await this.getModelInfo(model, options)
