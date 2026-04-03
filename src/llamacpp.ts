@@ -12,6 +12,7 @@ import {
   LlamaLoadModelOptionsKeys,
   LlamaLoadModelOptions,
 } from "./options";
+import { defaultsDeep } from 'lodash-es';
 
 export interface AILlamaCppTokenizeOptions extends AITokenizeOptions {
   with_pieces?: boolean
@@ -43,9 +44,12 @@ function existsAny(arr1: any[], arr2: any[]) {
 
 export interface LlamaCppProvider extends CancelableAbility {}
 export class LlamaCppProvider extends LLMProvider {
+  declare static loadModelOptions?: LlamaLoadModelOptions
+
   rule = /.gguf$/
 
   async tryGetModelInfo(model: string|undefined, options: AIOptions) {
+    const ctor = this.constructor as typeof LlamaCppProvider
     let modelInfo: AIModelParams|undefined
 
     if (!model && this.model) {
@@ -56,6 +60,9 @@ export class LlamaCppProvider extends LLMProvider {
       if (model.startsWith(this.name + '://')) {model = model.slice(this.name!.length + 3)}
       if (model !== '.') {
         const currentModel = this.defaultModelName // modelInfo?.name
+        options = defaultsDeep({}, ctor.loadModelOptions, options)
+        console.log('🚀 ~ file: llamacpp.ts:68 ~ this.loadModelOptions:', ctor.loadModelOptions)
+        console.log('🚀 ~ file: llamacpp.ts:66 ~tryGetModelInfo options:', options)
         if (!currentModel || currentModel.indexOf(model) < 0 || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
           await this.loadModel({...options, model, currentModel})
           modelInfo = await this.getModelInfo(model, options)

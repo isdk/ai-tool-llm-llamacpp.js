@@ -35,7 +35,8 @@
   "dependencies": {
     "@isdk/ai-tool": "workspace:^",
     "@isdk/ai-tool-llm": "workspace:^",
-    "@isdk/ai-tool-sqlite": "workspace:^"
+    "@isdk/ai-tool-sqlite": "workspace:^",
+    "lodash-es": "^4.18.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.1",
@@ -43,6 +44,7 @@
     "@isdk/ai-tool-prompt": "workspace:^",
     "@types/better-sqlite3": "^7.6.13",
     "@types/jest": "^29.5.14",
+    "@types/lodash-es": "^4.17.12",
     "@typescript-eslint/eslint-plugin": "~8.41.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
