@@ -45,6 +45,7 @@ function existsAny(arr1: any[], arr2: any[]) {
 export interface LlamaCppProvider extends CancelableAbility {}
 export class LlamaCppProvider extends LLMProvider {
   declare static loadModelOptions?: LlamaLoadModelOptions
+  declare currentLoadedModel?: string
 
   rule = /.gguf$/
 
@@ -59,11 +60,12 @@ export class LlamaCppProvider extends LLMProvider {
       if (model.endsWith('.gguf')) {model = model.slice(0, -5)}
       if (model.startsWith(this.name + '://')) {model = model.slice(this.name!.length + 3)}
       if (model !== '.') {
-        const currentModel = this.defaultModelName // modelInfo?.name
+        const currentModel = this.currentLoadedModel // modelInfo?.name
         options = defaultsDeep({}, ctor.loadModelOptions, options)
         if (!currentModel || currentModel.indexOf(model) < 0 || existsAny(LlamaLoadModelOptionsKeys, Object.keys(options)) ) {
           await this.loadModel({...options, model, currentModel})
           modelInfo = await this.getModelInfo(model, options)
+          this.currentLoadedModel = modelInfo.name
         } else {
           modelInfo = await this.getModelInfo(model, options)
         }
