@@ -115,8 +115,16 @@ export class LlamaCppProvider extends LLMProvider {
     }
 
     if (chatTemplate?.parameters) {
-      const defaultParams = this.getDefaultParameters(chatTemplate, modelInfo.name!)
+      // TODO: 应该传递 options 到 getDefaultParameters 而不是在这里打补丁！
+      let defaultParams = this.getDefaultParameters(chatTemplate, modelInfo.name!)
       if (defaultParams) {
+        // 2: first think or 3: deep think
+        if (options.shouldThink && (options.shouldThink.mode === 2 || options.shouldThink.mode === 3)) {
+          if (defaultParams.thinking) {
+            defaultParams = defaultsDeep({}, defaultParams.thinking, defaultParams)
+            delete defaultParams.thinking
+          }
+        }
         if (defaultParams.eot_token || defaultParams.eos_token) {
           if (!endOfTokens) endOfTokens = []
           if (defaultParams.eot_token && !endOfTokens.includes(defaultParams.eot_token)) {endOfTokens.push(defaultParams.eot_token)}
